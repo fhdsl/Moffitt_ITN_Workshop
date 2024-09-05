@@ -58,14 +58,56 @@ Additionally the metadata describe which samples came from which patients with w
 
 ## Starting a new project
 
-<input type="checkbox"> Click the blue "New Project" button
-<input type="checkbox"> For `What spatial transcriptomics platform are you using for this project?` choose `Visium` -- this is the type of data our example data are.
-<input type="checkbox"> Make your own project name and description that's sensible. Could be something related to the workshop "ITN workshop"
-<input type="checkbox"> Then click "Create".
+<input type="checkbox"> Click the blue "New Project" button  
+<input type="checkbox"> For `What spatial transcriptomics platform are you using for this project?` choose `Visium` -- this is the type of data our example data are.  
+<input type="checkbox"> Make your own project name and description that's sensible. Could be something related to the workshop "ITN workshop"  
+<input type="checkbox"> Then click "Create".  
 
-## Uploading samples
+## Uploading the dataset
 
-For each sample we will repeat the following steps:
+_For each sample we will repeat the following steps to upload each sample's set of files._
 
+### Uploading one sample's data
 
-<input type="checkbox"> For `Sample Name` put the ID indicating on the folder, i.e. `sample_093d`
+<input type="checkbox"> For `Sample Name` put the ID indicating on the folder, e.g. `sample_093d`  
+<input type="checkbox"> For the `Gene expression` box upload the `.h5` file e.g. `GSM6433590_093D_filtered_feature_bc_matrix.h5`. You can upload files by dragging and dropping or by clicking on them to navigate.
+<input type="checkbox"> For the `Coordinates` box upload the `.csv` file e.g. `GSM6433590_093D_tissue_positions_list.csv`.  
+<input type="checkbox"> For the `Tissue image` box upload the `.png` file e.g. `GSM6433590_093D_tissue_hires_image.png`.  
+<input type="checkbox"> For the `Scale factor` box upload the `.json` file e.g. `GSM6433590_093D_scalefactors_json.json`.
+
+<input type="checkbox"> Once the above steps are done click the green `Import Sample`.
+
+_You can use this checklist to keep track as you upload and follow the steps for each sample._
+
+<input type="checkbox"> `sample_093d` data entered
+<input type="checkbox"> `sample_396a` data entered
+<input type="checkbox"> `sample_396c` data entered
+<input type="checkbox"> `sample_397d` data entered
+
+Now [return to the beginning of these steps](#uploading-one-samples-data) to repeat the same steps for the other 3 samples.
+
+### Adding metadata
+
+<input type="checkbox"> Now click `Add metadata manually`.   
+<input type="checkbox"> Click `Add new metadata column`. Add a column named `patient`.  
+<input type="checkbox"> Click `Add new metadata column` again. Add a column named `therapy`.    
+
+You can reference the `example_clinical.csv` file's contents to add these data for each sample:
+
+|samplename|patient|therapy|
+|----------|-------|-------|
+|sample_093d|patient_12|none
+|sample_396a|patient_19|pembrolizumab
+|sample_396c|patient_20|adriamycin
+|sample_397d|patient_22|taxotere
+
+<input type="checkbox"> Add this `sample_093d` corresponding `patient` and `therapy` information.  
+<input type="checkbox"> Add this `sample_396a` corresponding `patient` and `therapy` information.  
+<input type="checkbox"> Add this `sample_396c` corresponding `patient` and `therapy` information.  
+<input type="checkbox"> Add this `sample_397d` corresponding `patient` and `therapy` information.  
+
+### After you've entered the data and metadata:  
+
+<input type="checkbox">  You will not be able to edit this (unless you delete the sample completely) after you click `Import Data`. So make sure everything is as you intend and then click `Import Data`. This will take a little bit of time. Note you can have it send you an email instead of waiting on the page.
+
+##
