@@ -42,7 +42,7 @@ The README describes these samples:
 
 > The original data set results from triple-negative breast cancer (TNBC) tumor biopsies collected from a diverse patient cohort. Patients underwent different therapeutic regimes. The tumor biopsies were profiled with 10X Visium. The data set presented here is a subset of the original cohort.
 
-Additionally the metadata describe which samples came from which patients with which treatments:
+Additionally the metadata describe which samples came from which patients with which treatments which looks like this:
 
 |samplename|patient|therapy|
 |----------|-------|-------|
@@ -53,7 +53,7 @@ Additionally the metadata describe which samples came from which patients with w
 
 ## Create an account with SpatialGE
 
-<input type="checkbox"> Go to spatialge.moffitt.org
+<input type="checkbox"> Go to https://spatialge.moffitt.org/
 <input type="checkbox"> Click on "Sign Up" in the upper right corner.
 
 ## Starting a new project
