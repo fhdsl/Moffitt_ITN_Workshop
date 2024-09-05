@@ -36,20 +36,7 @@ Each sample's folder has an h5 file, and a spatial folder.
 - sample_396c
   ...
 - sample_397d
-  ...
-
-The README describes these samples:
-
-> The original data set results from triple-negative breast cancer (TNBC) tumor biopsies collected from a diverse patient cohort. Patients underwent different therapeutic regimes. The tumor biopsies were profiled with 10X Visium. The data set presented here is a subset of the original cohort.
-
-Additionally the metadata descibe which samples came from which patients with which treatments:
-
-|samplename|patient|therapy|
-|----------|-------|-------|
-sample_093d	patient_12	none
-sample_396a	patient_19	pembrolizumab
-sample_396c	patient_20	adriamycin
-sample_397d	patient_22	taxotere
+  ... 
 
 ## Create an account with SpatialGE
 

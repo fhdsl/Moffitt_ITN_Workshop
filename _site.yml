@@ -6,19 +6,12 @@ navbar:
   - text: ""
     href: index.html
     icon: fa-home
-  - text: 1. Setup
-    href: setup.html
-  - text: 2. Hosting
-    href: hosting.html
-  - text: Editing
-    href: editing.html
-  - text: 3. Style
-    href: style.html
-  - text: 4. Git Actions
-    href: git_actions.html
-  - text: More ottr docs
-    href: https://www.ottrproject.org/
-
+  - text: GitHub Activity
+    href: github-activity-instructions.html
+  - text: Containers Activity
+    href: https://hutchdatascience.org/containers-for-scientists-sandbox/activity-1-instructions.html
+  - text: Spatial Transcriptomics
+    href: st-activity-instructions.html
 
 output:
   html_document:
@@ -27,5 +20,3 @@ output:
     self_contained: no
     highlight: textmate
     css: styles.css
-    includes:
-       in_header: resources/header.html
