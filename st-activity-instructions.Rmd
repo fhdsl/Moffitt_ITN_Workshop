@@ -14,6 +14,7 @@ knitr::opts_chunk$set(number_sections = FALSE)
 ```
 
 ## Get workshop files
+
 <input type="checkbox"> Download the files for this activity clicking here: https://github.com/fhdsl/ITN_Workshops_2024/archive/refs/heads/main.zip
 <input type="checkbox"> Put this file on your desktop so it is easily findable.  
 <input type="checkbox"> Double click the zip file (or right click and choose "unzip" or "decompress" to unzip the file.  
@@ -110,4 +111,6 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 
 <input type="checkbox">  You will not be able to edit this (unless you delete the sample completely) after you click `Import Data`. So make sure everything is as you intend and then click `Import Data`. This will take a little bit of time. Note you can have it send you an email instead of waiting on the page.
 
-##
+## Filtering your data
+
+<input type="checkbox"> Go to the "Filter data" tab. 
