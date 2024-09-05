@@ -1,7 +1,7 @@
-name: OTTR Template Website
+
 output_dir: 'docs'
 navbar:
-  title: OTTR Web
+  title: ITN Workshops 2024
   left:
   - text: ""
     href: index.html
