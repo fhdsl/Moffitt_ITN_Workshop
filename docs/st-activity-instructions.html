@@ -395,8 +395,8 @@ underwent different therapeutic regimes. The tumor biopsies were
 profiled with 10X Visium. The data set presented here is a subset of the
 original cohort.</p>
 </blockquote>
-<p>Additionally the metadata descibe which samples came from which
-patients with which treatments:</p>
+<p>Additionally the metadata describe which samples came from which
+patients with which treatments which looks like this:</p>
 <table>
 <thead>
 <tr class="header">
@@ -406,17 +406,36 @@ patients with which treatments:</p>
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>sample_093d</td>
+<td>patient_12</td>
+<td>none</td>
+</tr>
+<tr class="even">
+<td>sample_396a</td>
+<td>patient_19</td>
+<td>pembrolizumab</td>
+</tr>
+<tr class="odd">
+<td>sample_396c</td>
+<td>patient_20</td>
+<td>adriamycin</td>
+</tr>
+<tr class="even">
+<td>sample_397d</td>
+<td>patient_22</td>
+<td>taxotere</td>
+</tr>
 </tbody>
 </table>
-<p>sample_093d patient_12 none sample_396a patient_19 pembrolizumab
-sample_396c patient_20 adriamycin sample_397d patient_22 taxotere</p>
 </div>
 </div>
 <div id="create-an-account-with-spatialge" class="section level2">
 <h2>Create an account with SpatialGE</h2>
-<p><input type="checkbox"> Go to spatialge.moffitt.org
-<input type="checkbox"> Click on “Sign Up” in the upper right
-corner.</p>
+<p><input type="checkbox"> Go to <a
+href="https://spatialge.moffitt.org/"
+class="uri">https://spatialge.moffitt.org/</a> <input type="checkbox">
+Click on “Sign Up” in the upper right corner.</p>
 </div>
 <div id="starting-a-new-project" class="section level2">
 <h2>Starting a new project</h2>
@@ -426,206 +445,13 @@ corner.</p>
 choose <code>Visium</code> – this is the type of data our example data
 are. <input type="checkbox"> Make your own project name and description
 that’s sensible. Could be something related to the workshop “ITN
-workshop” <input type="checkbox"> Then click “Create”</p>
-<div id="step-3-run-the-docker-image-to-start-a-container"
-class="section level4">
-<h4>Step 3: Run the docker image to start a container!</h4>
-<p><input type="checkbox"> Now if want to launch the image for use, we
-can use <code>docker run</code> to turn it into a
-<strong>container</strong>.</p>
-<pre><code>docker run cansav09/practice-image:1</code></pre>
-<p><input type="checkbox"> To see what containers we have running we
-have we can run:</p>
-<pre><code>docker ps</code></pre>
+workshop” <input type="checkbox"> Then click “Create”.</p>
 </div>
-<div id="step-4-run-a-single-command" class="section level4">
-<h4>Step 4: Run a single command</h4>
-<p><input type="checkbox"> To run stuff interactively from the command
-line we can do:</p>
-<pre><code>docker exec -it &lt;PUT_CONTAINER_ID_HERE&gt; bash</code></pre>
-</div>
-<div id="step-5-try-calling-a-script" class="section level4">
-<h4>Step 5: Try calling a script</h4>
-<p><input type="checkbox"> To run a script using the docker container we
-could just add reference to a script at the end:</p>
-<pre><code>docker exec -it &lt;PUT_CONTAINER_ID_HERE&gt; bash run_analysis.sh</code></pre>
-<p><strong>BUT! You will find that this command won’t work yet though,
-why?</strong></p>
-<pre><code>bash: run_analysis.sh: No such file or directory</code></pre>
-<p><strong>Question: Does our container have all of the same files that
-our computer has?</strong></p>
-<p>This won’t work because the file <code>run_analysis.sh</code> is not
-a file that our container has. Docker containers do not have all the
-files that our computer does; they only have the files we add to it.</p>
-</div>
-<div id="activity-1b-add-a-volume-to-the-image" class="section level3">
-<h3>Activity 1b: Add a volume to the image</h3>
-<p>Our container is separate from our computer so if we want to use a
-file we have to attach it using a “volume”.</p>
-<div id="step-1-lets-add-our-containers-for-scientists-sandbox-files"
-class="section level4">
-<h4>Step 1: Let’s add our containers-for-scientists-sandbox files</h4>
-<p>Let’s point a volume to our workshop files so we have them on our
-container.</p>
-<details>
-</summary>
-Other ways we could get files on a container
-</summary>
-<p>If we want to run <code>run_analysis.sh</code> there’s two ways we
-could get our files on there. - We could download the files we need from
-online! We could <code>git clone</code> files from a repository or
-otherwise <code>wget</code> or <code>curl</code> files. - We could add a
-<code>volume</code> of files that are local to our computer. For this we
-will use the You’ll <code>-v</code> or volume option. We’ll do this in
-the next step.</p>
-We can specify a particular file path on our computer or give it
-<code>$PWD</code> Then optionally we can give a <code>:</code> and a
-file path we’d like this to be stored on on the container. Otherwise it
-will be stored at the absolute top of the container.
-</details>
-<p><input type="checkbox"> Now we can run:</p>
-<pre><code>docker run -v $pwd:/home cansav09/practice-image:1</code></pre>
-<p>If you have a windows machine you may have to run this variant
-instead. This version has a different <code>${}</code> around the
-<code>pwd</code> part.</p>
-<pre><code>docker run -v ${pwd}:/home cansav09/practice-image:1</code></pre>
-</div>
-</div>
-<div id="step-2-retry-calling-the-script" class="section level3">
-<h3>Step 2: Retry calling the script</h3>
-<p><input type="checkbox"> Now we can run the following command but we
-will have to run <code>docker ps</code> and get the container ID we need
-to put here.</p>
-<pre><code>docker exec -it &lt;REPLACE_WITH_CONTAINER_ID&gt; bash /home/run_analysis.sh</code></pre>
-<p>Now we have a new error! What does this mean?</p>
-<p><strong>Question: Does our container have all of the same software
-that our computer has?</strong></p>
-</div>
-</div>
-<div id="podman" class="section level2">
-<h2>Podman</h2>
-<div id="set-up-podman" class="section level3">
-<h3>Set up Podman</h3>
-<p><input type="checkbox"> Go here to <a
-href="https://podman.io/docs/installation">install Podman</a>, following
-the instructions for your particular operating system.<br />
-<input type="checkbox"> Open up your <a
-href="https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955">command
-line</a>.<br />
-<input type="checkbox"> Start up Podman by running the following:</p>
-<pre><code>podman machine init
-podman machine start</code></pre>
-</div>
-<div id="get-workshop-files-1" class="section level3">
-<h3>Get workshop files</h3>
-<p><input type="checkbox"> Download the files for this activity clicking
-here: <a
-href="https://github.com/fhdsl/containers-for-scientists-sandbox/archive/refs/heads/main.zip"
-class="uri">https://github.com/fhdsl/containers-for-scientists-sandbox/archive/refs/heads/main.zip</a><br />
-<input type="checkbox"> Put this file on your desktop so it is easily
-findable.<br />
-<input type="checkbox"> Double click the zip file (or right click and
-choose “unzip” or “decompress” to unzip the file.</p>
-</div>
-<div id="activity-1-pull-and-run-an-image" class="section level3">
-<h3>Activity 1: Pull and run an image</h3>
-<p><strong>This activity is built so that you will encounter errors that
-this guide will work you through!</strong> Most common container
-stumbling block is understanding the idea that containers are isolated
-from your computer</p>
-<p>Which means: If your computer has files, software, or anything else.
-Your container by default does NOT have it unless you do something to
-get those files and software on there.</p>
-<p>We will encounter both an error of when we don’t have a file we need
-AND an error of when we don’t have a software package we need. We will
-guide you through what to do when these expected errors occur.</p>
-<div id="step-1-podman-pull" class="section level4">
-<h4>Step 1: Podman pull</h4>
-<p>We need to get the Docker <strong>image</strong> we want to use. We
-do this by “pulling” it.</p>
-<p><input type="checkbox"> Run this command in your Terminal or Command
-Prompt window:</p>
-<pre><code>podman pull cansav09/practice-image:1</code></pre>
-</div>
-<div id="step-2-check-what-images-you-have" class="section level4">
-<h4>Step 2: Check what images you have</h4>
-<p><input type="checkbox"> To see what images we have we can run
-<code>podman image ls</code>.<br />
-<input type="checkbox"> You should see
-<code>cansav09/practice-image:1</code> show up in the output.</p>
-</div>
-<div id="step-3-run-the-docker-image-to-start-a-container-1"
-class="section level4">
-<h4>Step 3: Run the docker image to start a container!</h4>
-<p><input type="checkbox"> Now if want to launch the image for use, we
-can use <code>podman run</code> to turn it into a
-<strong>container</strong>.</p>
-<pre><code>podman run cansav09/practice-image:1</code></pre>
-<p><input type="checkbox"> To see what containers we have running we
-have we can run:</p>
-<pre><code>podman ps</code></pre>
-</div>
-<div id="step-4-run-a-single-command-1" class="section level4">
-<h4>Step 4: Run a single command</h4>
-<p><input type="checkbox"> To run stuff interactively from the command
-line we can do:</p>
-<pre><code>podman exec -it &lt;PUT_CONTAINER_ID_HERE&gt; bash</code></pre>
-</div>
-<div id="step-5-try-calling-a-script-1" class="section level4">
-<h4>Step 5: Try calling a script</h4>
-<p><input type="checkbox"> To run a script using the docker container we
-could just add reference to a script at the end:</p>
-<pre><code>podman exec -it &lt;PUT_CONTAINER_ID_HERE&gt; bash run_analysis.sh</code></pre>
-<p><strong>BUT! You will find that this command won’t work yet though,
-why?</strong></p>
-<p>This won’t work because the file <code>run_analysis.sh</code> is not
-a file that our container has. Docker containers do not have all the
-files that our computer does; they only have the files we add to it.</p>
-<pre><code>bash: run_analysis.sh: No such file or directory</code></pre>
-</div>
-</div>
-<div id="activity-1b-add-a-volume-to-the-image-1"
-class="section level3">
-<h3>Activity 1b: Add a volume to the image</h3>
-<p>Our container is separate from our computer so if we want to use a
-file we have to attach it using a “volume”.</p>
-<div id="step-1-lets-add-our-containers-for-scientists-sandbox-files-1"
-class="section level4">
-<h4>Step 1: Let’s add our containers-for-scientists-sandbox files</h4>
-<p>Let’s point a volume to our workshop files so we have them on our
-container.</p>
-<details>
-</summary>
-Other ways we could get files on a container
-</summary>
-If we want to run <code>run_analysis.sh</code> there’s two ways we could
-get our files on there. - We could download the files we need from
-online! We could <code>git clone</code> files from a repository or
-otherwise <code>wget</code> or <code>curl</code> files.<br />
-- We could add a <code>volume</code> of files that are local to our
-computer. For this we will use the You’ll <code>-v</code> or volume
-option. We’re going to do this in the next step.
-</details>
-<p>We will specify a particular file path on our computer or give it
-<code>$pwd</code> Then we can give a <code>:</code> and a file path we’d
-like this to be stored on on the container. Otherwise it will be stored
-at the absolute top of the container.</p>
-<p><input type="checkbox"> Now we can run:</p>
-<pre><code>podman run -v $pwd:/home cansav09/practice-image:1</code></pre>
-<p>If you have a windows machine you may have to run this variant
-instead. This version has a different <code>${}</code> around the
-<code>pwd</code> part.</p>
-<pre><code>podman run -v ${pwd}:/home cansav09/practice-image:1</code></pre>
-</div>
-<div id="step-2-retry-calling-the-script-1" class="section level4">
-<h4>Step 2: Retry calling the script</h4>
-<p><input type="checkbox"> Now we can run:</p>
-<pre><code>podman exec -it &lt;REPLACE_WITH_CONTAINER_ID&gt; bash /home/run_analysis.sh</code></pre>
-<p>Now we have a new error! What does this mean?</p>
-<p><strong>Question: Does our container have all of the same software
-that our computer has?</strong></p>
-</div>
-</div>
+<div id="uploading-samples" class="section level2">
+<h2>Uploading samples</h2>
+<p>For each sample we will repeat the following steps:</p>
+<p><input type="checkbox"> For <code>Sample Name</code> put the ID
+indicating on the folder, i.e. <code>sample_093d</code></p>
 </div>
 
 
