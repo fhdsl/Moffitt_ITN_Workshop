@@ -113,4 +113,11 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 
 ## Filtering your data
 
-<input type="checkbox"> Go to the "Filter data" tab. 
+<input type="checkbox"> Go to the "Filter data" tab.
+
+
+## Normalize Data
+
+## Pseudo-bulk analysis
+
+## Quilt plot
