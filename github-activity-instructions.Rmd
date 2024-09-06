@@ -17,7 +17,7 @@ knitr::opts_chunk$set(number_sections = FALSE)
 <input type="checkbox"> Create an account or otherwise [login to GitHub](https://github.com)   
 <input type="checkbox"> Install GitHub Desktop to your computer: https://desktop.github.com/download/  
 
-## Create the repository for this activity
+### Create the repository for this activity
 
 <input type="checkbox"> Go to the template repository for this workshop: https://github.com/fhdsl/reproducibility-sandbox
 
@@ -44,7 +44,7 @@ When you look at the README for this repository however, you will notice it is b
 <input type="checkbox"> Choose `Public`.  
 <input type="checkbox"> Scroll to the bottom and click `Create repository`.  
 
-## Cloning our repository
+### Cloning our repository
 
 GitHub Desktop is a great tool to help use use version control and interact with GitHub.  
 <input type="checkbox"> Open up GitHub Desktop on your computer.  
@@ -62,7 +62,7 @@ We will be "juggling" some windows when doing this activity:
 - `Files` -- we'll find where our files are on our computer with this
 - `Online GitHub` -- we will send our pull request and suggested changes to online GitHub.com with this.
 
-## Filing a pull request
+### Filing a pull request
 
 Pull requests are great for suggesting changes in a way that allow us to preview and discuss the changes before merging to the `main` version.
 
@@ -82,15 +82,15 @@ But to create a pull request, we first need to create a branch to work from that
 <input type="checkbox"> Copy all the text from `01-heatmap.Rmd` (Cmd + A)  
 <input type="checkbox"> Go to phind https://www.phind.com/search  
 <input type="checkbox"> Ask find to create a README from the code and paste in the code from `01-heatmap.Rmd`. You may want to do some variations on the prompt you use to ask phind to do this to get good results.   
-<input type="checkbox"> Copy all the text from the desired Phind output and paste it to `README.md`. Save the file.
+<input type="checkbox"> Copy all the text from the desired Phind output and paste it to `README.md`. Save the file.  
 
 
 ### Adding changes to a branch
 
-<input type="checkbox"> Go back to GitHub Desktop. You should see `1 changed file` in the upper right corner.
-<input type="checkbox"> Type in a "commit" message. Commits are how we add things to our branch.
-<input type="checkbox"> Click the button that says `Commit to ...` it will have your branch name which should be `readme-edit`.
-<input type="checkbox"> Click the `Publish branch` button. This will "push" your changes to online Github.com
+<input type="checkbox"> Go back to GitHub Desktop. You should see `1 changed file` in the upper right corner.  
+<input type="checkbox"> Type in a "commit" message. Commits are how we add things to our branch.  
+<input type="checkbox"> Click the button that says `Commit to ...` it will have your branch name which should be `readme-edit`.  
+<input type="checkbox"> Click the `Publish branch` button. This will "push" your changes to online Github.com  
 
 
 ### Making the pull request
@@ -98,7 +98,6 @@ But to create a pull request, we first need to create a branch to work from that
 <input type="checkbox"> Follow GitHub Desktop's prompt to `Create a Pull Request` and click the blue button.
 <input type="checkbox"> It should open up a page on GitHub.com Fill out the `Add a title` and the `Add a description` boxes to appropriately describe the work you did on the branch we are making the pull request from.
 <input type="checkbox"> Click `Create pull request`.
-
 
 
 ## Activity 2: Navigating PR components
@@ -122,7 +121,7 @@ On the bottom of your PR you will notice a box at the bottom that will probably 
 
 This is an automatic check run by GitHub Actions which is one of many systems used for Continuous Integration/Continuous Deployment.
 
-<input type="checkbox"> Click `Show all checks`.  
+<input type="checkbox"> If needed, click `Show all checks`.  
 <input type="checkbox"> Click `Details` at the end of the line that says `Render R Example / render-notebooks (pull_request)`.
 <input type="checkbox"> Click around in here to investigate what GitHub Actions logs look like.
 
@@ -146,4 +145,4 @@ Pull requests and GitHub have their own kind of etiquette. Make sure you talk to
 <input type="checkbox"> Return to GitHub Pull Request Online
 <input type="checkbox"> Click the `Merge` button.
 
-Yay! Congrats. 
+Yay! Congrats.
