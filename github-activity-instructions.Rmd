@@ -12,7 +12,7 @@ css: style.css
 ```{r echo = FALSE, show = FALSE}
 knitr::opts_chunk$set(number_sections = FALSE)
 ```
-## Git-ting Started
+## Activity 1: Git-ting Familiar with Branches
 
 <input type="checkbox"> Create an account or otherwise [login to GitHub](https://github.com)   
 <input type="checkbox"> Install GitHub Desktop to your computer: https://desktop.github.com/download/  
@@ -83,3 +83,22 @@ But to create a pull request, we first need to create a branch to work from that
 <input type="checkbox"> Go to phind https://www.phind.com/search  
 <input type="checkbox"> Ask find to create a README from the code and paste in the code from `01-heatmap.Rmd`. You may want to do some variations on the prompt you use to ask phind to do this to get good results.   
 <input type="checkbox"> Copy all the text from the desired Phind output and paste it to `README.md`. Save the file.
+
+
+### Adding changes to a branch
+
+<input type="checkbox"> Go back to GitHub Desktop. You should see `1 changed file` in the upper right corner.
+<input type="checkbox"> Type in a "commit" message. Commits are how we add things to our branch.
+<input type="checkbox"> Click the button that says `Commit to ...` it will have your branch name which should be `readme-edit`.
+<input type="checkbox"> Click the `Publish branch` button. This will "push" your changes to online Github.com
+
+
+### Making the pull request
+
+<input type="checkbox"> Follow GitHub Desktop's prompt to `Create a Pull Request` and click the blue button.
+<input type="checkbox"> It should open up a page on GitHub.com Fill out the `Add a title` and the `Add a description` boxes to appropriately describe the work you did on the branch we are making the pull request from.
+<input type="checkbox"> Click `Create pull request`.
+
+
+
+## Activity 2: Add in line comments
