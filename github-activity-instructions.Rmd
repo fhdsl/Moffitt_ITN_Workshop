@@ -146,3 +146,9 @@ Pull requests and GitHub have their own kind of etiquette. Make sure you talk to
 <input type="checkbox"> Click the `Merge` button.
 
 Yay! Congrats.
+
+### For more learning:
+- [Docs and Usability course](https://jhudatascience.org/Documentation_and_Usability/)
+- [Intro to Reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)
+- [Advanced Reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html)
+- [Github Automation for Scientists course](https://hutchdatascience.org/GitHub_Automation_for_Scientists/)
