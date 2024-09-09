@@ -113,11 +113,64 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 
 ## Filtering your data
 
-<input type="checkbox"> Go to the "Filter data" tab.
+<input type="checkbox"> Go to the "Filter data" tab.  
+<input type="checkbox"> Click "Filter spots/cells"  
+<input type="checkbox"> Enter the minimum number of counts a spot needs to have to be kept in the data set. In this case, 2000 will be input.  
+<input type="checkbox"> Enter the minimum number of genes a spot needs to have to be kept in the data set. In this case, 500 will be input.  
+<input type="checkbox"> Click the "Mitochondrial genes (^MT-)" field to filter spots by mitochondrial gene content. Keep in mind that some ST platforms do not quantify mitochondrial genes.  
+<input type="checkbox"> Enter the maximum percentage of mitochondrial counts. Use 20% in this case.  
+<input type="checkbox"> Now, to filter out genes, click "Filter genes".  
+<input type="checkbox"> Filter out genes with less than 2000 counts.  
+<input type="checkbox"> Filter out genes expressed in less than 20 spots.  
+<input type="checkbox"> Once you have all the filter settings as you'd like cick the blue "APPLY FILTER" button.  
 
+### Data visualization of filtering
+
+<input type="checkbox"> Click "Violin plots" to visualize count distribution after filtering.  
+<input type="checkbox"> Currently, "total_counts" and "total_genes" per spot can be visualized.  
+<input type="checkbox"> When changing the variable to plot, click the blue "GENERATE PLOTS" button to update.  
 
 ## Normalize Data
 
-## Pseudo-bulk analysis
+<input type="checkbox"> Click the "Normalize data" tab.  
+<input type="checkbox"> Click "Use SCTransform" to apply Seurat's normalization method.  
+<input type="checkbox"> Click the blue "NORMALIZE DATA" to start normalization.  
+<input type="checkbox"> The distribution of counts per spot for a given gene can also be plotted. For example, TP53.  
+<input type="checkbox"> Click "GENERATE PLOTS" to show the number of TP53 counts per spot.
 
-## Quilt plot
+
+## Visualization
+
+### Quilt plot
+
+<input type="checkbox">  Click `Quilt plot` to visualize the total number of genes or counts per spot and their spatial context.  
+<input type="checkbox"> Select `total_counts`.  
+<input type="checkbox">  Select one sample underneath the `First sample` dropdown menu.  
+<input type="checkbox"> And select a second sample to compare to underneath the `Second sample` dropdown menu.  
+<input type="checkbox"> Click blue "GENERATE PLOTS" button to create the plot.  
+
+### Gene comparison visualization
+
+<input type="checkbox"> Click the `Visualization` module on the left side menu.   
+<input type="checkbox"> You can search for your favorite gene in the `Search and select genes` menu. For this example query and click "IGKC".  
+<input type="checkbox"> Also query and click "FN1" gene.  
+<input type="checkbox"> Lastly, also query and click `C1QA`.
+<input type="checkbox"> Click blue "GENERATE PLOTS" button to create the plot.  
+
+### Expression surface
+
+Alternatively, an "expression surface" can be generated. This is a type of plot where expression values are inferred for the spaces not quantified between spots
+
+<input type="checkbox"> Click the "Expression surface" tab.  
+<input type="checkbox"> In the `Search and select genes` menu search and select `IGKC`.  
+<input type="checkbox"> Click "ESTIMATE SURFACES" button to create the plot.  
+
+## Spatial Domain Detection
+
+<input type="checkbox"> Click the "Spatial domain detection" on the left side menu.  
+<input type="checkbox"> Now in the `Number of domains` slider put 3 to 6 domains will be detected in the samples.  his is how many clusters will attempt to be identified.   
+<input type="checkbox"> For `Number of most variable genes to use` choose 3000 with high variation will be used to detect the domains.  
+<input type="checkbox"> Finally, click "RUN STCLUST" to find clusters.  
+<input type="checkbox"> Explore the results by clicking each `K=` tab.
+
+Images can be exported in multiple formats.
