@@ -122,7 +122,7 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 <input type="checkbox"> Now, to filter out genes, click "Filter genes".  
 <input type="checkbox"> Filter out genes with less than 2000 counts.  
 <input type="checkbox"> Filter out genes expressed in less than 20 spots.  
-<input type="checkbox"> Once you have all the filter settings as you'd like cick the blue "APPLY FILTER" button.  
+<input type="checkbox"> Once you have all the filter settings as you'd like click the blue "APPLY FILTER" button.  
 
 ### Data visualization of filtering
 
