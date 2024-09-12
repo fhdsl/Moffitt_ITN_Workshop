@@ -15,7 +15,7 @@ knitr::opts_chunk$set(number_sections = FALSE)
 
 ## Get workshop files
 
-<input type="checkbox"> Download the files for this activity clicking here: https://github.com/fhdsl/ITN_Workshops_2024/archive/refs/heads/main.zip  
+<input type="checkbox"> Download the files for this activity clicking here: https://github.com/fhdsl/ITN_Workshops_2024/archive/refs/heads/main.zip   
 <input type="checkbox"> Put this file on your desktop so it is easily findable.  
 <input type="checkbox"> Double click the zip file (or right click and choose "unzip" or "decompress" to unzip the file.  
 <input type="checkbox"> Open up your activity files you downloaded so we can see what's here.
