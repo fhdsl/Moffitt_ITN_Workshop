@@ -440,14 +440,14 @@ corner.</p>
 </div>
 <div id="starting-a-new-project" class="section level2">
 <h2>Starting a new project</h2>
-<p><input type="checkbox"> Click the blue “New Project” button<br />
+<p><input type="checkbox"> Click the blue “New Project” button.<br />
 <input type="checkbox"> For
 <code>What spatial transcriptomics platform are you using for this project?</code>
 choose <code>Visium</code> – this is the type of data our example data
 are.<br />
 <input type="checkbox"> Make your own project name and description
 that’s sensible. Could be something related to the workshop “ITN
-workshop”<br />
+workshop”.<br />
 <input type="checkbox"> Then click “Create”.</p>
 </div>
 <div id="uploading-the-dataset" class="section level2">
@@ -544,8 +544,106 @@ So make sure everything is as you intend and then click
 can have it send you an email instead of waiting on the page.</p>
 </div>
 </div>
-<div id="section" class="section level2">
-<h2></h2>
+<div id="filtering-your-data" class="section level2">
+<h2>Filtering your data</h2>
+<p><input type="checkbox"> Go to the “Filter data” tab.<br />
+<input type="checkbox"> Click “Filter spots/cells”.<br />
+<input type="checkbox"> Enter the minimum number of counts a spot needs
+to have to be kept in the data set. In this case, 2000 will be
+input.<br />
+<input type="checkbox"> Enter the minimum number of genes a spot needs
+to have to be kept in the data set. In this case, 500 will be
+input.<br />
+<input type="checkbox"> Click the “Mitochondrial genes (^MT-)” field to
+filter spots by mitochondrial gene content. Keep in mind that some ST
+platforms do not quantify mitochondrial genes.<br />
+<input type="checkbox"> Enter the maximum percentage of mitochondrial
+counts. Use 20% in this case.<br />
+<input type="checkbox"> Now, to filter out genes, click “Filter
+genes”.<br />
+<input type="checkbox"> Filter out genes with less than 2000
+counts.<br />
+<input type="checkbox"> Filter out genes expressed in less than 20
+spots.<br />
+<input type="checkbox"> Once you have all the filter settings as you’d
+like click the blue “APPLY FILTER” button.</p>
+<div id="data-visualization-of-filtering" class="section level3">
+<h3>Data visualization of filtering</h3>
+<p><input type="checkbox"> Click “Violin plots” to visualize count
+distribution after filtering.<br />
+<input type="checkbox"> Currently, “total_counts” and “total_genes” per
+spot can be visualized.<br />
+<input type="checkbox"> When changing the variable to plot, click the
+blue “GENERATE PLOTS” button to update.</p>
+</div>
+</div>
+<div id="normalize-data" class="section level2">
+<h2>Normalize Data</h2>
+<p><input type="checkbox"> Click the “Normalize data” tab.<br />
+<input type="checkbox"> Click “Use SCTransform” to apply Seurat’s
+normalization method.<br />
+<input type="checkbox"> Click the blue “NORMALIZE DATA” to start
+normalization.<br />
+<input type="checkbox"> The distribution of counts per spot for a given
+gene can also be plotted. For example, TP53.<br />
+<input type="checkbox"> Click “GENERATE PLOTS” to show the number of
+TP53 counts per spot.</p>
+</div>
+<div id="visualization" class="section level2">
+<h2>Visualization</h2>
+<div id="quilt-plot" class="section level3">
+<h3>Quilt plot</h3>
+<p><input type="checkbox"> Click <code>Quilt plot</code> to visualize
+the total number of genes or counts per spot and their spatial
+context.<br />
+<input type="checkbox"> Select <code>total_counts</code>.<br />
+<input type="checkbox"> Select one sample underneath the
+<code>First sample</code> dropdown menu.<br />
+<input type="checkbox"> And select a second sample to compare to
+underneath the <code>Second sample</code> dropdown menu.<br />
+<input type="checkbox"> Click blue “GENERATE PLOTS” button to create the
+plot.</p>
+</div>
+<div id="gene-comparison-visualization" class="section level3">
+<h3>Gene comparison visualization</h3>
+<p><input type="checkbox"> Click the <code>Visualization</code> module
+on the left side menu.<br />
+<input type="checkbox"> You can search for your favorite gene in the
+<code>Search and select genes</code> menu. For this example query and
+click “IGKC”.<br />
+<input type="checkbox"> Also query and click “FN1” gene.<br />
+<input type="checkbox"> Lastly, also query and click
+<code>C1QA</code>.<br />
+<input type="checkbox"> Click blue “GENERATE PLOTS” button to create the
+plot.</p>
+</div>
+<div id="expression-surface" class="section level3">
+<h3>Expression surface</h3>
+<p>Alternatively, an “expression surface” can be generated. This is a
+type of plot where expression values are inferred for the spaces not
+quantified between spots</p>
+<p><input type="checkbox"> Click the “Expression surface” tab.<br />
+<input type="checkbox"> In the <code>Search and select genes</code> menu
+search and select <code>IGKC</code>.<br />
+<input type="checkbox"> Click “ESTIMATE SURFACES” button to create the
+plot.</p>
+</div>
+</div>
+<div id="spatial-domain-detection" class="section level2">
+<h2>Spatial Domain Detection</h2>
+<p><input type="checkbox"> Click the “Spatial domain detection” on the
+left side menu.<br />
+<input type="checkbox"> Now in the <code>Number of domains</code> slider
+put 3 to 6 domains will be detected in the samples. his is how many
+clusters will attempt to be identified.<br />
+<input type="checkbox"> For
+<code>Number of most variable genes to use</code> choose 3000 with high
+variation will be used to detect the domains.<br />
+<input type="checkbox"> Finally, click “RUN STCLUST” to find
+clusters.<br />
+<input type="checkbox"> Explore the results by clicking each
+<code>K=</code> tab.</p>
+<p>Images can be exported in multiple formats.</p>
 </div>
 
 
