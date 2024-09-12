@@ -133,15 +133,17 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 
 ## Filtering your data
 
+*Note that these values for the filtering steps are suggested for this data and may not be appropriate for all future use/datasets.*
+
 <input type="checkbox"> Go to the "Filter data" tab.  
 <input type="checkbox"> Click "Filter spots/cells".    
-<input type="checkbox"> Enter the minimum number of counts a spot needs to have to be kept in the data set. In this case, 2000 will be input.  
-<input type="checkbox"> Enter the minimum number of genes a spot needs to have to be kept in the data set. In this case, 500 will be input.  
+<input type="checkbox"> Enter the **minimum** number of counts a spot needs to have to be kept in the data set. In this case, 2000 will be input.  
+<input type="checkbox"> Enter the **minimum** number of genes a spot needs to have to be kept in the data set. In this case, 500 will be input.  
 <input type="checkbox"> Click the "Mitochondrial genes (^MT-)" field to filter spots by mitochondrial gene content. Keep in mind that some ST platforms do not quantify mitochondrial genes.  
-<input type="checkbox"> Enter the maximum percentage of mitochondrial counts. Use 20% in this case.  
+<input type="checkbox"> Enter the **maximum** percentage of mitochondrial counts. Use 20% in this case.  
 <input type="checkbox"> Now, to filter out genes, click "Filter genes".  
-<input type="checkbox"> Filter out genes with less than 2000 counts.  
-<input type="checkbox"> Filter out genes expressed in less than 20 spots.  
+<input type="checkbox"> Filter out genes with **less than** 2000 counts.  
+<input type="checkbox"> Filter out genes expressed in **less than** 20 spots.  
 <input type="checkbox"> Once you have all the filter settings as you'd like click the blue "APPLY FILTER" button.  
 
 ### Data visualization of filtering
