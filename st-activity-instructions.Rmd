@@ -133,7 +133,7 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 
 ## Filtering your data
 
-*Note that these values for the filtering steps are suggested for this data and may not be appropriate for all future use/datasets*
+*Note that these values for the filtering steps are suggested for this data and may not be appropriate for all future use/datasets.*
 
 <input type="checkbox"> Go to the "Filter data" tab.  
 <input type="checkbox"> Click "Filter spots/cells".    
