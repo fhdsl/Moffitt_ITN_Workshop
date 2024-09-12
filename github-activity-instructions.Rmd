@@ -81,7 +81,7 @@ But to create a pull request, we first need to create a branch to work from that
 <input type="checkbox"> With any text editor open up both the `01-heatmap.Rmd` file and the `README.md` file  
 <input type="checkbox"> Copy all the text from `01-heatmap.Rmd` (Cmd + A - Mac, Ctrl + A - Windows).     
 <input type="checkbox"> Go to phind https://www.phind.com/search  
-<input type="checkbox"> Ask find to create a README from the code. Copy (Ctrl + C) and paste (Ctrl + V) in the code from `01-heatmap.Rmd`. You may want to do some variations on the prompt you use to ask phind to do this to get good results.     
+<input type="checkbox"> Ask find to create a README from the code. Copy (Cmd + A - Mac, Ctrl + C - Windows) and paste (Cmd + V - Mac, Ctrl + V - Windows) in the code from `01-heatmap.Rmd`. You may want to do some variations on the prompt you use to ask phind to do this to get good results.     
 <input type="checkbox"> Copy all the text from the desired Phind output and paste it to `README.md`. Save the file.  
 
 
