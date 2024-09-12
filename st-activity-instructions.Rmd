@@ -86,7 +86,7 @@ _You can use this checklist to keep track as you upload and follow the steps for
 <input type="checkbox"> `sample_396c` data entered  
 
 #### {.click_to_expand_block}
-<details><summary>Click here for additional datasets for post-workshop walkthrough</summary>
+<details><summary>Click here for additional datasets for post-workshop walkthrough.</summary>
 
 <input type="checkbox"> `sample_396a` data entered  
 <input type="checkbox"> `sample_397d` data entered
