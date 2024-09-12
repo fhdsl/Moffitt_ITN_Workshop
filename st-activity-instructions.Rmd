@@ -113,7 +113,7 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 <input type="checkbox"> Add this `sample_396c` corresponding `patient` and `therapy` information.   
 
 #### {.click_to_expand_block}
-<details><summary>Click here for additional datasets for post-workshop walkthrough</summary>
+<details><summary>Click here for additional datasets for post-workshop walkthrough.</summary>
 
 |samplename|patient|therapy|
 |:----------|:-------|:-------|
