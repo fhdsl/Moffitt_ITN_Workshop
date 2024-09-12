@@ -46,11 +46,13 @@ The README describes these samples:
 Additionally the metadata describe which samples came from which patients with which treatments which looks like this:
 
 |samplename|patient|therapy|
-|----------|-------|-------|
+|:----------|:-------|:-------|
 |sample_093d|patient_12|none
 |sample_396a|patient_19|pembrolizumab
 |sample_396c|patient_20|adriamycin
 |sample_397d|patient_22|taxotere
+
+While 4 samples are provided, this workshop will only use 2 of the 4 samples. The rest could be used with this activity walkthrough after the workshop.  
 
 ## Create an account with SpatialGE
 
@@ -80,12 +82,18 @@ _For each sample we will repeat the following steps to upload each sample's set 
 
 _You can use this checklist to keep track as you upload and follow the steps for each sample._
 
-<input type="checkbox"> `sample_093d` data entered
-<input type="checkbox"> `sample_396a` data entered
-<input type="checkbox"> `sample_396c` data entered
+<input type="checkbox"> `sample_093d` data entered  
+<input type="checkbox"> `sample_396c` data entered  
+
+
+<details><summary>Click here for additional datasets for post-workshop walkthrough</summary>
+
+<input type="checkbox"> `sample_396a` data entered  
 <input type="checkbox"> `sample_397d` data entered
 
-Now [return to the beginning of these steps](#uploading-one-samples-data) to repeat the same steps for the other 3 samples.
+</details>
+
+Now [return to the beginning of these steps](#uploading-one-samples-data) to repeat the same steps for the other sample.
 
 ### Adding metadata
 
@@ -96,16 +104,24 @@ Now [return to the beginning of these steps](#uploading-one-samples-data) to rep
 You can reference the `example_clinical.csv` file's contents to add these data for each sample:
 
 |samplename|patient|therapy|
-|----------|-------|-------|
+|:----------|:-------|:-------|
 |sample_093d|patient_12|none
-|sample_396a|patient_19|pembrolizumab
 |sample_396c|patient_20|adriamycin
+
+<input type="checkbox"> Add this `sample_093d` corresponding `patient` and `therapy` information.    
+<input type="checkbox"> Add this `sample_396c` corresponding `patient` and `therapy` information.   
+
+<details><summary>Click here for additional datasets for post-workshop walkthrough</summary>
+
+|samplename|patient|therapy|
+|:----------|:-------|:-------|
+|sample_396a|patient_19|pembrolizumab
 |sample_397d|patient_22|taxotere
 
-<input type="checkbox"> Add this `sample_093d` corresponding `patient` and `therapy` information.   
-<input type="checkbox"> Add this `sample_396a` corresponding `patient` and `therapy` information.   
-<input type="checkbox"> Add this `sample_396c` corresponding `patient` and `therapy` information.   
+<input type="checkbox"> Add this `sample_396a` corresponding `patient` and `therapy` information.  
 <input type="checkbox"> Add this `sample_397d` corresponding `patient` and `therapy` information.   
+
+</details>
 
 ### After you've entered the data and metadata:  
 
