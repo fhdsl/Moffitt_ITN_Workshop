@@ -7,4 +7,11 @@ output:
 
 Welcome to the sandbox website for the ITN workshops at the ITCR Annual meeting 2024!
 
-In this website you will find the step by step activity instructions for each workshop. 
+This repo is for folks to follow along with activities as a part of the ITCR Annual Conference ITN workshops.
+
+The slides associated with these activities can be found here:
+
+- [Spatial Transcriptomics](https://docs.google.com/presentation/d/1WABxPIA6J3wsi04pC3ZRmV8CRZA-V53awteBq0-U4Pg/edit#slide=id.p1)
+- [Intro to GitHub](https://docs.google.com/presentation/d/1Qz447paDgO8dBlnHbl80kBLOpahD9odI9yU7-sqYohw/edit)
+- [Intro to Containers](https://docs.google.com/presentation/d/1GPY_xPqhmzxZSmAX2bqJS1Sg7X5gtySEU9k2nVweaZg/edit#slide=id.g2ebd8828116_0_779)
+
