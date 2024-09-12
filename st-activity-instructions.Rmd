@@ -85,7 +85,7 @@ _You can use this checklist to keep track as you upload and follow the steps for
 <input type="checkbox"> `sample_093d` data entered  
 <input type="checkbox"> `sample_396c` data entered  
 
-
+#### {.click_to_expand_block}
 <details><summary>Click here for additional datasets for post-workshop walkthrough</summary>
 
 <input type="checkbox"> `sample_396a` data entered  
@@ -93,6 +93,7 @@ _You can use this checklist to keep track as you upload and follow the steps for
 
 </details>
 
+####
 Now [return to the beginning of these steps](#uploading-one-samples-data) to repeat the same steps for the other sample.
 
 ### Adding metadata
@@ -111,6 +112,7 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 <input type="checkbox"> Add this `sample_093d` corresponding `patient` and `therapy` information.    
 <input type="checkbox"> Add this `sample_396c` corresponding `patient` and `therapy` information.   
 
+#### {.click_to_expand_block}
 <details><summary>Click here for additional datasets for post-workshop walkthrough</summary>
 
 |samplename|patient|therapy|
@@ -122,6 +124,8 @@ You can reference the `example_clinical.csv` file's contents to add these data f
 <input type="checkbox"> Add this `sample_397d` corresponding `patient` and `therapy` information.   
 
 </details>
+
+####
 
 ### After you've entered the data and metadata:  
 
