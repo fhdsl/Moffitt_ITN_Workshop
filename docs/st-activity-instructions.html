@@ -400,34 +400,37 @@ patients with which treatments which looks like this:</p>
 <table>
 <thead>
 <tr class="header">
-<th>samplename</th>
-<th>patient</th>
-<th>therapy</th>
+<th align="left">samplename</th>
+<th align="left">patient</th>
+<th align="left">therapy</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>sample_093d</td>
-<td>patient_12</td>
-<td>none</td>
+<td align="left">sample_093d</td>
+<td align="left">patient_12</td>
+<td align="left">none</td>
 </tr>
 <tr class="even">
-<td>sample_396a</td>
-<td>patient_19</td>
-<td>pembrolizumab</td>
+<td align="left">sample_396a</td>
+<td align="left">patient_19</td>
+<td align="left">pembrolizumab</td>
 </tr>
 <tr class="odd">
-<td>sample_396c</td>
-<td>patient_20</td>
-<td>adriamycin</td>
+<td align="left">sample_396c</td>
+<td align="left">patient_20</td>
+<td align="left">adriamycin</td>
 </tr>
 <tr class="even">
-<td>sample_397d</td>
-<td>patient_22</td>
-<td>taxotere</td>
+<td align="left">sample_397d</td>
+<td align="left">patient_22</td>
+<td align="left">taxotere</td>
 </tr>
 </tbody>
 </table>
+<p>While 4 samples are provided, this workshop will only use 2 of the 4
+samples. The rest could be used with this activity walkthrough after the
+workshop.</p>
 </div>
 </div>
 <div id="create-an-account-with-spatialge" class="section level2">
@@ -476,12 +479,17 @@ e.g. <code>GSM6433590_093D_scalefactors_json.json</code>.</p>
 <code>Import Sample</code>.</p>
 <p><em>You can use this checklist to keep track as you upload and follow
 the steps for each sample.</em></p>
-<p><input type="checkbox"> <code>sample_093d</code> data entered
-<input type="checkbox"> <code>sample_396a</code> data entered
-<input type="checkbox"> <code>sample_396c</code> data entered
+<p><input type="checkbox"> <code>sample_093d</code> data entered<br />
+<input type="checkbox"> <code>sample_396c</code> data entered</p>
+<details>
+<summary>
+Click here for additional datasets for post-workshop walkthrough
+</summary>
+<p><input type="checkbox"> <code>sample_396a</code> data entered<br />
 <input type="checkbox"> <code>sample_397d</code> data entered</p>
+</details>
 <p>Now <a href="#uploading-one-samples-data">return to the beginning of
-these steps</a> to repeat the same steps for the other 3 samples.</p>
+these steps</a> to repeat the same steps for the other sample.</p>
 </div>
 <div id="adding-metadata" class="section level3">
 <h3>Adding metadata</h3>
@@ -496,43 +504,60 @@ contents to add these data for each sample:</p>
 <table>
 <thead>
 <tr class="header">
-<th>samplename</th>
-<th>patient</th>
-<th>therapy</th>
+<th align="left">samplename</th>
+<th align="left">patient</th>
+<th align="left">therapy</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>sample_093d</td>
-<td>patient_12</td>
-<td>none</td>
+<td align="left">sample_093d</td>
+<td align="left">patient_12</td>
+<td align="left">none</td>
 </tr>
 <tr class="even">
-<td>sample_396a</td>
-<td>patient_19</td>
-<td>pembrolizumab</td>
-</tr>
-<tr class="odd">
-<td>sample_396c</td>
-<td>patient_20</td>
-<td>adriamycin</td>
-</tr>
-<tr class="even">
-<td>sample_397d</td>
-<td>patient_22</td>
-<td>taxotere</td>
+<td align="left">sample_396c</td>
+<td align="left">patient_20</td>
+<td align="left">adriamycin</td>
 </tr>
 </tbody>
 </table>
 <p><input type="checkbox"> Add this <code>sample_093d</code>
 corresponding <code>patient</code> and <code>therapy</code>
 information.<br />
-<input type="checkbox"> Add this <code>sample_396a</code> corresponding
-<code>patient</code> and <code>therapy</code> information.<br />
 <input type="checkbox"> Add this <code>sample_396c</code> corresponding
-<code>patient</code> and <code>therapy</code> information.<br />
+<code>patient</code> and <code>therapy</code> information.</p>
+<details>
+<summary>
+Click here for additional datasets for post-workshop walkthrough
+</summary>
+<table>
+<thead>
+<tr class="header">
+<th align="left">samplename</th>
+<th align="left">patient</th>
+<th align="left">therapy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">sample_396a</td>
+<td align="left">patient_19</td>
+<td align="left">pembrolizumab</td>
+</tr>
+<tr class="even">
+<td align="left">sample_397d</td>
+<td align="left">patient_22</td>
+<td align="left">taxotere</td>
+</tr>
+</tbody>
+</table>
+<p><input type="checkbox"> Add this <code>sample_396a</code>
+corresponding <code>patient</code> and <code>therapy</code>
+information.<br />
 <input type="checkbox"> Add this <code>sample_397d</code> corresponding
 <code>patient</code> and <code>therapy</code> information.</p>
+</details>
 </div>
 <div id="after-youve-entered-the-data-and-metadata"
 class="section level3">
