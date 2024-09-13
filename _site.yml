@@ -9,7 +9,8 @@ navbar:
   - text: GitHub Activity
     href: github-activity-instructions.html
   - text: Containers Activity
-    href: <a "https://hutchdatascience.org/containers-for-scientists-sandbox/activity-1-instructions.html" target="_blank">
+    href: https://hutchdatascience.org/containers-for-scientists-sandbox/activity-1-instructions.html
+    target: _blank
   - text: Spatial Transcriptomics
     href: st-activity-instructions.html
 
