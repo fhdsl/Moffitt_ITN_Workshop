@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Getting started with Spatial Transcriptomics</title>
+
+<script src="site_libs/header-attrs-2.27.1/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ITN Workshops 2024</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    
+  </a>
+</li>
+<li>
+  <a href="github-activity-instructions.html">GitHub Activity</a>
+</li>
+<li>
+  <a href="https://hutchdatascience.org/containers-for-scientists-sandbox/activity-1-instructions.html">Containers Activity</a>
+</li>
+<li>
+  <a href="st-activity-instructions.html">Spatial Transcriptomics</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Getting started with Spatial
+Transcriptomics</h1>
+
+</div>
+
+
+<div id="get-workshop-files" class="section level2">
+<h2>Get workshop files</h2>
+<p><input type="checkbox"> Download the files for this activity clicking
+here: <a
+href="https://github.com/fhdsl/ITN_Workshops_2024/archive/refs/heads/main.zip"
+class="uri">https://github.com/fhdsl/ITN_Workshops_2024/archive/refs/heads/main.zip</a><br />
+<input type="checkbox"> Put this file on your desktop so it is easily
+findable.<br />
+<input type="checkbox"> Double click the zip file (or right click and
+choose “unzip” or “decompress” to unzip the file.<br />
+<input type="checkbox"> Open up your activity files you downloaded so we
+can see what’s here.</p>
+<div id="get-familiar-with-the-data-we-have" class="section level3">
+<h3>Get familiar with the data we have</h3>
+<p>We should see we have two samples, a metadata file, as well as a PDF
+of the manuscript that describes these data.</p>
+<p>Each sample’s folder has an h5 file, and a spatial folder.</p>
+<ul>
+<li>sample_093d
+<ul>
+<li>GSM6433590_093D_filtered_feature_bc_matrix.h5</li>
+<li>spatial
+<ul>
+<li>GSM6433590_093D_scalefactors_json.json</li>
+<li>GSM6433590_093D_tissue_hires_image.png</li>
+<li>GSM6433590_093D_tissue_positions_list.csv</li>
+</ul></li>
+</ul></li>
+<li>sample_396c …</li>
+</ul>
+<p>The README describes these samples:</p>
+<blockquote>
+<p>The original data set results from triple-negative breast cancer
+(TNBC) tumor biopsies collected from a diverse patient cohort. Patients
+underwent different therapeutic regimes. The tumor biopsies were
+profiled with 10X Visium. The data set presented here is a subset of the
+original cohort.</p>
+</blockquote>
+<p>Additionally the metadata describe which samples came from which
+patients with which treatments which looks like this:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">samplename</th>
+<th align="left">patient</th>
+<th align="left">therapy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">sample_093d</td>
+<td align="left">patient_12</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">sample_396c</td>
+<td align="left">patient_20</td>
+<td align="left">adriamycin</td>
+</tr>
+</tbody>
+</table>
+<p>While two samples are provided, an additional two samples are
+available in the course’s material, which could be used with this
+activity walkthrough after the workshop.</p>
+</div>
+</div>
+<div id="create-an-account-with-spatialge" class="section level2">
+<h2>Create an account with SpatialGE</h2>
+<p><input type="checkbox"> Go to <a
+href="https://spatialge.moffitt.org/"
+class="uri">https://spatialge.moffitt.org/</a><br />
+<input type="checkbox"> Click on “Sign Up” in the upper right
+corner.</p>
+</div>
+<div id="starting-a-new-project" class="section level2">
+<h2>Starting a new project</h2>
+<p><input type="checkbox"> Click the blue “New Project” button.<br />
+<input type="checkbox"> For
+<code>What spatial transcriptomics platform are you using for this project?</code>
+choose <code>Visium</code> – this is the type of data our example data
+are.<br />
+<input type="checkbox"> Make your own project name and description
+that’s sensible. Could be something related to the workshop “ITN
+workshop”.<br />
+<input type="checkbox"> Then click “Create”.</p>
+</div>
+<div id="uploading-the-dataset" class="section level2">
+<h2>Uploading the dataset</h2>
+<p><em>For each sample we will repeat the following steps to upload each
+sample’s set of files.</em></p>
+<div id="uploading-one-samples-data" class="section level3">
+<h3>Uploading one sample’s data</h3>
+<p><input type="checkbox"> For <code>Sample Name</code> put the ID
+indicating on the folder, e.g. <code>sample_093d</code>. This is very
+important, as sample IDs need to match exactly the sample IDs in the
+metadata file (<code>example_clinical.csv</code>). Otherwise, no
+metadata is imported.<br />
+<input type="checkbox"> For the <code>Gene expression</code> box upload
+the <code>.h5</code> file
+e.g. <code>GSM6433590_093D_filtered_feature_bc_matrix.h5</code>. You can
+upload files by dragging and dropping or by clicking on them to
+navigate.<br />
+<input type="checkbox"> For the <code>Coordinates</code> box upload the
+<code>.csv</code> file
+e.g. <code>GSM6433590_093D_tissue_positions_list.csv</code>.<br />
+<input type="checkbox"> For the <code>Tissue image</code> box upload the
+<code>.png</code> file
+e.g. <code>GSM6433590_093D_tissue_hires_image.png</code>.<br />
+<input type="checkbox"> For the <code>Scale factor</code> box upload the
+<code>.json</code> file
+e.g. <code>GSM6433590_093D_scalefactors_json.json</code>. The scaling
+factor file is output automatically by the <code>10X Space Ranger</code>
+pipeline, and contains information to approximate the size of the tissue
+image and the expression plots.</p>
+<p><input type="checkbox"> Once the above steps are done click the green
+<code>Import Sample</code>.</p>
+<p><em>You can use this checklist to keep track as you upload and follow
+the steps for each sample.</em></p>
+<p><input type="checkbox"> <code>sample_093d</code> data entered<br />
+<input type="checkbox"> <code>sample_396c</code> data entered</p>
+<div id="section" class="section level4 click_to_expand_block">
+<h4 class="click_to_expand_block"></h4>
+<details>
+<summary>
+Click here for additional datasets for post-workshop walkthrough.
+</summary>
+<p><input type="checkbox"> <code>sample_396a</code> data entered<br />
+<input type="checkbox"> <code>sample_397d</code> data entered</p>
+</details>
+</div>
+<div id="section-1" class="section level4">
+<h4></h4>
+<p>Now <a href="#uploading-one-samples-data">return to the beginning of
+these steps</a> to repeat the same steps for the other sample.</p>
+</div>
+</div>
+<div id="adding-metadata" class="section level3">
+<h3>Adding metadata</h3>
+<p><input type="checkbox"> Now click
+<code>Add metadata manually</code>.<br />
+<input type="checkbox"> Click <code>Add new metadata column</code>. Add
+a column named <code>patient</code>.<br />
+<input type="checkbox"> Click <code>Add new metadata column</code>
+again. Add a column named <code>therapy</code>.</p>
+<p>You can reference the <code>example_clinical.csv</code> file’s
+contents to add these data for each sample:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">samplename</th>
+<th align="left">patient</th>
+<th align="left">therapy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">sample_093d</td>
+<td align="left">patient_12</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">sample_396c</td>
+<td align="left">patient_20</td>
+<td align="left">adriamycin</td>
+</tr>
+</tbody>
+</table>
+<p><input type="checkbox"> Add this <code>sample_093d</code>
+corresponding <code>patient</code> and <code>therapy</code>
+information.<br />
+<input type="checkbox"> Add this <code>sample_396c</code> corresponding
+<code>patient</code> and <code>therapy</code> information.</p>
+<div id="section-2" class="section level4 click_to_expand_block">
+<h4 class="click_to_expand_block"></h4>
+<details>
+<summary>
+Click here for additional datasets for post-workshop walkthrough.
+</summary>
+<table>
+<thead>
+<tr class="header">
+<th align="left">samplename</th>
+<th align="left">patient</th>
+<th align="left">therapy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">sample_396a</td>
+<td align="left">patient_19</td>
+<td align="left">pembrolizumab</td>
+</tr>
+<tr class="even">
+<td align="left">sample_397d</td>
+<td align="left">patient_22</td>
+<td align="left">taxotere</td>
+</tr>
+</tbody>
+</table>
+<p><input type="checkbox"> Add this <code>sample_396a</code>
+corresponding <code>patient</code> and <code>therapy</code>
+information.<br />
+<input type="checkbox"> Add this <code>sample_397d</code> corresponding
+<code>patient</code> and <code>therapy</code> information.</p>
+</details>
+</div>
+<div id="section-3" class="section level4">
+<h4></h4>
+<p><strong>Remember:</strong> The sample IDs in the metadata should
+match exactly the sample names used during file import.</p>
+</div>
+</div>
+<div id="after-youve-entered-the-data-and-metadata"
+class="section level3">
+<h3>After you’ve entered the data and metadata:</h3>
+<p><input type="checkbox"> You will not be able to edit this (unless you
+start a new project completely) after you click
+<code>Import Data</code>. So make sure everything is as you intend and
+then click <code>Import Data</code>. This will take a little bit of
+time. Note you can have it send you an email instead of waiting on the
+page.</p>
+</div>
+</div>
+<div id="filtering-your-data" class="section level2">
+<h2>Filtering your data</h2>
+<p>Each ST technology will require different filtering parameters.
+Compared to single-cell ST, spot-level ST (e.g., Visium), tends to yield
+more counts per spot. Even among spot-level ST projects, these
+parameters will need adjustement considering the sequencing depth and
+cellularity (i.e., cells per area unit). For these reasons, the values
+used here should not be taken as “golden rule”, but rather, users are
+eoncuraged to ytry different parameters and see what filtering procedure
+produces the most “moise” reduction withouth loosing too much relevant
+information. spatialGE provides statitsics and plots to help the user
+assess the effect of filtering.</p>
+<p><input type="checkbox"> Go to the “Filter data” tab.<br />
+<input type="checkbox"> Click “Filter spots/cells”.<br />
+<input type="checkbox"> Enter the minimum number of counts a spot needs
+to have to be kept in the data set. In this case, 2000 will be
+input.<br />
+<input type="checkbox"> Enter the minimum number of genes a spot needs
+to have to be kept in the data set. In this case, 500 will be
+input.<br />
+<input type="checkbox"> Click the “Mitochondrial genes (^MT-)” field to
+filter spots by mitochondrial gene content. Keep in mind that some ST
+platforms do not quantify mitochondrial genes.<br />
+<input type="checkbox"> Enter the maximum percentage of mitochondrial
+counts. Use 20% in this case.<br />
+<input type="checkbox"> Now, to filter out genes, click “Filter
+genes”.<br />
+<input type="checkbox"> Filter out genes with less than 2000
+counts.<br />
+<input type="checkbox"> Filter out genes expressed in less than 20
+spots.<br />
+<input type="checkbox"> Once you have all the filter settings as you’d
+like click the blue “APPLY FILTER” button.<br />
+<input type="checkbox"> Users can also download a “parameter file”,
+which contains the filtering settings used for reproducibility. To do
+this, locate the “Download parameter log” link below the “APPLY FILTER”
+button.</p>
+<div id="visualize-filtering-results" class="section level3">
+<h3>Visualize filtering results</h3>
+<div id="count-distributions" class="section level4">
+<h4>Count distributions</h4>
+<p><input type="checkbox"> Click “Violin plots” to visualize count
+distribution after filtering.<br />
+<input type="checkbox"> Currently, “total_counts” and “total_genes” per
+spot can be visualized.<br />
+<input type="checkbox"> When changing the variable to plot, click the
+blue “GENERATE PLOTS” button to update.</p>
+</div>
+<div id="quilt-plot" class="section level4">
+<h4>Quilt plot</h4>
+<p><input type="checkbox"> Click <code>Quilt plot</code> to visualize
+the total number of genes or counts per spot and their spatial
+context.<br />
+<input type="checkbox"> Select <code>total_counts</code>.<br />
+<input type="checkbox"> Select one sample underneath the
+<code>First sample</code> dropdown menu.<br />
+<input type="checkbox"> And select a second sample to compare to
+underneath the <code>Second sample</code> dropdown menu.<br />
+<input type="checkbox"> Click blue “GENERATE PLOTS” button to create the
+plot.</p>
+</div>
+</div>
+</div>
+<div id="normalize-data" class="section level2">
+<h2>Normalize Data</h2>
+<p><input type="checkbox"> Click the “Normalize data” tab.<br />
+<input type="checkbox"> Click “Use SCTransform” to apply Seurat’s
+normalization method.<br />
+<input type="checkbox"> Click the blue “NORMALIZE DATA” to start
+normalization.<br />
+<input type="checkbox"> The distribution of counts per spot for a given
+gene can also be plotted. For example, <em>MAP2K2</em>. When querying a
+gene, keep in mind that the query is case-sensitive. Since these are
+human samples, use all-upper case letters.<br />
+<input type="checkbox"> Click “GENERATE PLOTS” to show the number of
+<em>MAP2K2</em> counts per spot.</p>
+</div>
+<div id="visualization" class="section level2">
+<h2>Visualization</h2>
+<div id="gene-expression-comparative-visualization"
+class="section level3">
+<h3>Gene expression comparative visualization</h3>
+<p><input type="checkbox"> Click the <code>Visualization</code> module
+on the left side menu.<br />
+<input type="checkbox"> You can search for your favorite gene in the
+<code>Search and select genes</code> menu. For this example query and
+click <em>IGKC</em>.<br />
+<input type="checkbox"> Also query and click <em>FN1</em> gene.<br />
+<input type="checkbox"> Lastly, also query and click
+<em>C1QA</em>.<br />
+<input type="checkbox"> Click blue “GENERATE PLOTS” button to create the
+plot.</p>
+<div id="section-4" class="section level4 click_to_expand_block">
+<h4 class="click_to_expand_block"></h4>
+<details>
+<summary>
+Click here for instructions on gene expression surfaces.
+</summary>
+<p>Expression surface</p>
+<p>Alternatively, an “expression surface” can be generated. This is a
+type of plot where expression values are inferred for the spaces not
+quantified between spots</p>
+<p><input type="checkbox"> Click the “Expression surface” tab.<br />
+<input type="checkbox"> In the <code>Search and select genes</code> menu
+search and select <code>IGKC</code>.<br />
+<input type="checkbox"> Click “ESTIMATE SURFACES” button to create the
+plot.</p>
+</details>
+</div>
+<div id="section-5" class="section level4">
+<h4></h4>
+</div>
+</div>
+</div>
+<div id="spatial-domain-detection" class="section level2">
+<h2>Spatial Domain Detection</h2>
+<p><input type="checkbox"> Click the “Spatial domain detection” on the
+left side menu.<br />
+<input type="checkbox"> Now in the <code>Number of domains</code> slider
+put 3 to 5 domains will be detected in the samples. This is how many
+clusters will attempt to be identified.<br />
+<input type="checkbox"> For
+<code>Number of most variable genes to use</code> choose 3000 with high
+variation will be used to detect the domains.<br />
+<input type="checkbox"> Finally, click “RUN STCLUST” to find
+clusters.<br />
+<input type="checkbox"> Explore the results by clicking each
+<code>K=</code> tab.</p>
+<p>Images can be exported in multiple formats.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
