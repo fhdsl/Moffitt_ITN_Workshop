@@ -66,9 +66,9 @@ _For each sample we will repeat the following steps to upload each sample's set 
 
 ### Uploading one sample's data
 
-<input type="checkbox"> For `Sample Name` put the ID indicating on the folder, e.g. `sample_093d`. This is very important, as sample IDs need to match exactly the sample IDs in the metadata file (`example_clinical.csv`). Otherwise, no metadata is imported.
+<input type="checkbox"> For `Sample Name` put the ID indicating on the folder, e.g. `sample_093d`. This is very important, as sample IDs need to match exactly the sample IDs in the metadata file (`example_clinical.csv`). Otherwise, no metadata is imported.  
 <input type="checkbox"> For the `Gene expression` box upload the `.h5` file e.g. `GSM6433590_093D_filtered_feature_bc_matrix.h5`. You can upload files by dragging and dropping or by clicking on them to navigate.   
-<input type="checkbox"> For the `Coordinates` box upload the `.csv` file e.g. `GSM6433590_093D_tissue_positions_list.csv`.
+<input type="checkbox"> For the `Coordinates` box upload the `.csv` file e.g. `GSM6433590_093D_tissue_positions_list.csv`.  
 <input type="checkbox"> For the `Tissue image` box upload the `.png` file e.g. `GSM6433590_093D_tissue_hires_image.png`.   
 <input type="checkbox"> For the `Scale factor` box upload the `.json` file e.g. `GSM6433590_093D_scalefactors_json.json`. The scaling factor file is output automatically by the `10X Space Ranger` pipeline, and contains information to approximate the size of the tissue image and the expression plots.
 
@@ -132,7 +132,7 @@ __Remember:__ The sample IDs in the metadata should match exactly the sample nam
 Each ST technology will require different filtering parameters. Compared to single-cell ST, spot-level ST (e.g., Visium), tends to yield more counts per spot. Even among spot-level ST projects, these parameters will need adjustement considering the sequencing depth and cellularity (i.e., cells per area unit). For these reasons, the values used here should not be taken as "golden rule", but rather, users are eoncuraged to ytry different parameters and see what filtering procedure produces the most "moise" reduction withouth loosing too much relevant information. spatialGE provides statitsics and plots to help the user assess the effect of filtering.
 
 <input type="checkbox"> Go to the "Filter data" tab.  
-<input type="checkbox"> Click "Filter spots/cells".
+<input type="checkbox"> Click "Filter spots/cells".  
 <input type="checkbox"> Enter the minimum number of counts a spot needs to have to be kept in the data set. In this case, 2000 will be input.  
 <input type="checkbox"> Enter the minimum number of genes a spot needs to have to be kept in the data set. In this case, 500 will be input.  
 <input type="checkbox"> Click the "Mitochondrial genes (^MT-)" field to filter spots by mitochondrial gene content. Keep in mind that some ST platforms do not quantify mitochondrial genes.  
@@ -164,7 +164,7 @@ Each ST technology will require different filtering parameters. Compared to sing
 <input type="checkbox"> Click the "Normalize data" tab.  
 <input type="checkbox"> Click "Use SCTransform" to apply Seurat's normalization method.  
 <input type="checkbox"> Click the blue "NORMALIZE DATA" to start normalization.  
-<input type="checkbox"> The distribution of counts per spot for a given gene can also be plotted. For example, _MAP2K2_. When querying a gene, keep in mind that the query is case-sensitive. Since these are human samples, use all-upper case letters.
+<input type="checkbox"> The distribution of counts per spot for a given gene can also be plotted. For example, _MAP2K2_. When querying a gene, keep in mind that the query is case-sensitive. Since these are human samples, use all-upper case letters.  
 <input type="checkbox"> Click "GENERATE PLOTS" to show the number of _MAP2K2_ counts per spot.  
 
 ## Visualization
@@ -177,8 +177,11 @@ Each ST technology will require different filtering parameters. Compared to sing
 <input type="checkbox"> Lastly, also query and click _C1QA_.  
 <input type="checkbox"> Click blue "GENERATE PLOTS" button to create the plot.   
 
-</details><summary>Click here instructions on gene expressino surfaces.</summary>
-### Expression surface
+
+#### {.click_to_expand_block}
+<details><summary>Click here for instructions on gene expression surfaces.</summary>
+
+Expression surface
 
 Alternatively, an "expression surface" can be generated. This is a type of plot where expression values are inferred for the spaces not quantified between spots
 
@@ -186,7 +189,11 @@ Alternatively, an "expression surface" can be generated. This is a type of plot 
 <input type="checkbox"> In the `Search and select genes` menu search and select `IGKC`.  
 <input type="checkbox"> Click "ESTIMATE SURFACES" button to create the plot.   
 
+
 </details>
+
+####
+
 
 ## Spatial Domain Detection
 

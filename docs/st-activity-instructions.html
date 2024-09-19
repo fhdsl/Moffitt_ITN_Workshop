@@ -13,7 +13,7 @@
 
 <title>Getting started with Spatial Transcriptomics</title>
 
-<script src="site_libs/header-attrs-2.27.1/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -369,7 +369,7 @@ choose “unzip” or “decompress” to unzip the file.<br />
 can see what’s here.</p>
 <div id="get-familiar-with-the-data-we-have" class="section level3">
 <h3>Get familiar with the data we have</h3>
-<p>We should see we have four samples, a metadata file, as well as a PDF
+<p>We should see we have two samples, a metadata file, as well as a PDF
 of the manuscript that describes these data.</p>
 <p>Each sample’s folder has an h5 file, and a spatial folder.</p>
 <ul>
@@ -383,9 +383,7 @@ of the manuscript that describes these data.</p>
 <li>GSM6433590_093D_tissue_positions_list.csv</li>
 </ul></li>
 </ul></li>
-<li>sample_396a …</li>
 <li>sample_396c …</li>
-<li>sample_397d …</li>
 </ul>
 <p>The README describes these samples:</p>
 <blockquote>
@@ -412,25 +410,15 @@ patients with which treatments which looks like this:</p>
 <td align="left">none</td>
 </tr>
 <tr class="even">
-<td align="left">sample_396a</td>
-<td align="left">patient_19</td>
-<td align="left">pembrolizumab</td>
-</tr>
-<tr class="odd">
 <td align="left">sample_396c</td>
 <td align="left">patient_20</td>
 <td align="left">adriamycin</td>
 </tr>
-<tr class="even">
-<td align="left">sample_397d</td>
-<td align="left">patient_22</td>
-<td align="left">taxotere</td>
-</tr>
 </tbody>
 </table>
-<p>While 4 samples are provided, this workshop will only use 2 of the 4
-samples. The rest could be used with this activity walkthrough after the
-workshop.</p>
+<p>While two samples are provided, an additional two samples are
+available in the course’s material, which could be used with this
+activity walkthrough after the workshop.</p>
 </div>
 </div>
 <div id="create-an-account-with-spatialge" class="section level2">
@@ -460,7 +448,10 @@ sample’s set of files.</em></p>
 <div id="uploading-one-samples-data" class="section level3">
 <h3>Uploading one sample’s data</h3>
 <p><input type="checkbox"> For <code>Sample Name</code> put the ID
-indicating on the folder, e.g. <code>sample_093d</code><br />
+indicating on the folder, e.g. <code>sample_093d</code>. This is very
+important, as sample IDs need to match exactly the sample IDs in the
+metadata file (<code>example_clinical.csv</code>). Otherwise, no
+metadata is imported.<br />
 <input type="checkbox"> For the <code>Gene expression</code> box upload
 the <code>.h5</code> file
 e.g. <code>GSM6433590_093D_filtered_feature_bc_matrix.h5</code>. You can
@@ -474,7 +465,10 @@ e.g. <code>GSM6433590_093D_tissue_positions_list.csv</code>.<br />
 e.g. <code>GSM6433590_093D_tissue_hires_image.png</code>.<br />
 <input type="checkbox"> For the <code>Scale factor</code> box upload the
 <code>.json</code> file
-e.g. <code>GSM6433590_093D_scalefactors_json.json</code>.</p>
+e.g. <code>GSM6433590_093D_scalefactors_json.json</code>. The scaling
+factor file is output automatically by the <code>10X Space Ranger</code>
+pipeline, and contains information to approximate the size of the tissue
+image and the expression plots.</p>
 <p><input type="checkbox"> Once the above steps are done click the green
 <code>Import Sample</code>.</p>
 <p><em>You can use this checklist to keep track as you upload and follow
@@ -569,46 +563,62 @@ information.<br />
 </div>
 <div id="section-3" class="section level4">
 <h4></h4>
+<p><strong>Remember:</strong> The sample IDs in the metadata should
+match exactly the sample names used during file import.</p>
 </div>
 </div>
 <div id="after-youve-entered-the-data-and-metadata"
 class="section level3">
 <h3>After you’ve entered the data and metadata:</h3>
 <p><input type="checkbox"> You will not be able to edit this (unless you
-delete the sample completely) after you click <code>Import Data</code>.
-So make sure everything is as you intend and then click
-<code>Import Data</code>. This will take a little bit of time. Note you
-can have it send you an email instead of waiting on the page.</p>
+start a new project completely) after you click
+<code>Import Data</code>. So make sure everything is as you intend and
+then click <code>Import Data</code>. This will take a little bit of
+time. Note you can have it send you an email instead of waiting on the
+page.</p>
 </div>
 </div>
 <div id="filtering-your-data" class="section level2">
 <h2>Filtering your data</h2>
-<p><em>Note that these values for the filtering steps are suggested for
-this data and may not be appropriate for all future
-use/datasets.</em></p>
+<p>Each ST technology will require different filtering parameters.
+Compared to single-cell ST, spot-level ST (e.g., Visium), tends to yield
+more counts per spot. Even among spot-level ST projects, these
+parameters will need adjustement considering the sequencing depth and
+cellularity (i.e., cells per area unit). For these reasons, the values
+used here should not be taken as “golden rule”, but rather, users are
+eoncuraged to ytry different parameters and see what filtering procedure
+produces the most “moise” reduction withouth loosing too much relevant
+information. spatialGE provides statitsics and plots to help the user
+assess the effect of filtering.</p>
 <p><input type="checkbox"> Go to the “Filter data” tab.<br />
 <input type="checkbox"> Click “Filter spots/cells”.<br />
-<input type="checkbox"> Enter the <strong>minimum</strong> number of
-counts a spot needs to have to be kept in the data set. In this case,
-2000 will be input.<br />
-<input type="checkbox"> Enter the <strong>minimum</strong> number of
-genes a spot needs to have to be kept in the data set. In this case, 500
-will be input.<br />
+<input type="checkbox"> Enter the minimum number of counts a spot needs
+to have to be kept in the data set. In this case, 2000 will be
+input.<br />
+<input type="checkbox"> Enter the minimum number of genes a spot needs
+to have to be kept in the data set. In this case, 500 will be
+input.<br />
 <input type="checkbox"> Click the “Mitochondrial genes (^MT-)” field to
 filter spots by mitochondrial gene content. Keep in mind that some ST
 platforms do not quantify mitochondrial genes.<br />
-<input type="checkbox"> Enter the <strong>maximum</strong> percentage of
-mitochondrial counts. Use 20% in this case.<br />
+<input type="checkbox"> Enter the maximum percentage of mitochondrial
+counts. Use 20% in this case.<br />
 <input type="checkbox"> Now, to filter out genes, click “Filter
 genes”.<br />
-<input type="checkbox"> Filter out genes with <strong>less than</strong>
-2000 counts.<br />
-<input type="checkbox"> Filter out genes expressed in <strong>less
-than</strong> 20 spots.<br />
+<input type="checkbox"> Filter out genes with less than 2000
+counts.<br />
+<input type="checkbox"> Filter out genes expressed in less than 20
+spots.<br />
 <input type="checkbox"> Once you have all the filter settings as you’d
-like click the blue “APPLY FILTER” button.</p>
-<div id="data-visualization-of-filtering" class="section level3">
-<h3>Data visualization of filtering</h3>
+like click the blue “APPLY FILTER” button.<br />
+<input type="checkbox"> Users can also download a “parameter file”,
+which contains the filtering settings used for reproducibility. To do
+this, locate the “Download parameter log” link below the “APPLY FILTER”
+button.</p>
+<div id="visualize-filtering-results" class="section level3">
+<h3>Visualize filtering results</h3>
+<div id="count-distributions" class="section level4">
+<h4>Count distributions</h4>
 <p><input type="checkbox"> Click “Violin plots” to visualize count
 distribution after filtering.<br />
 <input type="checkbox"> Currently, “total_counts” and “total_genes” per
@@ -616,23 +626,8 @@ spot can be visualized.<br />
 <input type="checkbox"> When changing the variable to plot, click the
 blue “GENERATE PLOTS” button to update.</p>
 </div>
-</div>
-<div id="normalize-data" class="section level2">
-<h2>Normalize Data</h2>
-<p><input type="checkbox"> Click the “Normalize data” tab.<br />
-<input type="checkbox"> Click “Use SCTransform” to apply Seurat’s
-normalization method.<br />
-<input type="checkbox"> Click the blue “NORMALIZE DATA” to start
-normalization.<br />
-<input type="checkbox"> The distribution of counts per spot for a given
-gene can also be plotted. For example, TP53.<br />
-<input type="checkbox"> Click “GENERATE PLOTS” to show the number of
-TP53 counts per spot.</p>
-</div>
-<div id="visualization" class="section level2">
-<h2>Visualization</h2>
-<div id="quilt-plot" class="section level3">
-<h3>Quilt plot</h3>
+<div id="quilt-plot" class="section level4">
+<h4>Quilt plot</h4>
 <p><input type="checkbox"> Click <code>Quilt plot</code> to visualize
 the total number of genes or counts per spot and their spatial
 context.<br />
@@ -644,21 +639,44 @@ underneath the <code>Second sample</code> dropdown menu.<br />
 <input type="checkbox"> Click blue “GENERATE PLOTS” button to create the
 plot.</p>
 </div>
-<div id="gene-comparison-visualization" class="section level3">
-<h3>Gene comparison visualization</h3>
+</div>
+</div>
+<div id="normalize-data" class="section level2">
+<h2>Normalize Data</h2>
+<p><input type="checkbox"> Click the “Normalize data” tab.<br />
+<input type="checkbox"> Click “Use SCTransform” to apply Seurat’s
+normalization method.<br />
+<input type="checkbox"> Click the blue “NORMALIZE DATA” to start
+normalization.<br />
+<input type="checkbox"> The distribution of counts per spot for a given
+gene can also be plotted. For example, <em>MAP2K2</em>. When querying a
+gene, keep in mind that the query is case-sensitive. Since these are
+human samples, use all-upper case letters.<br />
+<input type="checkbox"> Click “GENERATE PLOTS” to show the number of
+<em>MAP2K2</em> counts per spot.</p>
+</div>
+<div id="visualization" class="section level2">
+<h2>Visualization</h2>
+<div id="gene-expression-comparative-visualization"
+class="section level3">
+<h3>Gene expression comparative visualization</h3>
 <p><input type="checkbox"> Click the <code>Visualization</code> module
 on the left side menu.<br />
 <input type="checkbox"> You can search for your favorite gene in the
 <code>Search and select genes</code> menu. For this example query and
-click “IGKC”.<br />
-<input type="checkbox"> Also query and click “FN1” gene.<br />
+click <em>IGKC</em>.<br />
+<input type="checkbox"> Also query and click <em>FN1</em> gene.<br />
 <input type="checkbox"> Lastly, also query and click
-<code>C1QA</code>.<br />
+<em>C1QA</em>.<br />
 <input type="checkbox"> Click blue “GENERATE PLOTS” button to create the
 plot.</p>
-</div>
-<div id="expression-surface" class="section level3">
-<h3>Expression surface</h3>
+<div id="section-4" class="section level4 click_to_expand_block">
+<h4 class="click_to_expand_block"></h4>
+<details>
+<summary>
+Click here for instructions on gene expression surfaces.
+</summary>
+<p>Expression surface</p>
 <p>Alternatively, an “expression surface” can be generated. This is a
 type of plot where expression values are inferred for the spaces not
 quantified between spots</p>
@@ -667,6 +685,11 @@ quantified between spots</p>
 search and select <code>IGKC</code>.<br />
 <input type="checkbox"> Click “ESTIMATE SURFACES” button to create the
 plot.</p>
+</details>
+</div>
+<div id="section-5" class="section level4">
+<h4></h4>
+</div>
 </div>
 </div>
 <div id="spatial-domain-detection" class="section level2">
@@ -674,7 +697,7 @@ plot.</p>
 <p><input type="checkbox"> Click the “Spatial domain detection” on the
 left side menu.<br />
 <input type="checkbox"> Now in the <code>Number of domains</code> slider
-put 3 to 6 domains will be detected in the samples. his is how many
+put 3 to 5 domains will be detected in the samples. This is how many
 clusters will attempt to be identified.<br />
 <input type="checkbox"> For
 <code>Number of most variable genes to use</code> choose 3000 with high
