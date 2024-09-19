@@ -125,7 +125,7 @@ __Remember:__ The sample IDs in the metadata should match exactly the sample nam
 
 ### After you've entered the data and metadata:  
 
-<input type="checkbox">  You will not be able to edit this (unless you start a new project completely) after you click `Import Data`. So make sure everything is as you intend and then click `Import Data`. This will take a little bit of time. Note you can have it send you an email instead of waiting on the page.  
+<input type="checkbox">  **You will not be able to edit this** (unless you start a new project completely) after you click `Import Data`. So make sure everything is as you intend and then click `Import Data`. This will take a little bit of time. Note you can have it send you an email instead of waiting on the page.  
 
 ## Filtering your data
 
