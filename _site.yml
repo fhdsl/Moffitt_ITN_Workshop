@@ -1,18 +1,21 @@
 
 output_dir: 'docs'
 navbar:
-  title: ITN Workshops 2024
+  title: Moffitt Workshops 2024
   left:
   - text: ""
     href: index.html
     icon: fa-home
-  - text: GitHub Activity
-    href: github-activity-instructions.html
-  - text: Containers Activity
-    href: https://hutchdatascience.org/containers-for-scientists-sandbox/activity-1-instructions.html
-    target: _blank
+  - text: Computing and Ethics Activity
+    href:   
+  - text: Single Cell Proteomics Activity
+    href: sc-proteomics.html
+  - text: Single Cell Transcriptomics Activity
+    href: sc_gene_expression_workshop.html
   - text: Spatial Transcriptomics
     href: st-activity-instructions.html
+  - text: Spatial Transcriptomics
+    href: machine-learning.html
 
 output:
   html_document:
