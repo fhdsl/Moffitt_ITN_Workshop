@@ -1,0 +1,10 @@
+---
+title: "**Tools for Genomics and Single-Cell RNA-seq**"
+subtitle: "Workshop Material"
+output:
+  html_document
+---
+
+## Slides
+
+The slides for this workshop are <div class = "link_button"><a href="https://docs.google.com/presentation/d/18H84ScncbbRA9KovjfkEULtmWVuOAu6mW7mGjl5BxR8/edit?usp=sharing" target="_blank"> available to view here</a></div>.

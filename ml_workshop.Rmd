@@ -1,0 +1,10 @@
+---
+title: "**Transforming the Machine Learning Workbench with Galaxy**"
+subtitle: "Workshop Material"
+output:
+  html_document
+---
+
+## Slides
+
+The slides for this workshop are <div class = "link_button"><a href="https://docs.google.com/presentation/d/1p6vO1RahBUAu3_lAKL0my5NTIHfv8F9rj4vVXYn7oHA/edit?usp=sharing" target="_blank"> available to view here</a></div>.
