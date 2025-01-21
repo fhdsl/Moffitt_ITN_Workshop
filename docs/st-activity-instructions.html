@@ -371,58 +371,82 @@ findable.<br />
 choose “unzip” or “decompress” to unzip the file.<br />
 <input type="checkbox"> Open up your activity files you downloaded so we
 can see what’s here.</p>
-<div id="get-familiar-with-the-data-we-have" class="section level3">
-<h3>Get familiar with the data we have</h3>
-<p>We should see we have two samples, a metadata file, as well as a PDF
-of the manuscript that describes these data.</p>
-<p>Each sample’s folder has an h5 file, and a spatial folder.</p>
+<div id="get-familiar-with-the-data-set" class="section level3">
+<h3>Get familiar with the data set</h3>
+<p>Within the folder, we should see a metadata file
+(<code>meylan_etal_2022_tumor_grade.csv</code>), a PDF of the manuscript
+that describes these data, and a <code>visium_samples</code> folder that
+includes four samples.</p>
+<p>Each sample’s folder contains a several files resulting from the
+<code>spaceranger</code> pipeline. However, we will use the following
+files:</p>
 <ul>
-<li>sample_093d
+<li>sample_a_01
 <ul>
-<li>GSM6433590_093D_filtered_feature_bc_matrix.h5</li>
-<li>spatial
-<ul>
-<li>GSM6433590_093D_scalefactors_json.json</li>
-<li>GSM6433590_093D_tissue_hires_image.png</li>
-<li>GSM6433590_093D_tissue_positions_list.csv</li>
+<li>GSM5924042_frozen_a_1_filtered_feature_bc_matrix.h5 (the gene
+expression data)</li>
+<li>GSM5924042_frozen_a_1_tissue_positions_list.csv (spot x,y spatial
+positions)</li>
+<li>GSM5924042_frozen_a_1_tissue_hires_image.png (The H&amp;E-stained
+tissue image)</li>
+<li>GSM5924042_frozen_a_1_scalefactors_json.json (to scale the H&amp;E
+image and plots)</li>
 </ul></li>
-</ul></li>
-<li>sample_396c …</li>
+<li>sample_b_01 …</li>
 </ul>
 <p>The README describes these samples:</p>
 <blockquote>
-<p>The original data set results from triple-negative breast cancer
-(TNBC) tumor biopsies collected from a diverse patient cohort. Patients
-underwent different therapeutic regimes. The tumor biopsies were
-profiled with 10X Visium. The data set presented here is a subset of the
-original cohort.</p>
+<p>These samples result from tumor biopsies collected from a patient
+cohort with clear cell renal cell carcinoma (ccRCC). The researchers
+profiled the samples with 10X Visium to study the gene expression in TLS
+in a spatial context.</p>
 </blockquote>
-<p>Additionally the metadata describe which samples came from which
-patients with which treatments which looks like this:</p>
+<p>The metadata file (<code>meylan_etal_2022_tumor_grade.csv</code>)
+contains two variables of interest. One is the tumor grade, and the
+other is positivity for a tertiary lymphoid structure (TLS) as
+ascertained using immunohistochemistry staining. The file looks like
+this:</p>
 <table>
 <thead>
 <tr class="header">
 <th align="left">samplename</th>
-<th align="left">patient</th>
-<th align="left">therapy</th>
+<th align="left">cohort</th>
+<th align="left">ID</th>
+<th align="left">pT</th>
+<th align="left">tls</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">sample_093d</td>
-<td align="left">patient_12</td>
-<td align="left">none</td>
+<td align="left">sample_b_18</td>
+<td align="left">IMM</td>
+<td align="left">b_18</td>
+<td align="left">pT2</td>
+<td align="left">pos</td>
 </tr>
 <tr class="even">
-<td align="left">sample_396c</td>
-<td align="left">patient_20</td>
-<td align="left">adriamycin</td>
+<td align="left">sample_b_07</td>
+<td align="left">IMM</td>
+<td align="left">b_7</td>
+<td align="left">pT3</td>
+<td align="left">neg</td>
+</tr>
+<tr class="odd">
+<td align="left">sample_b_01</td>
+<td align="left">IMM</td>
+<td align="left">b_1</td>
+<td align="left">pT1</td>
+<td align="left">neg</td>
+</tr>
+<tr class="even">
+<td align="left">sample_a_01</td>
+<td align="left">ExhauCRF</td>
+<td align="left">a_1</td>
+<td align="left">pT1b</td>
+<td align="left">pos</td>
 </tr>
 </tbody>
 </table>
-<p>While two samples are provided, an additional two samples are
-available in the course’s material, which could be used with this
-activity walkthrough after the workshop.</p>
 </div>
 </div>
 <div id="create-an-account-with-spatialge" class="section level2">
@@ -441,8 +465,8 @@ corner.</p>
 choose <code>Visium</code> – this is the type of data our example data
 are.<br />
 <input type="checkbox"> Make your own project name and description
-that’s sensible. Could be something related to the workshop “ITN
-workshop”.<br />
+that’s sensible. Could be something related to the workshop such as
+“ITN-Moffitt workshop”.<br />
 <input type="checkbox"> Then click “Create”.</p>
 </div>
 <div id="uploading-the-dataset" class="section level2">
@@ -452,120 +476,101 @@ sample’s set of files.</em></p>
 <div id="uploading-one-samples-data" class="section level3">
 <h3>Uploading one sample’s data</h3>
 <p><input type="checkbox"> For <code>Sample Name</code> put the ID
-indicating on the folder, e.g. <code>sample_093d</code>. This is very
+indicating on the folder, e.g. <code>sample_b_18</code>. This is very
 important, as sample IDs need to match exactly the sample IDs in the
-metadata file (<code>example_clinical.csv</code>). Otherwise, no
-metadata is imported.<br />
+metadata file (<code>meylan_etal_2022_tumor_grade.csv</code>).
+Otherwise, no metadata is imported.<br />
 <input type="checkbox"> For the <code>Gene expression</code> box upload
 the <code>.h5</code> file
-e.g. <code>GSM6433590_093D_filtered_feature_bc_matrix.h5</code>. You can
-upload files by dragging and dropping or by clicking on them to
+e.g. <code>GSM5924049_frozen_b_18_raw_feature_bc_matrix.h5</code>. You
+can upload files by dragging and dropping or by clicking on them to
 navigate.<br />
 <input type="checkbox"> For the <code>Coordinates</code> box upload the
 <code>.csv</code> file
-e.g. <code>GSM6433590_093D_tissue_positions_list.csv</code>.<br />
+e.g. <code>GSM5924049_frozen_b_18_tissue_positions_list.csv</code>.<br />
 <input type="checkbox"> For the <code>Tissue image</code> box upload the
 <code>.png</code> file
-e.g. <code>GSM6433590_093D_tissue_hires_image.png</code>.<br />
+e.g. <code>GSM5924049_frozen_b_18_tissue_hires_image.png</code>.<br />
 <input type="checkbox"> For the <code>Scale factor</code> box upload the
 <code>.json</code> file
-e.g. <code>GSM6433590_093D_scalefactors_json.json</code>. The scaling
-factor file is output automatically by the <code>10X Space Ranger</code>
-pipeline, and contains information to approximate the size of the tissue
-image and the expression plots.</p>
+e.g. <code>GSM5924049_frozen_b_18_scalefactors_json.json</code>. The
+scaling factor file is output automatically by the
+<code>10X Space Ranger</code> pipeline, and contains information to
+approximate the size of the tissue image and the expression plots.</p>
 <p><input type="checkbox"> Once the above steps are done click the green
 <code>Import Sample</code>.</p>
-<p><em>You can use this checklist to keep track as you upload and follow
-the steps for each sample.</em></p>
-<p><input type="checkbox"> <code>sample_093d</code> data entered<br />
-<input type="checkbox"> <code>sample_396c</code> data entered</p>
-<div id="section" class="section level4 click_to_expand_block">
-<h4 class="click_to_expand_block"></h4>
-<details>
-<summary>
-Click here for additional datasets for post-workshop walkthrough.
-</summary>
-<p><input type="checkbox"> <code>sample_396a</code> data entered<br />
-<input type="checkbox"> <code>sample_397d</code> data entered</p>
-</details>
-</div>
-<div id="section-1" class="section level4">
-<h4></h4>
 <p>Now <a href="#uploading-one-samples-data">return to the beginning of
 these steps</a> to repeat the same steps for the other sample.</p>
-</div>
+<p><em>You can use this checklist to keep track as you upload and follow
+the steps for each sample.</em></p>
+<p><input type="checkbox"> <code>sample_b_18</code> data entered<br />
+<input type="checkbox"> <code>sample_b_07</code> data entered<br />
+<input type="checkbox"> <code>sample_b_01</code> data entered<br />
+<input type="checkbox"> <code>sample_a_01</code> data entered</p>
 </div>
 <div id="adding-metadata" class="section level3">
 <h3>Adding metadata</h3>
 <p><input type="checkbox"> Now click
-<code>Add metadata manually</code>.<br />
+<code>Option 1: Upload metadata file</code>.<br />
+<input type="checkbox"> Upload the
+<code>meylan_etal_2022_tumor_grade.csv</code> file. You can drag and
+drop the file or by click on the (+) button to navigate.<br />
+</p>
+<div id="section" class="section level4 click_to_expand_block">
+<h4 class="click_to_expand_block"></h4>
+<details>
+<p>Metadata can also be added manually. To do so, follow these
+steps:</p>
+<p><input type="checkbox"> Click
+<code>Option 2: Add metadata manually</code>.<br />
 <input type="checkbox"> Click <code>Add new metadata column</code>. Add
 a column named <code>patient</code>.<br />
 <input type="checkbox"> Click <code>Add new metadata column</code>
 again. Add a column named <code>therapy</code>.</p>
-<p>You can reference the <code>example_clinical.csv</code> file’s
-contents to add these data for each sample:</p>
+<p>You can reference the <code>meylan_etal_2022_tumor_grade.csv</code>
+file’s contents to add these data for each sample:</p>
 <table>
 <thead>
 <tr class="header">
 <th align="left">samplename</th>
-<th align="left">patient</th>
-<th align="left">therapy</th>
+<th align="left">pT</th>
+<th align="left">tls</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">sample_093d</td>
-<td align="left">patient_12</td>
-<td align="left">none</td>
+<td align="left">sample_b_18</td>
+<td align="left">pT2</td>
+<td align="left">pos</td>
 </tr>
 <tr class="even">
-<td align="left">sample_396c</td>
-<td align="left">patient_20</td>
-<td align="left">adriamycin</td>
+<td align="left">sample_b_07</td>
+<td align="left">pT3</td>
+<td align="left">neg</td>
 </tr>
-</tbody>
-</table>
-<p><input type="checkbox"> Add this <code>sample_093d</code>
-corresponding <code>patient</code> and <code>therapy</code>
-information.<br />
-<input type="checkbox"> Add this <code>sample_396c</code> corresponding
-<code>patient</code> and <code>therapy</code> information.</p>
-<div id="section-2" class="section level4 click_to_expand_block">
-<h4 class="click_to_expand_block"></h4>
-<details>
-<summary>
-Click here for additional datasets for post-workshop walkthrough.
-</summary>
-<table>
-<thead>
-<tr class="header">
-<th align="left">samplename</th>
-<th align="left">patient</th>
-<th align="left">therapy</th>
-</tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td align="left">sample_396a</td>
-<td align="left">patient_19</td>
-<td align="left">pembrolizumab</td>
+<td align="left">sample_b_01</td>
+<td align="left">pT1</td>
+<td align="left">neg</td>
 </tr>
 <tr class="even">
-<td align="left">sample_397d</td>
-<td align="left">patient_22</td>
-<td align="left">taxotere</td>
+<td align="left">sample_a_01</td>
+<td align="left">pT1b</td>
+<td align="left">pos</td>
 </tr>
 </tbody>
 </table>
-<p><input type="checkbox"> Add this <code>sample_396a</code>
-corresponding <code>patient</code> and <code>therapy</code>
-information.<br />
-<input type="checkbox"> Add this <code>sample_397d</code> corresponding
-<code>patient</code> and <code>therapy</code> information.</p>
-</details>
+<p><input type="checkbox"> Add this <code>sample_b_18</code>
+corresponding <code>pT</code> and <code>tls</code> information.<br />
+<input type="checkbox"> Add this <code>sample_b_07</code> corresponding
+<code>pT</code> and <code>tls</code> information.<br />
+<input type="checkbox"> Add this <code>sample_b_01</code> corresponding
+<code>pT</code> and <code>tls</code> information.<br />
+<input type="checkbox"> Add this <code>sample_a_01</code> corresponding
+<code>pT</code> and <code>tls</code> information.<br />
+</p>
 </div>
-<div id="section-3" class="section level4">
+<div id="section-1" class="section level4">
 <h4></h4>
 <p><strong>Remember:</strong> The sample IDs in the metadata should
 match exactly the sample names used during file import.</p>
@@ -574,12 +579,14 @@ match exactly the sample names used during file import.</p>
 <div id="after-youve-entered-the-data-and-metadata"
 class="section level3">
 <h3>After you’ve entered the data and metadata:</h3>
-<p><input type="checkbox"> You will not be able to edit this (unless you
-start a new project completely) after you click
+<p><strong>NOTE</strong>: Make sure to upload all the samples before
+clicking the <code>Import Data</code> button</p>
+<p><input type="checkbox"> You will not be able to edit the project
+(unless you start a new project completely) after you click
 <code>Import Data</code>. So make sure everything is as you intend and
-then click <code>Import Data</code>. This will take a little bit of
-time. Note you can have it send you an email instead of waiting on the
-page.</p>
+then click <code>Import Data</code>.</p>
+<p>This will take a little bit of time. Note you can have it send you an
+email instead of waiting on the page.</p>
 </div>
 </div>
 <div id="filtering-your-data" class="section level2">
@@ -587,38 +594,53 @@ page.</p>
 <p>Each ST technology will require different filtering parameters.
 Compared to single-cell ST, spot-level ST (e.g., Visium), tends to yield
 more counts per spot. Even among spot-level ST projects, these
-parameters will need adjustement considering the sequencing depth and
+parameters will need adjustment considering the sequencing depth and
 cellularity (i.e., cells per area unit). For these reasons, the values
 used here should not be taken as “golden rule”, but rather, users are
-eoncuraged to ytry different parameters and see what filtering procedure
-produces the most “moise” reduction withouth loosing too much relevant
-information. spatialGE provides statitsics and plots to help the user
+encouraged to try different parameters and see what filtering procedure
+produces the most “noise” reduction without loosing too much relevant
+information. spatialGE provides statistics and plots to help the user
 assess the effect of filtering.</p>
 <p><input type="checkbox"> Go to the “Filter data” tab.<br />
 <input type="checkbox"> Click “Filter spots/cells”.<br />
 <input type="checkbox"> Enter the minimum number of counts a spot needs
-to have to be kept in the data set. In this case, 2000 will be
-input.<br />
-<input type="checkbox"> Enter the minimum number of genes a spot needs
 to have to be kept in the data set. In this case, 500 will be
 input.<br />
-<input type="checkbox"> Click the “Mitochondrial genes (^MT-)” field to
+<input type="checkbox"> Enter the minimum number of genes a spot needs
+to have to be kept in the data set. In this case, 100 will be
+input.<br />
+<input type="checkbox"> Click the “Mitochondrial genes (^MT-)” box to
 filter spots by mitochondrial gene content. Keep in mind that some ST
 platforms do not quantify mitochondrial genes.<br />
 <input type="checkbox"> Enter the maximum percentage of mitochondrial
 counts. Use 20% in this case.<br />
-<input type="checkbox"> Now, to filter out genes, click “Filter
+</p>
+<div id="section-2" class="section level4 click_to_expand_block">
+<h4 class="click_to_expand_block"></h4>
+<details>
+<p>Users can also remove genes with low number of counts. This is
+advisable in most cases. However, since ST featurs a high gene dropout
+(i.e., genes that the technology fails to quantify), imposing a filter
+too stringent might lead to keep very little usable information in the
+data set.</p>
+<p>To perform a gene count filter:</p>
+<p><input type="checkbox"> Now, to filter out genes, click “Filter
 genes”.<br />
 <input type="checkbox"> Filter out genes with less than 2000
 counts.<br />
 <input type="checkbox"> Filter out genes expressed in less than 20
 spots.<br />
-<input type="checkbox"> Once you have all the filter settings as you’d
-like click the blue “APPLY FILTER” button.<br />
+</p>
+</div>
+<div id="section-3" class="section level4">
+<h4></h4>
+<p><input type="checkbox"> Once you have all the filter settings as
+you’d like click the blue “APPLY FILTER” button.<br />
 <input type="checkbox"> Users can also download a “parameter file”,
 which contains the filtering settings used for reproducibility. To do
 this, locate the “Download parameter log” link below the “APPLY FILTER”
 button.</p>
+</div>
 <div id="visualize-filtering-results" class="section level3">
 <h3>Visualize filtering results</h3>
 <div id="count-distributions" class="section level4">
@@ -630,8 +652,16 @@ spot can be visualized.<br />
 <input type="checkbox"> When changing the variable to plot, click the
 blue “GENERATE PLOTS” button to update.</p>
 </div>
+<div id="section-4" class="section level4 click_to_expand_block">
+<h4 class="click_to_expand_block"></h4>
+<details>
+</div>
 <div id="quilt-plot" class="section level4">
 <h4>Quilt plot</h4>
+<p>The quilt plot tab within the QC and Data Transformation module
+allows visualization of the counts or detected genes per spot. This
+functionality might be useful to assess the localization of areas with
+low cellularity or necrotic.</p>
 <p><input type="checkbox"> Click <code>Quilt plot</code> to visualize
 the total number of genes or counts per spot and their spatial
 context.<br />
@@ -639,9 +669,12 @@ context.<br />
 <input type="checkbox"> Select one sample underneath the
 <code>First sample</code> dropdown menu.<br />
 <input type="checkbox"> And select a second sample to compare to
-underneath the <code>Second sample</code> dropdown menu.<br />
+underneath the <code>Second sample</code> drop-down menu.<br />
 <input type="checkbox"> Click blue “GENERATE PLOTS” button to create the
 plot.</p>
+</div>
+<div id="section-5" class="section level4">
+<h4></h4>
 </div>
 </div>
 </div>
@@ -652,12 +685,20 @@ plot.</p>
 normalization method.<br />
 <input type="checkbox"> Click the blue “NORMALIZE DATA” to start
 normalization.<br />
-<input type="checkbox"> The distribution of counts per spot for a given
-gene can also be plotted. For example, <em>MAP2K2</em>. When querying a
-gene, keep in mind that the query is case-sensitive. Since these are
-human samples, use all-upper case letters.<br />
+</p>
+<div id="section-6" class="section level4 click_to_expand_block">
+<h4 class="click_to_expand_block"></h4>
+<details>
+<p><input type="checkbox"> The distribution of counts per spot for a
+given gene can also be plotted. For example, <em>MAP2K2</em>. When
+querying a gene, keep in mind that the query is case-sensitive. Since
+these are human samples, use all-upper case letters.<br />
 <input type="checkbox"> Click “GENERATE PLOTS” to show the number of
 <em>MAP2K2</em> counts per spot.</p>
+</div>
+<div id="section-7" class="section level4">
+<h4></h4>
+</div>
 </div>
 <div id="visualization" class="section level2">
 <h2>Visualization</h2>
@@ -669,12 +710,13 @@ on the left side menu.<br />
 <input type="checkbox"> You can search for your favorite gene in the
 <code>Search and select genes</code> menu. For this example query and
 click <em>IGKC</em>.<br />
-<input type="checkbox"> Also query and click <em>FN1</em> gene.<br />
+<input type="checkbox"> Also query and click <em>MS4A1</em> gene.<br />
 <input type="checkbox"> Lastly, also query and click
-<em>C1QA</em>.<br />
+<em>COL1A1</em>.<br />
 <input type="checkbox"> Click blue “GENERATE PLOTS” button to create the
 plot.</p>
-<div id="section-4" class="section level4 click_to_expand_block">
+<p>Images can be exported in multiple formats (PNG/SVG/PDF).</p>
+<div id="section-8" class="section level4 click_to_expand_block">
 <h4 class="click_to_expand_block"></h4>
 <details>
 <summary>
@@ -691,7 +733,7 @@ search and select <code>IGKC</code>.<br />
 plot.</p>
 </details>
 </div>
-<div id="section-5" class="section level4">
+<div id="section-9" class="section level4">
 <h4></h4>
 </div>
 </div>
@@ -710,7 +752,39 @@ variation will be used to detect the domains.<br />
 clusters.<br />
 <input type="checkbox"> Explore the results by clicking each
 <code>K=</code> tab.</p>
-<p>Images can be exported in multiple formats.</p>
+<p>Images can be exported in multiple formats (PNG/SVG/PDF).</p>
+</div>
+<div id="phenotyping" class="section level2">
+<h2>Phenotyping</h2>
+<p>In spatialGE, inferring cell types on Visium data sets is achieved
+with STdeconvolve (<a
+href="https://doi.org/10.1038/s41467-022-30033-z">Miller et al.
+2022</a>). The STdeconvolve is performed in two stages:</p>
+<ol style="list-style-type: decimal">
+<li><p>The method attempts to fit a series of models composed of “latent
+topics”. Each latent topic represents a cell type, a cell state, or even
+a functional niche.</p></li>
+<li><p>The latent topics are assigned a biological identity based on a
+list of reference genes. The assignments are obtained via gene set
+enrichment analysis (GSEA).</p></li>
+</ol>
+<p><input type="checkbox"> Click the “Phenotyping” module on the left
+side menu.<br />
+<input type="checkbox"> To begin stage 1, select 7 to 10 topics in the
+<code>Fit LDA models with this many topics</code> slider. This is the
+number of topics within each model: One model with 7 topics, another
+with 8, another with 9, and one with 10 topics.<br />
+<input type="checkbox"> For <code>Use this many variable genes</code>
+choose 5000 with high variation will be used to detect the
+domains.<br />
+<input type="checkbox"> Finally, click “RUN LDA MODELS”.<br />
+</p>
+<p><input type="checkbox"> To begin stage 2, select the “CellMarker
+signatures (v2.0, Human-Cancer)” reference data set from the “Gene
+signatures” drop-down.<br />
+<input type="checkbox"> Then, click “ASSIGN IDENTITIES” to begin
+GSEA.<br />
+</p>
 </div>
 
 
