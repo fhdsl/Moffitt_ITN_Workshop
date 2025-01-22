@@ -1,21 +1,43 @@
-
+name: ITN Workshops at Moffitt Cancer Center 2025
 output_dir: 'docs'
 navbar:
-  title: Moffitt Workshops 2024
+  title: Moffitt Workshops 2025
   left:
   - text: ""
     href: index.html
     icon: fa-home
-  - text: Computing and Ethics Activity
-    href:   
-  - text: Single Cell Proteomics Activity
-    href: sc-proteomics.html
-  - text: Single Cell Transcriptomics Activity
-    href: sc_gene_expression_workshop.html
+  - text: Computing and Ethics
+    menu:
+    - text: Workshop Material
+      href: computing_workshop.html
+    - text: Activity
+      href: computing_activity.html
+  - text: scRNA-seq
+    menu:
+    - text: Workshop Material
+      href: scRNAseq_workshop.html
+    - text: Activity
+      href: sc-gene-expression-workshop.html
   - text: Spatial Transcriptomics
-    href: st-activity-instructions.html
-  - text: Spatial Transcriptomics
-    href: machine-learning.html
+    menu:
+    - text: Workshop Material
+      href: spatialTranscriptomics_workshop.html
+    - text: Activity
+      href: st-activity-instructions.html
+  - text: Single Cell Protein Imaging
+    menu:
+    - text: Workshop Material
+      href: scProteinImaging_workshop.html
+    - text: Activity
+      href: sc-proteomics.html
+  - text: Machine Learning
+    menu:
+    - text: Workshop Material
+      href: ml_workshop.html
+    - text: Activity
+      href: machine-learning.html
+  - text: ITN Home
+    href: https://www.itcrtraining.org/home
 
 output:
   html_document:
@@ -24,3 +46,5 @@ output:
     self_contained: no
     highlight: textmate
     css: styles.css
+    includes:
+       in_header: resources/header.html

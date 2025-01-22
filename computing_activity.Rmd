@@ -1,0 +1,6 @@
+---
+title: "**Computing and Data Ethics for Cancer Informatics**"
+subtitle: "Activity"
+output:
+  html_document
+---

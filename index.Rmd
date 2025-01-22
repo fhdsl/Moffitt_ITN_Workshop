@@ -1,16 +1,26 @@
 ---
-title: "**ITN Workshops 2024 Sandbox**"
+title: "**ITN Workshops at Moffitt Cancer Center 2025 Sandbox**"
 output:
   html_document
 ---
 
+# Moffitt ITN Workshops
 
-Welcome to the sandbox website for the ITN workshops at the ITCR Annual meeting 2024!
+This repo is making the ITN workshop website for folks to follow along with activities as a part of the Moffitt ITN Workshops
 
-This repo is for folks to follow along with activities as a part of the ITCR Annual Conference ITN workshops.
+See this website here: https://hutchdatascience.org/Moffitt_ITN_Workshop/
 
 The slides associated with these activities can be found here:
 
-- [Intro to GitHub](https://docs.google.com/presentation/d/1Qz447paDgO8dBlnHbl80kBLOpahD9odI9yU7-sqYohw/edit)
-- [Intro to Containers](https://docs.google.com/presentation/d/1GPY_xPqhmzxZSmAX2bqJS1Sg7X5gtySEU9k2nVweaZg/edit#slide=id.g2ebd8828116_0_779)
+- [Computing and Data Ethics for Cancer Informatics]()
+- [Tools for Genomics and Single-Cell RNA-seq]()
 - [Spatial Transcriptomics](https://docs.google.com/presentation/d/1WABxPIA6J3wsi04pC3ZRmV8CRZA-V53awteBq0-U4Pg/edit#slide=id.p1)
+- [Intro to single cell proteomics](https://docs.google.com/presentation/d/1lUcVOYB8T0Ex5j6y6LX6nt4rjvVaI8Q23v870vgOKX8/edit#slide=id.g2d6987c4406_0_0)
+- [Intro to Machine Learning](https://docs.google.com/presentation/d/1p6vO1RahBUAu3_lAKL0my5NTIHfv8F9rj4vVXYn7oHA/edit#slide=id.g2a47e840a8b_0_0)
+
+### **Pre-requisites**
+
+- If you haven't already [created an account](https://usegalaxy.org/login/start?redirect=None) for the free, online bioinformatics platform, Galaxy, please do so.
+- Create an account with SpatialGE
+  - Go to <https://spatialge.moffitt.org/>\
+  - Click on "Sign Up" in the upper right corner.

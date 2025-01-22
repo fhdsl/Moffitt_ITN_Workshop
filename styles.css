@@ -1,3 +1,42 @@
+/*------------- checkbox alignment for html checkbox---------------- */
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+  font-weight: normal
+}
+
+
+
+/*------------- checkbox alignment for markdown checkbox---------------- */
+
+input[type="checkbox"] {
+        margin-right: 0.5ch;
+      }
+
+/*------------ buttons for links ---------------------- */
+
+.link_button {
+    border-radius: 8px;
+    border: 1px solid #black;
+    background: #414487FF;
+    color: white !important;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/*------------- button link color---------------- */
+
+
+.link_button a:link{
+    color: #fff;
+}
 
 /* To add some space below the navigation bar */
 
