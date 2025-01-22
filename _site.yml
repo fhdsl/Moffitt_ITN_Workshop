@@ -17,7 +17,7 @@ navbar:
     - text: Workshop Material
       href: scRNAseq_workshop.html
     - text: Activity
-      href: sc_gene_expression_workshop.html
+      href: sc-gene-expression-workshop.html
   - text: Spatial Transcriptomics
     menu:
     - text: Workshop Material
