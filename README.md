@@ -2,7 +2,7 @@
 
 This repo is making the ITN workshop website for folks to follow along with activities as a part of the Moffitt ITN Workshops
 
-See this website here: https://hutchdatascience.org/Moffitt_ITN_Workshops/
+See this website here: https://hutchdatascience.org/Moffitt_ITN_Workshop/
 
 The slides associated with these activities can be found here:
 
