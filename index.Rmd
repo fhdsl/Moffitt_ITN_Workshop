@@ -22,5 +22,5 @@ The slides associated with these activities can be found here:
 
 - If you haven't already [created an account](https://usegalaxy.org/login/start?redirect=None) for the free, online bioinformatics platform, Galaxy, please do so.
 - Create an account with SpatialGE
-<input type="checkbox"> Go to <https://spatialge.moffitt.org/>\
-<input type="checkbox"> Click on "Sign Up" in the upper right corner.
+  - Go to <https://spatialge.moffitt.org/>\
+  - Click on "Sign Up" in the upper right corner.
