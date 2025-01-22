@@ -14,6 +14,8 @@ style-code: yes
 docker-test: no
 # Should URLs be tested periodically?
 url-check-periodically: yes
+# Would you like a readability report on your markdowns?
+readability-report: yes
 
 ##### Renderings run upon merge to main branch #####
 # Rendering each platform's content
