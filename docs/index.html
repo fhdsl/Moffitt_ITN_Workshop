@@ -11,7 +11,7 @@
 
 
 
-<title>ITN Workshops 2024 Sandbox</title>
+<title>ITN Workshops at Moffitt Cancer Center 2025 Sandbox</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -34,6 +34,8 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="resources/images/favicon.ico" />
+ <!--- go to https://favicon.io/favicon-converter/ to upload an image to make a new favicon.io. You will need to replace the current favicon.io image with the one in the downloaded directory from the website. The current image is in the resources/images/ directory --->
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -241,7 +243,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Moffitt Workshops 2024</a>
+      <a class="navbar-brand" href="index.html">Moffitt Workshops 2025</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -252,18 +254,83 @@ $(document).ready(function () {
     
   </a>
 </li>
-<li class="dropdown-header">Computing and Ethics Activity</li>
-<li>
-  <a href="sc-proteomics.html">Single Cell Proteomics Activity</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Computing and Ethics
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="computing_workshop.html">Workshop Material</a>
+    </li>
+    <li>
+      <a href="computing_activity.html">Activity</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    scRNA-seq
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="scRNAseq_workshop.html">Workshop Material</a>
+    </li>
+    <li>
+      <a href="sc-gene-expression-workshop.html">Activity</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Spatial Transcriptomics
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="spatialTranscriptomics_workshop.html">Workshop Material</a>
+    </li>
+    <li>
+      <a href="st-activity-instructions.html">Activity</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Single Cell Protein Imaging
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="scProteinImaging_workshop.html">Workshop Material</a>
+    </li>
+    <li>
+      <a href="sc-proteomics.html">Activity</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Machine Learning
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="ml_workshop.html">Workshop Material</a>
+    </li>
+    <li>
+      <a href="machine-learning.html">Activity</a>
+    </li>
+  </ul>
 </li>
 <li>
-  <a href="sc_gene_expression_workshop.html">Single Cell Transcriptomics Activity</a>
-</li>
-<li>
-  <a href="st-activity-instructions.html">Spatial Transcriptomics</a>
-</li>
-<li>
-  <a href="machine-learning.html">Spatial Transcriptomics</a>
+  <a href="https://www.itcrtraining.org/home">ITN Home</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -277,28 +344,50 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore"><strong>ITN Workshops 2024
-Sandbox</strong></h1>
+<h1 class="title toc-ignore"><strong>ITN Workshops at Moffitt Cancer
+Center 2025 Sandbox</strong></h1>
 
 </div>
 
 
-<p>Welcome to the sandbox website for the ITN workshops at the ITCR
-Annual meeting 2024!</p>
-<p>This repo is for folks to follow along with activities as a part of
-the ITCR Annual Conference ITN workshops.</p>
+<div id="moffitt-itn-workshops" class="section level1">
+<h1>Moffitt ITN Workshops</h1>
+<p>This repo is making the ITN workshop website for folks to follow
+along with activities as a part of the Moffitt ITN Workshops</p>
+<p>See this website here: <a
+href="https://hutchdatascience.org/Moffitt_ITN_Workshop/"
+class="uri">https://hutchdatascience.org/Moffitt_ITN_Workshop/</a></p>
 <p>The slides associated with these activities can be found here:</p>
 <ul>
-<li><a
-href="https://docs.google.com/presentation/d/1Qz447paDgO8dBlnHbl80kBLOpahD9odI9yU7-sqYohw/edit">Intro
-to GitHub</a></li>
-<li><a
-href="https://docs.google.com/presentation/d/1GPY_xPqhmzxZSmAX2bqJS1Sg7X5gtySEU9k2nVweaZg/edit#slide=id.g2ebd8828116_0_779">Intro
-to Containers</a></li>
+<li><a href="">Computing and Data Ethics for Cancer Informatics</a></li>
+<li><a href="">Tools for Genomics and Single-Cell RNA-seq</a></li>
 <li><a
 href="https://docs.google.com/presentation/d/1WABxPIA6J3wsi04pC3ZRmV8CRZA-V53awteBq0-U4Pg/edit#slide=id.p1">Spatial
 Transcriptomics</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/1lUcVOYB8T0Ex5j6y6LX6nt4rjvVaI8Q23v870vgOKX8/edit#slide=id.g2d6987c4406_0_0">Intro
+to single cell proteomics</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/1p6vO1RahBUAu3_lAKL0my5NTIHfv8F9rj4vVXYn7oHA/edit#slide=id.g2a47e840a8b_0_0">Intro
+to Machine Learning</a></li>
 </ul>
+<div id="pre-requisites" class="section level3">
+<h3><strong>Pre-requisites</strong></h3>
+<ul>
+<li>If you haven’t already <a
+href="https://usegalaxy.org/login/start?redirect=None">created an
+account</a> for the free, online bioinformatics platform, Galaxy, please
+do so.</li>
+<li>Create an account with SpatialGE
+<ul>
+<li>Go to <a href="https://spatialge.moffitt.org/"
+class="uri">https://spatialge.moffitt.org/</a><br />
+</li>
+<li>Click on “Sign Up” in the upper right corner.</li>
+</ul></li>
+</ul>
+</div>
+</div>
 
 
 
