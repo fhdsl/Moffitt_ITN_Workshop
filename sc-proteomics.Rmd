@@ -29,6 +29,8 @@ ______ has invited you to join Posit Cloud. By clicking on the link below, you c
 
 ![Posit Set Up Steps](./resources/images/posit_setup.png)
 
+<input type="checkbox">  On one of the early steps in the code it will ask you `.cache/R/ExperimentHub does not exist, creat directory? (yes/no)`. Type in "yes" and hit Enter. You should only have to do this once. <br>
+
 <input type="checkbox"> Now follow along with each step in the notebook and clicking the green triangles at each code chunk as we move along.
 
 **It is very important you run each step in order for the code to work!**
