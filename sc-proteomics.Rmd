@@ -24,16 +24,10 @@ ______ has invited you to join Posit Cloud. By clicking on the link below, you c
 
 <input type="checkbox"> Create an account if needed. <br>  
 <input type="checkbox"> Log into Posit.Cloud if needed <br>
-<input type="checkbox"> Get a copy of this workspace https://posit.cloud/spaces/604196/content/9588231 <br>
-<input type="checkbox"> Name your copy of your workspace by a name and click enter.  <br>
+<input type="checkbox"> Get a copy of this workspace https://posit.cloud/spaces/604196/content/9588231 You can also find it in the "Workshops" list <br>
+<input type="checkbox"> Name your copy of your workspace by typing in on the title at the top.  <br>
 
 ![Posit Set Up Steps](./resources/images/posit_setup.png)
-
-<input type="checkbox"> Click on the gear in the corner and pick "resources" <br>
-<input type="checkbox"> Use the sliders to have at least 10 GB and 2CPUs available to your project. <br>
-<input type="checkbox"> Click Apply Changes <br>
-
-![Posit Set Up Steps](./resources/images/resources_posit.png)
 
 <input type="checkbox"> Now follow along with each step in the notebook and clicking the green triangles at each code chunk as we move along.
 
