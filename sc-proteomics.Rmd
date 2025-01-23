@@ -16,7 +16,14 @@ knitr::opts_chunk$set(number_sections = FALSE)
 
 For easy start up we will use Posit Cloud -- an online resource for using R.
 
-<input type="checkbox"> Log into Posit.Cloud <br>
+<input type="checkbox"> If you have not already accept the invite to our Posit cloud space go to your email that you registered with and accept that invite. <br>  
+
+The email will looks like this: 
+> 
+______ has invited you to join Posit Cloud. By clicking on the link below, you can join the space that has been shared with you. Note that you will first be prompted to create an Posit Cloud account.<br> 
+
+<input type="checkbox"> Create an account if needed. <br>  
+<input type="checkbox"> Log into Posit.Cloud if needed <br>
 <input type="checkbox"> Get a copy of this workspace https://posit.cloud/spaces/604196/content/9588231 <br>
 <input type="checkbox"> Name your copy of your workspace by a name and click enter.  <br>
 
