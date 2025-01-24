@@ -86,6 +86,8 @@ A: Seurat FindClusters on data Z: Seurat RDS
 
 - [Full Galaxy Training Tutorial "Filter, plot, and explore single cell RNA-seq data with Seurat"](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html) from which this tutorial was adapted. Changes include
   - several subsections within QC that are ommited
+  - rearranging of the Dimensionality Reduction section
+  - Stopping before the Differential Expression Testing: Finding Markers section
 
 - [Further information on Seurat and its manual](https://satijalab.org/seurat/)
 
