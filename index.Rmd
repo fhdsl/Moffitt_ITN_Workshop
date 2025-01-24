@@ -20,7 +20,7 @@ The slides associated with these activities can be found here:
 
 ### **Pre-requisites**
 
-Each course will be linked to computing resources you will need to register for before the courses start. (All computing resources are free to participants!) Some require an email confirmation that might take additional time, so we encourage all participants to register for resources needed for courses you will be attending.
+Each workshop will use computing resources that you will need to register for in advance, as some require an email confirmation that might take additional time. (All computing resources are free to participants!) 
 
 Please register for the following resources based on the workshops you will be attending:
 
