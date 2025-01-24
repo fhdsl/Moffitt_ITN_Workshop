@@ -27,10 +27,10 @@ Please register for the following based on the courses you will be attending
 |                                                        | Galaxy | spatialGE | posit cloud |
 |:------------------------------------------------------:|:------:|:---------:|:-----------:|
 |Computing and Data Ethics for Cancer Informatics        | X      |           |             |
-|Tools for Genomics and Single-Cell RNA-seq              | X      |            |             |
+|Tools for Genomics and Single-Cell RNA-seq              | X      |           |             |
 |Tools for Spatial Transcriptomics                       |        | X         |             |
-|Tools for Single-Cell Protein Imaging                   |        |           | X             |
-|Transforming the Machine Learning Workbench with Galaxy | X      |
+|Tools for Single-Cell Protein Imaging                   |        |           | X            |
+|Transforming the Machine Learning Workbench with Galaxy | X      |            |            |
 
 
 - To create a **Galaxy** account, go to <https://usegalaxy.org/login/start?redirect=None>\ and click the "Don't have an account? Register here." link at the bottom.
