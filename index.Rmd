@@ -20,7 +20,19 @@ The slides associated with these activities can be found here:
 
 ### **Pre-requisites**
 
-- If you haven't already [created an account](https://usegalaxy.org/login/start?redirect=None) for the free, online bioinformatics platform, Galaxy, please do so.
-- Create an account with SpatialGE
-  - Go to <https://spatialge.moffitt.org/>\
-  - Click on "Sign Up" in the upper right corner.
+Each course will be linked to computing resources you will need to register for before the courses start. (All computing resources are free to participants!) Some require an email confirmation that might take additional time, so we encourage all participants to register for resources needed for courses you will be attending.
+
+Please register for the following based on the courses you will be attending
+
+|                                                        | Galaxy | spatialGE | posit cloud |
+|:------------------------------------------------------:|:------:|:---------:|:-----------:|
+|Computing and Data Ethics for Cancer Informatics        | X      |           |             |
+|Tools for Genomics and Single-Cell RNA-seq              | X      |            |             |
+|Tools for Spatial Transcriptomics                       |        | X         |             |
+|Tools for Single-Cell Protein Imaging                   |        |           | X             |
+|Transforming the Machine Learning Workbench with Galaxy | X      |
+
+
+- To create a **Galaxy** account, go to <https://usegalaxy.org/login/start?redirect=None>\ and click the "Don't have an account? Register here." link at the bottom.
+- To create a **spatialGE** account, go to <https://spatialge.moffitt.org/>\ and click on "Sign Up" in the upper right corner
+- To create a **posit cloud** account, go to <https://login.posit.cloud/register?redirect=https%3A%2F%2Fclient.login.posit.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0>\ and sign up with any of the shown methods.
