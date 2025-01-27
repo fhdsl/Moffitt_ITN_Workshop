@@ -5,8 +5,16 @@ output:
   html_document
 ---
 
-## Slides
 
-The slides for this workshop are <div class = "link_button"><a href="https://docs.google.com/presentation/d/1xjJdvDOOMGQLSd6jm9sfzfjDQEWG9xEICXbJOTq8-PQ/edit?usp=sharing" target="_blank"> available to view here</a></div>.
+In this workshop we cover:
+
+- Fundamentals about computing hardware
+- Common file sizes for biomedical research
+- Fundamentals about shared computing resources
+- Computing resources designed for biomedical research
+- Practices to ensure your research is transparent and reproducible
+- Concepts around why transparency and reproducibity are critical for ethical research
+
+ <div class = "link_button"><a href="https://docs.google.com/presentation/d/1xjJdvDOOMGQLSd6jm9sfzfjDQEWG9xEICXbJOTq8-PQ/edit?usp=sharing" target="_blank"> Slides for the computing workshop</a></div>
 
 
