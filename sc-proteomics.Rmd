@@ -39,7 +39,7 @@ ______ has invited you to join Posit Cloud. By clicking on the link below, you c
 
 ## Bonus: To run on your own computer
 
-We will keep the Posit Cloud account available to you for one week after the workshop. Please download your files you'd like to keep before this week is up!
+We will keep the Posit Cloud account available to you for one week after the workshop. Please download any of your files you'd like to keep before this week is up!
 
 If you'd like to run this on your own computer
 
