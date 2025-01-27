@@ -4,3 +4,12 @@ subtitle: "Activity"
 output:
   html_document
 ---
+
+
+Learners can access training resources by registering and logging in to
+a UseGalaxy.org account, then following this link:
+https://usegalaxy.org/join-training/itn-at-moffitt-2025/ 
+
+Note: this link will only be active for a week, but you can continue to use Galaxy resources for free!
+
+![Screenshot of Galaxy](resources/images/galaxy_get_started.png)
