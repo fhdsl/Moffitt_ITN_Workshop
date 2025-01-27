@@ -349,91 +349,118 @@ $(document).ready(function () {
 </div>
 
 
-<div id="slides" class="section level2">
-<h2>Slides</h2>
-<p>The slides for this workshop are available at the <a
-href="https://bit.ly/itn_nyu_2024_expression">following link</a></p>
-<p><a href="https://bit.ly/itn_nyu_2024_expression" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g2f393976e24_0_3.png" alt="The slides for this workshop are available by scanning this QR code or by visiting the link h t t p s colon forward slash forward slash bit dot l y forward slash i t n underscore n y u underscore 2024 underscore expression" width="480" /></a></p>
+<p>Note the galaxy link they should use: <a
+href="https://usegalaxy.org/join-training/itn-at-moffitt-2025/"
+class="uri">https://usegalaxy.org/join-training/itn-at-moffitt-2025/</a></p>
+<div id="tutorial-steps" class="section level2">
+<h2>Tutorial Steps</h2>
+<div id="get-data-onto-galaxy-and-generate-a-seurat-object"
+class="section level3">
+<h3>Get Data onto Galaxy and generate a Seurat object</h3>
+<div id="ebi-data-retrieval" class="section level4">
+<h4>EBI Data Retrieval</h4>
 </div>
-<div id="logistical-information" class="section level2">
-<h2>Logistical information</h2>
-<div id="learner-survey" class="section level3">
-<h3>Learner Survey</h3>
-<p>Please provide information in the <a
-href="https://bit.ly/hutch_learner">following survey</a> as this helps
-us keep you informed of upcoming workshops, and to follow up and see how
-you are using what you have learned.</p>
-<p><a href="https://bit.ly/hutch_learner" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g280003dbeb2_0_218.png" alt="To provide information for us, please scan this QR code or use the link h t t p s colon forward slash forward slash bit dot l y forward slash hutch underscore learner" width="480" /></a></p>
-</div>
-<div id="slido" class="section level3">
-<h3>Slido</h3>
-<p>Please also login to slido at <a
-href="https://www.slido.com/">slido.com</a> for this workshop for
-interactive questions throughout.</p>
-<p><a href="https://www.slido.com/" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g28d4fbef9f9_0_456.png" alt="The Slido code for this workshop is 7176191. Please enter the code at slido dot com" width="480" /></a></p>
-</div>
-<div id="gene-pattern-activity" class="section level3">
-<h3>Gene Pattern Activity</h3>
-<div id="bulk-rna-seq" class="section level4">
-<h4>Bulk RNA-seq</h4>
-<ul>
-<li><a
-href="https://datasets.genepattern.org/?prefix=data/workshops/240411-PSTP/">Download
-the relevant datasets at this link</a></li>
-</ul>
-<p><a href="https://datasets.genepattern.org/?prefix=data/workshops/240411-PSTP/" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g2f2ca03ec26_0_0.png" alt="This slide provides info on which datasets to download, specifically the c l s and g c t files, from h t t p s colon forward slash forward slash datasets doc gene pattern dot org forward slash question mark prefix equal sign data forward slash workshops forward slash 240411 dash P S T P forward slash" width="480" /></a></p>
-<ul>
-<li><a href="http://cloud.genepattern.org/gp/">Go to the Gene Pattern
-platform</a></li>
-</ul>
-<p><a href="http://cloud.genepattern.org/gp/" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g2f2ca03ec26_0_34.png" alt="Go to h t t p colon forward slash forward slash cloud dot gene pattern dot org forward slash g p forward slash" width="480" /></a></p>
-</div>
-<div id="single-cell-rna-seq" class="section level4">
-<h4>Single cell RNA-seq</h4>
-<ul>
-<li><a
-href="https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz">Download
-practice 10x single cell data</a></li>
-</ul>
-<p><a href="https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g2800f2a6905_0_37.png" alt="Use this link to download practice 10x single cell data. No need to unzip it" width="480" /></a></p>
-<ul>
-<li><a href="http://cloud.genepattern.org/gp/">Go to the Gene Pattern
-platform</a></li>
-</ul>
-<p><a href="http://cloud.genepattern.org/gp/" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g2800f2a6905_0_165.png" alt="Go to h t t p colon forward slash forward slash cloud dot gene pattern dot org forward slash g p forward slash" width="480" /></a></p>
+<div id="seurat-read10x" class="section level4">
+<h4>Seurat Read10X</h4>
 </div>
 </div>
-<div id="learner-demographic-survey" class="section level3">
-<h3>Learner Demographic Survey</h3>
-<p>Please provide information in the <a
-href="https://bit.ly/itn_demo">following survey</a> as this helps us
-gather necessary information we need to report to the NIH for trainings
-we host.</p>
-<p><a href="https://bit.ly/itn_demo" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g44b83cf246132a03_192.png" alt="To provide us with necessary reporting information, please use this QR code or follow the link h t t p s colon forward slash forward slash bit dot l y forward slash i t n underscore demo" width="480" /></a></p>
+<div id="qc-and-further-processing-of-the-seurat-object"
+class="section level3">
+<h3>QC and further processing of the Seurat object</h3>
+<div id="qc-visualize-counts" class="section level4">
+<h4>QC: Visualize Counts</h4>
+</div>
+<div id="qc-visualize-features" class="section level4">
+<h4>QC: Visualize Features</h4>
+</div>
+<div id="finding-our-filtering-parameters" class="section level4">
+<h4>Finding our filtering parameters</h4>
+</div>
+<div id="filter-cells" class="section level4">
+<h4>Filter Cells</h4>
+</div>
+<div id="normalize-data" class="section level4">
+<h4>Normalize Data</h4>
+</div>
+<div id="find-variable-genes" class="section level4">
+<h4>Find Variable Genes</h4>
+</div>
+<div id="scale-data" class="section level4">
+<h4>Scale Data</h4>
+</div>
+</div>
+<div id="dimensionality-reduction" class="section level3">
+<h3>Dimensionality Reduction</h3>
+<div id="run-pca" class="section level4">
+<h4>Run PCA</h4>
+</div>
+<div id="run-umap" class="section level4">
+<h4>Run UMAP</h4>
+<p>Note here this walkthrough diverges from the Galaxy Training
+tutorial, rearranging the dimensionality reduction steps.</p>
+<p>Change the input such that for this tutorial it should be the PCA
+Processed Seurat Object (instead of the Preprocessed Seurat Object with
+Clusters)</p>
+<p>Keep the Dims 1:15 argument.</p>
+<p>The Reduction argument autofilled to be PCA and I kept it.</p>
+</div>
+<div id="plot-gapdh" class="section level4">
+<h4>Plot Gapdh</h4>
+<p>Use the output of the previous step “Seurat UMAP on data X: Seurat
+RDS” as the input for this one.</p>
+<p>Keep the Plot_type_selector as FeaturePlot and Features as Gapdh as
+described in the Galaxy Training Tutorial.</p>
+</div>
+<div id="plot-il2ra" class="section level4">
+<h4>Plot Il2ra</h4>
+<p>Use the output of the Run UMAP step “Seurat UMAP on data X: Seurat
+RDS” as the input for this one.</p>
+<p>Keep the Plot_type_selector as FeaturePlot and Features as Il2ra as
+described in the Galaxy Training Tutorial.</p>
+<p>NOTE: If you plot UMAP at this stage, do not use “Group by:
+RNA_nn_res.0.5” argument</p>
+</div>
+<div id="find-neighbors" class="section level4">
+<h4>Find Neighbors</h4>
+<p>Input is Y: Seurat UMAP on data X: Seurat RDS (the output of the Run
+UMAP step “Seurat UMAP on data X: Seurat RDS”)</p>
+<p>“Reduction”: PCA “Dimensions”: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+“Assay”: RNA –&gt; Z: Seurat FindNeighbours on data Y: Seurat RDS</p>
+</div>
+<div id="find-clusters" class="section level4">
+<h4>Find Clusters</h4>
+<p>In “Advanced Options “ “Resolution”: 0.5</p>
+<p>Z:Seurat FindNeighbours on data Y: Seurat RDS –&gt; A: Seurat
+FindClusters on data Z: Seurat RDS</p>
+</div>
+<div id="plot-umap" class="section level4">
+<h4>Plot UMAP</h4>
+<p>Group by: RNA_nn_res.0.5</p>
+<p>A: Seurat FindClusters on data Z: Seurat RDS –&gt; B: Seurat DimPlot
+on data A: png plot</p>
+</div>
 </div>
 </div>
 <div id="other-resources" class="section level2">
 <h2>Other Resources</h2>
-<div id="relevant-free-courses" class="section level3">
-<h3>Relevant (free!) courses</h3>
-<p>Material for this workshop is adapted from the <a
-href="https://bit.ly/genomics-tools">Choosing Genomics Tools ITN
-course</a> which is a sort of wikipedia for -omics analyses. That and
-our other courses are available for free. See <a
-href="https://www.itcrtraining.org/courses">our website</a> for more
-information.</p>
-<p><a href="https://www.itcrtraining.org/courses" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g2f00a92f04c_0_4.png" alt="This table lists the various courses available from the I T N including ones under development that will be available in the future. Choosing Genomics Tools is highlighted because this workshop is adapted from that larger course. For more info on and to access any of these courses, visit i t c r training dot org" width="480" /></a></p>
-<p><a href="https://bit.ly/genomics-tools" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g260a5f21d81_0_202.png" alt="Example of The Choosing Genomics Tools course website showing chapters that are general and others that are specific to a certain data type. To visit this coures's webiste, please scan the QR code or visit the link h t t p s colon forward slash forward slash bit dot l y forward slash genomics dash tools" width="480" /></a></p>
-</div>
-<div id="resources-for-finding-tools-to-help-with-your-analyses"
-class="section level3">
-<h3>Resources for finding tools to help with your analyses</h3>
-<p>The ITCR provides <a
-href="https://www.cancer.gov/about-nci/organization/cssi/resources/informatics-tools">tables
-broken by down data type with information on available analysis
-tools</a></p>
-<p><a href="https://www.cancer.gov/about-nci/organization/cssi/resources/informatics-tools" target="_blank"><img src="sc-gene-expression-workshop_files/figure-html/1IxnNcgbHLuwOMofOqhKx5IoIbPI1DNtPyORT4FjK6TY_g28166fa6a43_1_38.png" alt="To explore available tools for your analyses, scan this QR code or visit h t t p s foward slash forward slash bit dot l y forward slash i t c r underscore tool underscore list" width="480" /></a></p>
-</div>
+<ul>
+<li><p><a
+href="https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html">Full
+Galaxy Training Tutorial “Filter, plot, and explore single cell RNA-seq
+data with Seurat”</a> from which this tutorial was adapted. Changes
+include</p>
+<ul>
+<li>several subsections within QC that are omitted</li>
+<li>rearranging of the Dimensionality Reduction section</li>
+<li>Stopping before the Differential Expression Testing: Finding Markers
+section</li>
+</ul></li>
+<li><p><a href="https://satijalab.org/seurat/">Further information on
+Seurat and its manual</a></p></li>
+<li><p><a
+href="https://alleninstitute.org/resource/what-is-a-umap/">UMAP
+discussion</a></p></li>
+</ul>
 </div>
 
 
