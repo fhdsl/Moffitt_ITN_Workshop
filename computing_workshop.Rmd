@@ -14,13 +14,18 @@ In this workshop we cover:
 - Fundamentals about shared computing resources
 - Computing resources designed for biomedical research
 - Practices to ensure your research is transparent and reproducible
-- Concepts around why transparency and reproducibity are critical for ethical research
+- Concepts around why transparency and reproducibility are critical for ethical research
 
- Check out the slides here: <div class = "link_button"><a href="https://docs.google.com/presentation/d/1xjJdvDOOMGQLSd6jm9sfzfjDQEWG9xEICXbJOTq8-PQ/edit?usp=sharing" target="_blank"> Workshop Slides</a></div>
+<div class = "link_button"><a href="https://docs.google.com/presentation/d/1xjJdvDOOMGQLSd6jm9sfzfjDQEWG9xEICXbJOTq8-PQ/edit?usp=sharing" target="_blank"> Slides Link</a></div>
+
+<div class = "slido_button"><a href="https://app.sli.do/event/i9DkV4CzMwqgEvzwv7B96m" target="_blank"> Discussion Link </a></div>
+
+
+<br>
 
 ## Additional Resources
 
-Resources for computing can be found here: https://jhudatascience.org/ITN_computing_resources/ 
+Computing resources for research can be found at our [computing resource table](https://jhudatascience.org/ITN_computing_resources/). 
 
 Accompanying courses can be found here:
 
@@ -29,4 +34,4 @@ Accompanying courses can be found here:
 - [Introduction to reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)
 - [Advanced reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html)
 
-See our website for additional courses (including on Coursera and Leanpub)!  <div class = "link_button"><a href= "https://www.itcrtraining.org/resources/courses" target="_blank"> ITN Website Course Page</a></div>
+See our website for additional courses (including on Coursera and Leanpub)!  <div class = "itn_button"><a href= "https://www.itcrtraining.org/resources/courses" target="_blank"> ITN Website Course Page</a></div>
