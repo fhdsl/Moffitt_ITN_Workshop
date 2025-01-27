@@ -1,10 +1,11 @@
 ---
 title: "**Computing and Data Ethics for Cancer Informatics**"
-subtitle: "Workshop Material"
 output:
   html_document
 ---
 
+
+## Workshop Material
 
 In this workshop we cover:
 
@@ -15,6 +16,17 @@ In this workshop we cover:
 - Practices to ensure your research is transparent and reproducible
 - Concepts around why transparency and reproducibity are critical for ethical research
 
- <div class = "link_button"><a href="https://docs.google.com/presentation/d/1xjJdvDOOMGQLSd6jm9sfzfjDQEWG9xEICXbJOTq8-PQ/edit?usp=sharing" target="_blank"> Slides for the computing workshop</a></div>
+ Check out the slides here: <div class = "link_button"><a href="https://docs.google.com/presentation/d/1xjJdvDOOMGQLSd6jm9sfzfjDQEWG9xEICXbJOTq8-PQ/edit?usp=sharing" target="_blank"> Workshop Slides</a></div>
 
+## Additional Resources
 
+Resources for computing can be found here: https://jhudatascience.org/ITN_computing_resources/ 
+
+Accompanying courses can be found here:
+
+- [Computing course](https://jhudatascience.org/Computing_for_Cancer_Informatics/)
+- [Ethical data Handling course](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/)
+- [Introduction to reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)
+- [Advanced reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html)
+
+See our website for additional courses (including on Coursera and Leanpub)!  <div class = "link_button"><a href= "https://www.itcrtraining.org/resources/courses" target="_blank"> ITN Website Course Page</a></div>
