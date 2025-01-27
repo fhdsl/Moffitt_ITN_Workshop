@@ -41,7 +41,7 @@ Change the input such that for this tutorial it should be the PCA Processed Seur
 
 Keep the Dims 1:15 argument.
 
-The Reduction argument autofilled to be pca and I kept it.
+The Reduction argument autofilled to be PCA and I kept it.
 
 
 #### Plot Gapdh
@@ -62,7 +62,7 @@ NOTE: If you plot UMAP at this stage, do not use "Group by: RNA_nn_res.0.5" argu
 
 Input is Y: Seurat UMAP on data X: Seurat RDS (the output of the Run UMAP step "Seurat UMAP on data X: Seurat RDS")
 
-“Reduction”: pca
+“Reduction”: PCA
 “Dimensions”: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 “Assay”: RNA
 --> Z: Seurat FindNeighbours on data Y: Seurat RDS
@@ -85,7 +85,7 @@ A: Seurat FindClusters on data Z: Seurat RDS
 ## Other Resources
 
 - [Full Galaxy Training Tutorial "Filter, plot, and explore single cell RNA-seq data with Seurat"](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html) from which this tutorial was adapted. Changes include
-  - several subsections within QC that are ommited
+  - several subsections within QC that are omitted
   - rearranging of the Dimensionality Reduction section
   - Stopping before the Differential Expression Testing: Finding Markers section
 
