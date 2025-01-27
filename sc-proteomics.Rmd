@@ -18,7 +18,7 @@ For easy start up we will use Posit Cloud -- an online resource for using R.
 
 <input type="checkbox"> If you have not already, accept the invite to our Posit cloud space that was sent to your email (that you registered for this workshop with). <br>  
 
-The email will looks like this: 
+The email will looks like this: <br/>
 > 
 ______ has invited you to join Posit Cloud. By clicking on the link below, you can join the space that has been shared with you. Note that you will first be prompted to create an Posit Cloud account.<br> 
 
