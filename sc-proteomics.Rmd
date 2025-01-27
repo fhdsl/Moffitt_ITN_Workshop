@@ -16,7 +16,7 @@ knitr::opts_chunk$set(number_sections = FALSE)
 
 For easy start up we will use Posit Cloud -- an online resource for using R.
 
-<input type="checkbox"> If you have not already accept the invite to our Posit cloud space go to your email that you registered with and accept that invite. <br>  
+<input type="checkbox"> If you have not already, accept the invite to our Posit cloud space that was sent to your email (that you registered for this workshop with). <br>  
 
 The email will looks like this: 
 > 
