@@ -46,7 +46,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-.itn_button {
+.resource_button {
     border-radius: 8px;
     border: 1px solid #black;
     background: #FDFD96;
@@ -73,7 +73,7 @@ input[type="checkbox"] {
     color: #fff;
 }
 
-.itn_button a:link{
+.resource_button a:link{
     color: black;
 }
 

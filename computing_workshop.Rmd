@@ -34,4 +34,4 @@ Accompanying courses can be found here:
 - [Introduction to reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)
 - [Advanced reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html)
 
-See our website for additional courses (including on Coursera and Leanpub)!  <div class = "itn_button"><a href= "https://www.itcrtraining.org/resources/courses" target="_blank"> ITN Website Course Page</a></div>
+See our website for additional courses (as well as how to get a certificate for completing courses) on our [course page](https://www.itcrtraining.org/resources/courses).
