@@ -12,7 +12,7 @@ css: style.css
 ```{r echo = FALSE, show = FALSE}
 knitr::opts_chunk$set(number_sections = FALSE)
 ```
-## Activity: Set Posit Cloud
+## Activity: Set Up Posit Cloud
 
 For easy start up we will use Posit Cloud -- an online resource for using R.
 
