@@ -27,4 +27,12 @@ href="https://usegalaxy.org/login/start?redirect=None" target="_blank"> Resource
 
 ## Additional Resources
 
-For more information about machine learning, check out this [case study](https://www.opencasestudies.org/ocs-bp-air-pollution/) in R. 
+- [Full Galaxy Training Tutorial "Building the LORIS LLR6 PanCancer Model Using PyCaret"](https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html) from which this tutorial was adapted. Changes include
+  - Reducing the number of models that pycaret compares
+  - Reducing the number of cross validation folds
+- [A Galaxy Training Tutorial on an image classification problem](https://training.galaxyproject.org/training-material/topics/statistics/tutorials/galaxy-ludwig/tutorial.html)
+- [A guide to machine learning for biologists, from nature reviews molecular cell biology](https://www-nature-com.fhcrc.idm.oclc.org/articles/s41580-021-00407-0)
+- [Clinical applications of artificial intelligence and machine learning in cancer diagnosis: looking into the future, from Cancer Cell International](https://cancerci.biomedcentral.com/articles/10.1186/s12935-021-01981-1)
+- [Deep learning: new computational modeling techniques for genomics, from nature reviews genetics](https://www-nature-com.fhcrc.idm.oclc.org/articles/s41576-019-0122-6)
+- [Navigating the pitfalls of applying machine learning in genomics, from nature reviews genetics](https://www-nature-com.fhcrc.idm.oclc.org/articles/s41576-021-00434-9)
+- [Case study about machine learning in R](https://www.opencasestudies.org/ocs-bp-air-pollution/)
