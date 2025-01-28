@@ -5,6 +5,17 @@ output:
   html_document
 ---
 
-## Slides
+## Workshop Material
 
-The slides for this workshop are <div class = "link_button"><a href="FILL IN" target="_blank"> available to view here</a></div>.
+In this workshop we cover:
+
+- Fundamentals about spatial transcriptomic methods
+- 
+
+<div class = "link_button"><a href="https://docs.google.com/presentation/d/1yPqGAAMdBA6DMpNlmV22sr-fB9nLc0oGs-0o_z1mxTY/edit?usp=drive_link" target="_blank"> Slides Link</a></div>
+
+<div class = "slido_button"><a href="https://app.sli.do/event/u34YdHzLCsYKgqCNueqiRp" target="_blank"> Discussion Link </a></div>
+
+<div class = "resource_button"><a 
+href="https://spatialge.moffitt.org/" target="_blank"> Resource Link </a></div>
+<br>
