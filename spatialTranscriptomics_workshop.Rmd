@@ -1,6 +1,5 @@
 ---
 title: "**Tools for Spatial Transcriptomics**"
-subtitle: "Workshop Material"
 output:
   html_document
 ---
@@ -13,6 +12,7 @@ In this workshop we cover:
 - Description about why spatial transcriptomics is a "hot topic" in cancer research
 - Overview of technologies available
 - Overview of analysis tools available
+- Overview of how to use spatialGE for analysis
 
 
 <div class = "link_button"><a href="https://docs.google.com/presentation/d/1yPqGAAMdBA6DMpNlmV22sr-fB9nLc0oGs-0o_z1mxTY/edit?usp=drive_link" target="_blank"> Slides Link</a></div>
@@ -22,3 +22,9 @@ In this workshop we cover:
 <div class = "resource_button"><a 
 href="https://spatialge.moffitt.org/" target="_blank"> Resource Link </a></div>
 <br>
+
+## Additional Resources
+
+- [The accompanying paper for spatialGE](https://academic.oup.com/bioinformatics/article/38/9/2645/6544582) 
+- [Tutorials on how to use the spatialGE R package](https://fridleylab.github.io/spatialGE/)
+- [The code for spatialGE](https://github.com/FridleyLab/spatialGE)
