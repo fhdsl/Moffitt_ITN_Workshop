@@ -1,8 +1,11 @@
 
 
-img {
+.img_shad{
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 /*------------- checkbox alignment for html checkbox---------------- */
 ul {
