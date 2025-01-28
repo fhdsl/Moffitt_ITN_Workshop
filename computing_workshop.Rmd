@@ -20,7 +20,8 @@ In this workshop we cover:
 
 <div class = "slido_button"><a href="https://app.sli.do/event/i9DkV4CzMwqgEvzwv7B96m" target="_blank"> Discussion Link </a></div>
 
-
+<div class = "resource_button"><a 
+href="https://usegalaxy.org/login/start?redirect=None" target="_blank"> Resource Link </a></div>
 <br>
 
 ## Additional Resources
