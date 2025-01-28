@@ -27,18 +27,19 @@ This information was emailed to you, but you will need to register for the follo
 |Transforming the Machine Learning Workbench with Galaxy | <img width="20%" src="resources/images/check.png">       |            |            |
 </div>
 
+<br>
 
-- To create a **Galaxy** account, go to the [Galaxy login page](https://usegalaxy.org/login/start?redirect=None) and click the "Don't have an account? Register here." link at the bottom.
+To create a **Galaxy** account, go to the [Galaxy login page](https://usegalaxy.org/login/start?redirect=None) and click the "Don't have an account? Register here." link at the bottom.
 
 <p align="center" >
     <img width="40%" src="resources/images/galaxy_login.png" class="img_shad">
 </p>
 
 
-- To create a **spatialGE** account, go to [spatialGE Website](https://spatialge.moffitt.org) and click on "Sign Up" in the upper right corner.
+To create a **spatialGE** account, go to [spatialGE Website](https://spatialge.moffitt.org) and click on "Sign Up" in the upper right corner.
 
 <p align="center" >
     <img width="20%" src="resources/images/spatialge_login.png" class="img_shad">
 </p>
 
-- To create a **Posit Cloud** account, go to the [Posit Cloud website](https://login.posit.cloud/register?redirect=https%3A%2F%2Fclient.login.posit.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0) and sign up with any of the shown methods.
+To create a **Posit Cloud** account, go to the [Posit Cloud website](https://login.posit.cloud/register?redirect=https%3A%2F%2Fclient.login.posit.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0) and sign up with any of the shown methods.
