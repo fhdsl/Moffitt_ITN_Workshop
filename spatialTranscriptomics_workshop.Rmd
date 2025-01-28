@@ -9,8 +9,11 @@ output:
 
 In this workshop we cover:
 
-- Fundamentals about spatial transcriptomic methods
-- 
+- Fundamentals about spatial transcriptomics
+- Description about why spatial transcriptomics is a "hot topic" in cancer research
+- Overview of technologies available
+- Overview of analysis tools available
+
 
 <div class = "link_button"><a href="https://docs.google.com/presentation/d/1yPqGAAMdBA6DMpNlmV22sr-fB9nLc0oGs-0o_z1mxTY/edit?usp=drive_link" target="_blank"> Slides Link</a></div>
 
