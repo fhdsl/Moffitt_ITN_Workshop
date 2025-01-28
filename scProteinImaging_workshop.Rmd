@@ -8,13 +8,10 @@ output:
 ## Workshop Material
 
 In this workshop we cover:
-
-- Fundamentals about computing hardware
-- Common file sizes for biomedical research
-- Fundamentals about shared computing resources
-- Computing resources designed for biomedical research
-- Practices to ensure your research is transparent and reproducible
-- Concepts around why transparency and reproducibility are critical for ethical research
+- Fundamentals of proteomics
+- Overview of proteomic methods
+- Overview of single cell multiplex tissue imaging
+- Introduction of the tool spatialTIME for processing single cell multiplex tissue imaging data
 
 <div class = "link_button"><a href="https://docs.google.com/presentation/d/1lUcVOYB8T0Ex5j6y6LX6nt4rjvVaI8Q23v870vgOKX8/edit#slide=id.g2a47e72aa8a_0_0" target="_blank"> Slides Link</a></div>
 
