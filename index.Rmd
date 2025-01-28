@@ -15,13 +15,17 @@ Over the next two days we will cover the a variety of bioinformatics topics. Ple
 
 This information was emailed to you, but you will need to register for the following resources based on the workshops you will be attending:
 
-|                                                        | Galaxy | spatialGE | posit cloud |
-|------------------------------------------------------|:------:|:------:|:------:|
+
+<div class = "myStyle" align = "center">
+
+|         Workshop        | Galaxy | spatialGE | Posit Cloud |
+|----------------------------|:------:|:------:|:-------:|
 |Computing and Data Ethics for Cancer Informatics        | <img width="20%" src="resources/images/check.png">     |           |             |
 |Tools for Genomics and Single-Cell RNA-seq              | <img width="20%" src="resources/images/check.png">      |           |             |
 |Tools for Spatial Transcriptomics                       |        | <img width="20%" src="resources/images/check.png">          |             |
 |Tools for Single-Cell Protein Imaging                   |        |           | <img width="20%" src="resources/images/check.png">            |
 |Transforming the Machine Learning Workbench with Galaxy | <img width="20%" src="resources/images/check.png">       |            |            |
+</div>
 
 
 - To create a **Galaxy** account, go to the [Galaxy login page](https://usegalaxy.org/login/start?redirect=None) and click the "Don't have an account? Register here." link at the bottom.
