@@ -7,7 +7,7 @@ output:
 
 ## Workshop Material
 
-In this workshop we cover:
+In this workshop we will cover:
 
 - Fundamentals about computing hardware
 - Common file sizes for biomedical research
