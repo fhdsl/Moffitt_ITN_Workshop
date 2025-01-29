@@ -6,7 +6,6 @@
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
 
 }
 .myStyle {
@@ -69,7 +68,6 @@
 
 input[type="checkbox"] {
         margin-right: 0.5ch;
-        padding-left: 30px;
       }
 
 /*------------ buttons for links ---------------------- */

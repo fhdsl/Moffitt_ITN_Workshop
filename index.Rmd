@@ -10,6 +10,26 @@ Welcome to the ITN Moffitt Workshop Series!
 
 Over the next two days we will cover the a variety of bioinformatics topics. Please feel free to refer to these materials in the future. 
 
+### **Schedule**
+
+<div class = "myStyle" align = "center">
+
+| Day 1 (SRB Ferman Family Conference Room) - February 5: | Time                |  
+|---------------------------------------------------------|:------:|
+| Computing and Data Ethics for Cancer Informatics        | 9:30 AM - 11:00 AM  |  
+| Tools for Genomics and Single-Cell RNA-seq              | 11:00 AM - 12:30 PM |  
+| <mark>Free Lunch!    </mark>                            | 12:30 PM - 1:30 PM  |  
+| Tools for Spatial Transcriptomics                       | 1:30 PM - 3:00 PM   | 
+
+
+| Day 2 (SRB David Murphey Conference Room) - February 6: |  Time                   |
+|---------------------------------------------------------|:------:|
+| Tools for Single-Cell Protein Imaging                   | 9:30 AM -11:00 AM   |  
+| Transforming the Machine Learning Workbench with Galaxy | 11:00AM - 12:30 PM  |  
+
+</div>
+
+<br>
 
 ### **Pre-requisites**
 
