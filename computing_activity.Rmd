@@ -12,4 +12,7 @@ https://usegalaxy.org/join-training/itn-at-moffitt-2025/
 
 Note: this link will only be active for a week, but you can continue to use Galaxy resources for free!
 
-![Screenshot of Galaxy](resources/images/galaxy_get_started.png)
+<p align="center" >
+    <img width="70%" src="resources/images/galaxy_get_started.png" class="img_shad">
+</p>
+
