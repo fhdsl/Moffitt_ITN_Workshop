@@ -134,6 +134,20 @@ input[type="checkbox"] {
     color: #000000;
 }
 
+/*------------- visited link button text color---------------- */
+
+
+.link_button a:visited{
+    color: #fff;
+}
+
+.slido_button a:visited{
+    color: #fff;
+}
+
+.resource_button a:visited{
+    color: #000000;
+}
 
 /* To add some space below the navigation bar */
 
