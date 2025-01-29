@@ -1,10 +1,38 @@
 ---
 title: "**Transforming the Machine Learning Workbench with Galaxy**"
-subtitle: "Workshop Material"
 output:
   html_document
 ---
 
-## Slides
+## Workshop Material
 
-The slides for this workshop are <div class = "link_button"><a href="https://docs.google.com/presentation/d/1p6vO1RahBUAu3_lAKL0my5NTIHfv8F9rj4vVXYn7oHA/edit?usp=sharing" target="_blank"> available to view here</a></div>.
+In this workshop we will cover:
+
+- Fundamentals about machine learning
+- Common machine learning modeling methods including:
+  - logistic regression, decision trees, and random forest
+- Applications for machine learning in cancer research
+- Methods for evaluating model performance
+- Concepts in tuning models for better performance
+
+We will work through some of the methods from this [study](https://www.nature.com/articles/s43018-024-00772-7). 
+
+<div class = "link_button"><a href="https://docs.google.com/presentation/d/1p6vO1RahBUAu3_lAKL0my5NTIHfv8F9rj4vVXYn7oHA/edit?usp=sharing" target="_blank"> Slides Link</a></div>
+
+<div class = "slido_button"><a href="https://app.sli.do/event/9u8HvTeKLmdpN6tfiG9heZ" target="_blank"> Discussion Link </a></div>
+
+<div class = "resource_button"><a 
+href="https://usegalaxy.org/login/start?redirect=None" target="_blank"> Resource Link </a></div>
+<br>
+
+## Additional Resources
+
+- [Full Galaxy Training Tutorial "Building the LORIS LLR6 PanCancer Model Using PyCaret"](https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html) from which this tutorial was adapted. Changes include
+  - Reducing the number of models that pycaret compares
+  - Reducing the number of cross validation folds
+- [A Galaxy Training Tutorial on an image classification problem](https://training.galaxyproject.org/training-material/topics/statistics/tutorials/galaxy-ludwig/tutorial.html)
+- [A guide to machine learning for biologists, from nature reviews molecular cell biology](https://www-nature-com.fhcrc.idm.oclc.org/articles/s41580-021-00407-0)
+- [Clinical applications of artificial intelligence and machine learning in cancer diagnosis: looking into the future, from Cancer Cell International](https://cancerci.biomedcentral.com/articles/10.1186/s12935-021-01981-1)
+- [Deep learning: new computational modeling techniques for genomics, from nature reviews genetics](https://www-nature-com.fhcrc.idm.oclc.org/articles/s41576-019-0122-6)
+- [Navigating the pitfalls of applying machine learning in genomics, from nature reviews genetics](https://www-nature-com.fhcrc.idm.oclc.org/articles/s41576-021-00434-9)
+- [Case study about machine learning in R](https://www.opencasestudies.org/ocs-bp-air-pollution/)

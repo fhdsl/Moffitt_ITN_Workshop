@@ -4,6 +4,7 @@ auth
 autofilled
 automations
 bc
+biocondtor
 bioinformatics
 Bootstap
 ccRCC
@@ -88,6 +89,8 @@ repo
 reproducibility
 Reproducibility
 Rmd
+RNAseq
+rstudio
 RStudio
 samplename
 SCTransform
@@ -96,6 +99,7 @@ slido
 Slido
 spatialGE
 spatialge
+spatialTIME
 STdeconvolve
 STCLUST
 subdir
@@ -107,9 +111,11 @@ TLS
 TNBC
 TP
 trainings
+transcriptomics
 Transcriptomics
 tsv
 UMAP
+UseGalaxy
 usegalaxy
 VectraPolarisData
 Visium

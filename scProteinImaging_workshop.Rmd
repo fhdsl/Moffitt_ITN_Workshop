@@ -1,10 +1,25 @@
 ---
 title: "**Tools for Single-Cell Protein Imaging**"
-subtitle: "Workshop Material"
 output:
   html_document
 ---
 
-## Slides
 
-The slides for this workshop are <div class = "link_button"><a href="https://docs.google.com/presentation/d/1lUcVOYB8T0Ex5j6y6LX6nt4rjvVaI8Q23v870vgOKX8/edit#slide=id.g2a47e72aa8a_0_0" target="_blank"> available to view here</a></div>.
+## Workshop Material
+
+In this workshop we will cover:
+
+- Fundamentals of proteomics
+- Overview of proteomic methods
+- Overview of single cell multiplex tissue imaging
+- Introduction of the tool spatialTIME for processing single cell multiplex tissue imaging data
+
+<div class = "link_button"><a href="https://docs.google.com/presentation/d/1lUcVOYB8T0Ex5j6y6LX6nt4rjvVaI8Q23v870vgOKX8/edit#slide=id.g2a47e72aa8a_0_0" target="_blank"> Slides Link</a></div>
+
+<div class = "slido_button"><a href="https://app.sli.do/event/wXDFisUEepzNBEpF2igyQU" target="_blank"> Discussion Link </a></div>
+
+<div class = "resource_button"><a 
+href="https://posit.cloud/" target="_blank"> Resource Link </a></div>
+<br>
+
+

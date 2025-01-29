@@ -1,38 +1,45 @@
 ---
-title: "**ITN Workshops at Moffitt Cancer Center 2025 Sandbox**"
+title: "**ITN Moffitt Cancer Center 2025 Workshops **"
 output:
   html_document
 ---
 
 # Moffitt ITN Workshops
 
-This repo is making the ITN workshop website for folks to follow along with activities as a part of the Moffitt ITN Workshops
+Welcome to the ITN Moffitt Workshop Series!
 
-See this website here: https://hutchdatascience.org/Moffitt_ITN_Workshop/
+Over the next two days we will cover the a variety of bioinformatics topics. Please feel free to refer to these materials in the future. 
 
-The slides associated with these activities can be found here:
-
-- [Computing and Data Ethics for Cancer Informatics]()
-- [Tools for Genomics and Single-Cell RNA-seq]()
-- [Spatial Transcriptomics](https://docs.google.com/presentation/d/1WABxPIA6J3wsi04pC3ZRmV8CRZA-V53awteBq0-U4Pg/edit#slide=id.p1)
-- [Intro to single cell proteomics](https://docs.google.com/presentation/d/1lUcVOYB8T0Ex5j6y6LX6nt4rjvVaI8Q23v870vgOKX8/edit#slide=id.g2d6987c4406_0_0)
-- [Intro to Machine Learning](https://docs.google.com/presentation/d/1p6vO1RahBUAu3_lAKL0my5NTIHfv8F9rj4vVXYn7oHA/edit#slide=id.g2a47e840a8b_0_0)
 
 ### **Pre-requisites**
 
-Each workshop will use computing resources that you will need to register for in advance, as some require an email confirmation that might take additional time. (All computing resources are free to participants!) 
-
-Please register for the following resources based on the workshops you will be attending:
-
-|                                                        | Galaxy | spatialGE | posit cloud |
-|:------------------------------------------------------:|:------:|:---------:|:-----------:|
-|Computing and Data Ethics for Cancer Informatics        | X      |           |             |
-|Tools for Genomics and Single-Cell RNA-seq              | X      |           |             |
-|Tools for Spatial Transcriptomics                       |        | X         |             |
-|Tools for Single-Cell Protein Imaging                   |        |           | X            |
-|Transforming the Machine Learning Workbench with Galaxy | X      |            |            |
+This information was emailed to you, but you will need to register for the following resources based on the workshops you will be attending:
 
 
-- To create a **Galaxy** account, go to <https://usegalaxy.org/login/start?redirect=None>\ and click the "Don't have an account? Register here." link at the bottom.
-- To create a **spatialGE** account, go to <https://spatialge.moffitt.org/>\ and click on "Sign Up" in the upper right corner
-- To create a **posit cloud** account, go to <https://login.posit.cloud/register?redirect=https%3A%2F%2Fclient.login.posit.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0>\ and sign up with any of the shown methods.
+<div class = "myStyle" align = "center">
+
+|         Workshop        | Galaxy | spatialGE | Posit Cloud |
+|----------------------------|:------:|:------:|:-------:|
+|Computing and Data Ethics for Cancer Informatics        | <img width="20%" src="resources/images/check.png">     |           |             |
+|Tools for Genomics and Single-Cell RNA-seq              | <img width="20%" src="resources/images/check.png">      |           |             |
+|Tools for Spatial Transcriptomics                       |        | <img width="20%" src="resources/images/check.png">          |             |
+|Tools for Single-Cell Protein Imaging                   |        |           | <img width="20%" src="resources/images/check.png">            |
+|Transforming the Machine Learning Workbench with Galaxy | <img width="20%" src="resources/images/check.png">       |            |            |
+</div>
+
+<br>
+
+To create a **Galaxy** account, go to the [Galaxy login page](https://usegalaxy.org/login/start?redirect=None) and click the "Don't have an account? Register here." link at the bottom.
+
+<p align="center" >
+    <img width="40%" src="resources/images/galaxy_login.png" class="img_shad">
+</p>
+
+
+To create a **spatialGE** account, go to [spatialGE Website](https://spatialge.moffitt.org) and click on "Sign Up" in the upper right corner.
+
+<p align="center" >
+    <img width="20%" src="resources/images/spatialge_login.png" class="img_shad">
+</p>
+
+To create a **Posit Cloud** account, go to the [Posit Cloud website](https://login.posit.cloud/register?redirect=https%3A%2F%2Fclient.login.posit.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0) and sign up with any of the shown methods.

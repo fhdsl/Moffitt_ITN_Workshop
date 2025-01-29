@@ -5,6 +5,31 @@ output:
   html_document
 ---
 
-## Slides
 
-The slides for this workshop are <div class = "link_button"><a href="https://docs.google.com/presentation/d/18H84ScncbbRA9KovjfkEULtmWVuOAu6mW7mGjl5BxR8/edit?usp=sharing" target="_blank"> available to view here</a></div>.
+## Workshop Material
+
+In this workshop we will cover:
+
+- Fundamentals about single cell RNAseq and how this differs from bulk RNAseq
+- Fundamentals about common library prep methods
+- Overview of a typical bioinformatics analysis workflow for single cell RNAseq
+- Important considerations for quality control
+- Methods and considerations for normalization and dimensionality reduction
+- Common tools for analysis
+
+
+<div class = "link_button"><a href="https://docs.google.com/presentation/d/18H84ScncbbRA9KovjfkEULtmWVuOAu6mW7mGjl5BxR8/edit?usp=sharing" target="_blank"> Slides Link</a></div>
+
+<div class = "slido_button"><a href="https://app.sli.do/event/ftRxxSsRxixDYZotJt3VxD" target="_blank"> Discussion Link </a></div>
+
+<div class = "resource_button"><a 
+href="https://usegalaxy.org/login/start?redirect=None" target="_blank"> Resource Link </a></div>
+<br>
+
+## Additional Resources
+
+- [Orchastarting single-cell analysis with bioconductor Book](https://bioconductor.org/books/release/OSCA/)
+- [Current best practices in single‐cell RNA‐seq analysis: a tutorial](https://www.embopress.org/doi/full/10.15252/msb.20188746)
+- [Single cell best practices book](https://www.sc-best-practices.org/preamble.html)
+- [Single-cell RNA-seq data analysis workshop](https://hbctraining.github.io/scRNA-seq_online/)
+
