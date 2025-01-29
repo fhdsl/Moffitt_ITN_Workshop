@@ -12,6 +12,7 @@ Over the next two days we will cover the a variety of bioinformatics topics. Ple
 
 ### **Schedule**
 
+
 <div class = "myStyle" align = "center">
 
 | Day 1 (SRB Ferman Family Conference Room) - February 5: | Time                |  
@@ -28,6 +29,7 @@ Over the next two days we will cover the a variety of bioinformatics topics. Ple
 | Transforming the Machine Learning Workbench with Galaxy | 11:00AM - 12:30 PM  |  
 
 </div>
+
 
 <br>
 
