@@ -37,6 +37,7 @@ FN
 Foauth
 Fshow
 favicon
+Ferman
 Gapdh
 GH
 github
@@ -61,6 +62,7 @@ LLR
 md
 moffitt
 Moffitt
+Murphey
 nb
 nn
 omics
@@ -76,6 +78,7 @@ png
 Pre
 Preprocessed
 proteomics
+proteomic
 pT
 py
 pycaret
@@ -100,6 +103,7 @@ Slido
 spatialGE
 spatialge
 spatialTIME
+SRB
 STdeconvolve
 STCLUST
 subdir
