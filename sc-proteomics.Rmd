@@ -53,7 +53,7 @@ If you'd like to run this on your own computer
 
 <input type="checkbox"> You will need to [install Rstudio](https://posit.co/download/rstudio-desktop/).
 
-<input type="checkbox"> If you are new to Rstudio [we recommend this resource](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/a-tour-of-rstudio.html). <br>
+<input type="checkbox"> If you are new to RStudio [we recommend this resource](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/a-tour-of-rstudio.html). <br>
 <input type="checkbox">
 
 ### For more learning:

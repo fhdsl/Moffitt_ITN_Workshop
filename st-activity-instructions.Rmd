@@ -69,7 +69,7 @@ immunohistochemistry staining. The file looks like this:
 | sample_b_01 | IMM      | b_1  | pT1  | neg |
 | sample_a_01 | ExhauCRF | a_1  | pT1b | pos |
 
-## Create an account with SpatialGE
+## Create an account with spatialGE
 
 <input type="checkbox"> Go to <https://spatialge.moffitt.org/>\
 <input type="checkbox"> Click on "Sign Up" in the upper right corner.
