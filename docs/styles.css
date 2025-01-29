@@ -4,9 +4,7 @@
 .myStyle table {
     border-collapse: collapse;
     text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+
 
 }
 .myStyle {
@@ -17,7 +15,15 @@
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
 
+}
+
+/* Zebra-striped table rows */
+.myStyle tr:nth-child(even) {
+  background-color: #f2f2f2
 }
 .myStyle table td, .myStyle table th {
     padding: 3px 10px;
@@ -69,7 +75,6 @@
 
 input[type="checkbox"] {
         margin-right: 0.5ch;
-        padding-left: 30px;
       }
 
 /*------------ buttons for links ---------------------- */
@@ -136,6 +141,20 @@ input[type="checkbox"] {
     color: #000000;
 }
 
+/*------------- visited link button text color---------------- */
+
+
+.link_button a:visited{
+    color: #fff;
+}
+
+.slido_button a:visited{
+    color: #fff;
+}
+
+.resource_button a:visited{
+    color: #000000;
+}
 
 /* To add some space below the navigation bar */
 
