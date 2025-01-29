@@ -1,9 +1,67 @@
+/*------------- table code---------------- */
+/*table code from https://jsfiddle.net/davidThomas/vk7eP/3/*/
+
+.myStyle table {
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+.myStyle {
+    font: normal 12px/150% Arial, Helvetica, sans-serif;
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #801D99;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+}
+.myStyle table td, .myStyle table th {
+    padding: 3px 10px;
+}
+.myStyle table thead th {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #801D99), color-stop(1, #801D99));
+    background:-moz-linear-gradient(center top, #801D99 5%, #801D99 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#801D99', endColorstr='#801D99');
+    background-color:#801D99;
+    color:#FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    border-left: 1px solid #801D99;
+}
+.myStyle table thead th:first-child {
+    border: none;
+}
+.myStyle table tbody td {
+    color: #801D99;
+    font-size: 12px;
+    border-bottom: 1px solid #995993;
+    font-weight: normal;
+}
+.myStyle table tbody td:first-child {
+    border-left: none;
+}
+.myStyle table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/*------------- making images with shadows---------------- */
+
+
+.img_shad{
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
 /*------------- checkbox alignment for html checkbox---------------- */
-ul {
+/*ul {
   list-style-position: inside;
   padding-left: 0;
   font-weight: normal
-}
+}*/
 
 
 
@@ -11,6 +69,7 @@ ul {
 
 input[type="checkbox"] {
         margin-right: 0.5ch;
+        padding-left: 30px;
       }
 
 /*------------ buttons for links ---------------------- */
@@ -49,7 +108,7 @@ input[type="checkbox"] {
 .resource_button {
     border-radius: 8px;
     border: 1px solid #black;
-    background: #FDFD96;
+    background: #e1ad01;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     padding: 8px 16px;
     text-align: center;
