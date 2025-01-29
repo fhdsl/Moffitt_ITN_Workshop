@@ -13,9 +13,49 @@ css: style.css
 knitr::opts_chunk$set(number_sections = FALSE)
 ```
 
-Note the galaxy link they should use: https://usegalaxy.org/join-training/itn-at-moffitt-2025/
+## Overview of activity and data
 
-## Tutorial
+Our Galaxy activity is a condensed tutorial adapted from the "Building the LORIS LLR6 PanCancer Model Using PyCaret" Galaxy Training Tutorial.
+
+```{r echo=FALSE, fig.alt="Galaxy Training Tutorial titled 'Building the LORIS LLR6 PanCancer Model Using PyCaret'", fig.link="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32af3c023b6_0_0")
+```
+
+## Activity steps
+
+### Open Galaxy
+
+<input type="checkbox"> Please [use this link to access the Galaxy platform specifically for our activity](https://usegalaxy.org/join-training/itn-at-moffitt-2025/).<br/>
+
+Note: this link will only be active for this workshop, but you can continue to use Galaxy resources for free by visiting [usegalaxy.org](https://usegalaxy.org/).
+
+### Set up Galaxy's history pane
+
+<input type="checkbox"> If you have files in your history already, use the `+` button on the top right of the history pane to `Create new history`. <br/>
+<input type="checkbox"> Click the pencil button next to "Unnamed history". Fill in the name with something descriptive/appropriate. Click "Save"
+
+Now that our History pane is empty, we'll need to load data.
+
+### Data upload
+
+<input type="checkbox"> Copy these links:
+
+```
+https://zenodo.org/records/13885908/files/Chowell_train_Response.tsv
+https://zenodo.org/records/13885908/files/Chowell_test_Response.tsv
+```
+
+<input type="checkbox"> In Galaxy, click the "Upload" button in the top left of the page.
+
+This will open an interactive panel for data upload.
+
+<input type="checkbox"> Click the "Paste/Fetch Data" button in the middle of the bottom stretch of options.
+
+<input type="checkbox"> Paste the copied URLs into the middle box.
+
+<input type="checkbox"> Click the blue "Start" button in the bottom stretch of options.
+
+<input type="checkbox"> Click the "Close" button at the end of the bottom stretch of options.
 
 Train dataset: 1: Chowell_train_Response.tsv
 
@@ -33,4 +73,3 @@ Task:
 Customize Default Settings?
 No --> Yes
 Cross Validation Folds --> 2
-
