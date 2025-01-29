@@ -7,6 +7,7 @@
     margin-left: auto;
     margin-right: auto;
 
+
 }
 .myStyle {
     font: normal 12px/150% Arial, Helvetica, sans-serif;
@@ -16,7 +17,14 @@
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
+    width:60%;
+    alignment: centered;
 
+}
+
+/* Zebra-striped table rows */
+.myStyle tr:nth-child(even) {
+  background-color: #f2f2f2
 }
 .myStyle table td, .myStyle table th {
     padding: 3px 10px;
