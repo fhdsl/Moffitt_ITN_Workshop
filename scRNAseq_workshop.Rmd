@@ -28,7 +28,7 @@ href="https://usegalaxy.org/login/start?redirect=None" target="_blank"> Resource
 
 ## Additional Resources
 
-- [Orchastarting single-cell analysis with bioconductor Book](https://bioconductor.org/books/release/OSCA/)
+- [Orchestrating single-cell analysis with bioconductor Book](https://bioconductor.org/books/release/OSCA/)
 - [Current best practices in single‐cell RNA‐seq analysis: a tutorial](https://www.embopress.org/doi/full/10.15252/msb.20188746)
 - [Single cell best practices book](https://www.sc-best-practices.org/preamble.html)
 - [Single-cell RNA-seq data analysis workshop](https://hbctraining.github.io/scRNA-seq_online/)
