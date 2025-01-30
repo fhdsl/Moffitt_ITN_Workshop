@@ -337,7 +337,7 @@ Nice! We now have a preprocessed Seurat object!
 
 Although we’ve made our expression values comparable to one another and our overall dataset less computationally demanding, we still have way too many dimensions (n cells x n genes!).
 
-Transcript changes are not usually singular–which is to say, genes function and exist in pathways and groups. It would be easier to analyse our data if we could group these differences. To address this we will run principal component analysis (PCA).
+Transcript changes are not usually singular–which is to say, genes function and exist in pathways and groups. It would be easier to analyze our data if we could group these differences. To address this we will run principal component analysis (PCA).
 
 #### Run PCA
 
