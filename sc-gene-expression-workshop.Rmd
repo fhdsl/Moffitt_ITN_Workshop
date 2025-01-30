@@ -7,9 +7,60 @@ Note the galaxy link they should use: https://usegalaxy.org/join-training/itn-at
 
 ## Tutorial Steps
 
+We will be working through a modified/truncated version of the [Galaxy Training Tutorial "Filter, plot, and explore single cell RNA-seq data with Seurat" Tutorial ](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html). 
+
+Changes include:
+
+  - several subsections within QC will be omitted
+  - we rearranged the Dimensionality Reduction section
+  - we will stop before the Differential Expression Testing: Finding Markers section
+
+### Open Galaxy
+
+<input type="checkbox"> Please [use this link to access the Galaxy platform specifically for our activity](https://usegalaxy.org/join-training/itn-at-moffitt-2025/).<br/>
+
+Note: this link will only be active for this workshop, but you can continue to use Galaxy resources for free by visiting [usegalaxy.org](https://usegalaxy.org/).
+
+### Set up Galaxy's history pane
+
+<input type="checkbox"> If you have files in your history already, use the `+` button on the top right of the history pane to `Create new history`. <br/>
+<input type="checkbox"> Click the pencil button next to "Unnamed history". Fill in the name with something descriptive/appropriate. Click "Save".
+
+<p align="center" >
+    <img width="40%" src="resources/images/hist_singlecell.png" class="img_shad">
+</p>
+
+Now we are ready to start the tutorial!
+
+### Open the tutorial
+
+<input type="checkbox"> Click on the [full tutorial link](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html) to follow along.
+
 ### Get Data onto Galaxy and generate a Seurat object
 
+<input type="checkbox"> Click on the "Get Data onto Galaxy and generate a Seurat object" link to get started in the tutorial.
+
+### 
+
 #### EBI Data Retrieval
+
+<input type="checkbox"> Copy and paste  `EBI SCXA Data Retrieval` into the tool search.
+
+<p align="center" >
+    <img width="40%" src="resources/images/data_singlecell.png" class="img_shad">
+</p>
+
+<input type="checkbox"> Select `EBI SCXA DATa Retrieval`.
+
+<input type="checkbox"> Copy paste `E-MTAB-6945` into the `SC-Atlas experiment accession` field 
+
+<input type="checkbox"> Make sure the `“Choose the type of matrix to download”` field says `Raw filtered counts`.
+
+<input type="checkbox"> Click the Run tool button.
+
+<p align="center" >
+    <img width="50%" src="resources/images/EBI_singlecell.png" class="img_shad">
+</p>
 
 #### Seurat Read10X
 
@@ -84,10 +135,7 @@ A: Seurat FindClusters on data Z: Seurat RDS
 
 ## Other Resources
 
-- [Full Galaxy Training Tutorial "Filter, plot, and explore single cell RNA-seq data with Seurat"](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html) from which this tutorial was adapted. Changes include
-  - several subsections within QC that are omitted
-  - rearranging of the Dimensionality Reduction section
-  - Stopping before the Differential Expression Testing: Finding Markers section
+
 
 - [Further information on Seurat and its manual](https://satijalab.org/seurat/)
 
