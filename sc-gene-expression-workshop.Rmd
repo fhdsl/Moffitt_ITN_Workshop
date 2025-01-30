@@ -62,9 +62,73 @@ Now we are ready to start the tutorial!
     <img width="50%" src="resources/images/EBI_singlecell.png" class="img_shad">
 </p>
 
-#### Seurat Read10X
+You will see your history pane show some new activity, with rectangles showing the data file upload first in gray (to show that the job has been requested), then yellow (to show that Galaxy is working on it), and finally green (to show that the job is complete). 
+
+Note: do not worry about the numbers next to each step - depending on how many times you run requests you will have different numbers. 
+
+<p align="center" >
+    <img width="50%" src="resources/images/gal_data_singlecell.png" class="img_shad">
+</p>
+
+
+You have now imported the `exp_design.tsv`, `barcodes.tsv`, `genes.tsv`, `matrix.mtx` and files into Galaxy! Note that each file starts with `EBI SCXA Data Retrieval on E-MTAB-6945` to indicate how we got them. 
+
+#### Generating a Seurat Read10X Object
+
+Now we need to get our data into a format that the Seurat tools will recognize. 
+
+<input type="checkbox"> Copy paste `Seurat Read10x` into the tools search.
+
+<p align="center" >
+    <img width="50%" src="resources/images/10x_singlecell.png" class="img_shad">
+</p>
+
+<input type="checkbox"> Select `Seurat Read10x`.
+
+<input type="checkbox"> Select the pull down menu for the `Expression matrix in sparse matrix format (.mtx)` and select the `matrix.mtx` file.
+
+<p align="center" >
+    <img width="50%" src="resources/images/select_file_singlecell.png" class="img_shad">
+</p>
+
+Continue with the rest of the files to select the appropriate file for each field. Remeber that each file starts with `EBI SCXA Data Retrieval on E-MTAB-6945`.
+
+<input type="checkbox"> Select the pull down menu for the `Gene table` and select the `genes.tsv` file.
+
+<input type="checkbox"> Select the pull down menu for the `Barcode/cell table` and select the `barcodes.tsv` file.
+
+<input type="checkbox"> Select the pull down menu for the `Cell Metadata` and select the `exp_design.tsv` file.
+
+<input type="checkbox"> Type `5` into the `Minimum cells to include features`.
+
+<input type="checkbox"> Ensure that the `Choose format of the output` field says `RDS with a Seurat object`.
+
+<input type="checkbox"> Rename the output to `Initial Seurat Object`.
+
+<p align="center" >
+    <img width="50%" src="resources/images/seurat_singlecell.png" class="img_shad">
+</p>
+
+
+<input type="checkbox"> Click `Run Tool` Button.
+
+You should see a green message indicating that the job is now in the queue. 
+
+<input type="checkbox"> Click on the pencil button of the new output that shows up in the history pane.
+
+<p align="center" >
+    <img width="50%" src="resources/images/rename_singlecell.png" class="img_shad">
+</p>
+
+<input type="checkbox"> Replace the name of the object to `Initial Seurat Object` and press save.
+
+<p align="center" >
+    <img width="50%" src="resources/images/rename2_singlecell.png" class="img_shad">
+</p>
+
 
 ### QC and further processing of the Seurat object
+
 
 #### QC: Visualize Counts
 
