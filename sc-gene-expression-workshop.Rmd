@@ -321,7 +321,7 @@ Note: that the differences from scaling etc. are not the values you have at the 
 
 <input type="checkbox"> For `Vars to regress` ensure that it says `nCount_RNA`.
 
-This function allow us to mitigate the effects of confounding factors in our dataset. In true research practice, one might regress out multiple variables including but not limited to perc.mt, cell cycle scoring, and feature count. As currently written, this tool only allows us to regress out a single variable.
+This function allow us to mitigate the effects of confounding factors in our dataset. In true research practice, one might regress out multiple variables including but not limited to percent mitochondria, cell cycle scoring, and feature count. As currently written, this tool only allows us to regress out a single variable.
 
 <input type="checkbox"> For `Statistical Model` ensure that it says `Linear model`.
 
