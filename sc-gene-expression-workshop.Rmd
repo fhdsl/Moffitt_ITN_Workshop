@@ -377,13 +377,22 @@ So what are all these new objects?
 
 #### Run UMAP
 
-Note here this walkthrough diverges from the Galaxy Training tutorial, rearranging the dimensionality reduction steps.
+Next we will use UMAP, the most recently developed, and most widely used dimensionality reduction method for visualization of principal component data. It has been optimized since tSNE to better preserve global structure and is less computationally demanding.
 
-Change the input such that for this tutorial it should be the PCA Processed Seurat Object (instead of the Preprocessed Seurat Object with Clusters)
+Note that this is where the walkthrough diverges from the Galaxy Training tutorial, rearranging the dimensionality reduction steps.
 
-Keep the Dims 1:15 argument.
 
-The Reduction argument autofilled to be PCA and I kept it.
+<input type="checkbox"> Search for the `Seurat UMAP` tool in the tool search. 
+
+<input type="checkbox"> Select `Seurat UMAP`. 
+
+<input type="checkbox"> Ensure that the `RDS file` field shows our object called PCA Processed Seurat Object.
+
+<input type="checkbox"> Ensure that the `Choose the format of the output` field shows RDS with a Seurat Object.
+
+<input type="checkbox"> For the `Dims` type `1:15`.
+
+<input type="checkbox"> Click the Run Tool button.
 
 
 #### Plot Gapdh
