@@ -307,7 +307,7 @@ What is scaling?
 
 This is an important step to set up our data for further dimensionality reduction. It will transform the dataset such that all genes have the same variance and a zero mean. It helps negate sequencing depth differences between samples, since the gene levels across the cells become comparable.
 
-Note: that the differences from scaling etc. are not the values you have at the end - i.e. if your cell has average GAPDH levels, it will not appear as a ‘0’ when you calculate gene differences between clusters.
+Note: that the differences from scaling etc. are not the values you have at the end - i.e. if your cell has average GAPDH levels, it will not appear as a "0" when you calculate gene differences between clusters.
 
 <input type="checkbox"> Search for the `Seurat ScaleData` tool in the tool search. 
 
