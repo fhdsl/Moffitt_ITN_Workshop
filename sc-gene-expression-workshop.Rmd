@@ -91,7 +91,7 @@ Now we need to get our data into a format that the Seurat tools will recognize.
     <img width="50%" src="resources/images/select_file_singlecell.png" class="img_shad">
 </p>
 
-Continue with the rest of the files to select the appropriate file for each field. Remeber that each file starts with `EBI SCXA Data Retrieval on E-MTAB-6945`.
+Continue with the rest of the files to select the appropriate file for each field. Remember that each file starts with `EBI SCXA Data Retrieval on E-MTAB-6945`.
 
 <input type="checkbox"> Select the pull down menu for the `Gene table` and select the `genes.tsv` file.
 
@@ -135,7 +135,7 @@ Our first step is to do some Quality Control checks aka QC to evaluate our data.
 
 #### QC: Visualize Counts
 
-There will be a number of ‘cells’ that are actually just empty droplets or low-quality. There will also be genes that could be sequencing artifacts or that appear with such low frequency that statistical tools will fail to accurately analyse them.
+There will be a number of ‘cells’ that are actually just empty droplets or low-quality. There will also be genes that could be sequencing artifacts or that appear with such low frequency that statistical tools will fail to accurately analyze them.
 
 This background noise of both cells and genes not only makes it harder to distinguish real biological information from artifacts, but also makes it computationally demanding to analyze.
 
@@ -211,7 +211,7 @@ In this plot, we can see that very few cells in the dataset contain fewer than ~
 
 #### Filter Cells
 
-Recall that from our first plot we saw a severe drop off in the number of cells that contain fewer than 500 and more than 10,000 transcripts. These will be our nCount thresholds that we filter based on. and that our lower thershold of genes would be 500 from our second plot.
+Recall that from our first plot we saw a severe drop off in the number of cells that contain fewer than 500 and more than 10,000 transcripts. These will be our nCount thresholds that we filter based on. and that our lower threshold of genes would be 500 from our second plot.
 
 Will will now apply these thresholds to filter our data.
 
@@ -252,7 +252,7 @@ You will see a green message a new block in the history that says "Seurat Filter
 
 #### Normalize Data
 
-Now we will normalize our data. This helps reduce the differences between gene and UMI counts by fitting total counts across cells in our data to be comparable to one another. SCTransform regularizes the gene expression profiles via a negative binomial regression while also controlling for overfitting of the data.
+Now we will normalize our data. This helps reduce the differences between gene counts by fitting total counts across cells in our data to be comparable to one another. SCTransform regularizes the gene expression profiles via a negative binomial regression while also controlling for overfitting of the data.
 
 <input type="checkbox"> Search for the `Seurat NormaliseData` tool in the tool search. 
 
@@ -275,9 +275,9 @@ Now we will normalize our data. This helps reduce the differences between gene a
 
 #### Find Variable Genes
 
-The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so we could remove these from our data to simplify our analyses.
+The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so we could remove these from our data to simplify our analysis.
 
-The find variable genes step flags genes that do vary across cells to expedite future analyses and ensure that we, and Seurat, don’t waste time looking for meaningful differences where they don’t exist.
+The find variable genes, this step flags genes that do vary across cells to expedite future analyses and ensure that we, and Seurat, don’t waste time looking for meaningful differences where they don’t exist.
 
 <input type="checkbox"> Search for the `Seurat FindVariableGenes` tool in the tool search. 
 

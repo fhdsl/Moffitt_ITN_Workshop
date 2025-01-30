@@ -4,7 +4,7 @@ auth
 autofilled
 automations
 bc
-biocondtor
+bioconductor
 bioinformatics
 Bootstap
 ccRCC
@@ -64,7 +64,10 @@ moffitt
 Moffitt
 Murphey
 nb
+nCount
+nFeature
 nn
+Normalised
 omics
 OTTR
 PanCancer
@@ -98,6 +101,7 @@ RStudio
 samplename
 SCTransform
 scalefactors
+SeuratNormalise
 slido
 Slido
 spatialGE
