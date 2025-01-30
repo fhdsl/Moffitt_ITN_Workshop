@@ -127,10 +127,51 @@ You should see a green message indicating that the job is now in the queue.
 </p>
 
 
+Now we have a Seurat object so we can start using Seurat to work with our data!
+
 ### QC and further processing of the Seurat object
 
+Our first step is to do some Quality Control checks aka QC to evaluate our data.
 
 #### QC: Visualize Counts
+
+There will be a number of ‘cells’ that are actually just empty droplets or low-quality. There will also be genes that could be sequencing artifacts or that appear with such low frequency that statistical tools will fail to accurately analyse them.
+
+This background noise of both cells and genes not only makes it harder to distinguish real biological information from artifacts, but also makes it computationally demanding to analyze.
+
+We want to filter our cells, but first we need to know what our data looks like to make appropriate filters.
+
+We will not have time to go through all of the possible plots one might use, but we will do some evaluations. Remember that you can always do the full tutorial in your own time.
+
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search. 
+
+<input type="checkbox"> Select `**Plot** with Seurat`. 
+
+<p align="center" >
+    <img width="50%" src="resources/images/plot_tool_singlecell.png" class="img_shad">
+</p>
+
+<input type="checkbox"> Ensure that the RDS file field shows our Initial Seurat Object.
+
+<input type="checkbox"> For the `Plot_type_selector` dropdown menu, select `VlnPlot`.
+
+<input type="checkbox"> For the `Plot_type_selector` dropdown menu, select `VlnPlot`.
+
+<input type="checkbox"> For the `Features` field type in `nCount_RNA`.
+
+<input type="checkbox"> Scroll down to `Log` and toggle it to yes.
+
+<input type="checkbox"> Click the Run Tool button.
+
+You should see a green message about the job being in the queue and a new block will show up in the history that says plot. It will take some time for the plot to be generated.  
+
+
+<input type="checkbox"> Once the new block turns green click on the eye button to see the plot.
+
+<p align="center" >
+    <img width="50%" src="resources/images/plot_view_singlecell.png" class="img_shad">
+</p>
+
 
 #### QC: Visualize Features
 
