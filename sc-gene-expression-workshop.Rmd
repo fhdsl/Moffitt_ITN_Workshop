@@ -155,7 +155,7 @@ We will not have time to go through all of the possible plots one might use, but
 
 <input type="checkbox"> For the `Plot_type_selector` dropdown menu, select `VlnPlot`.
 
-<input type="checkbox"> For the `Plot_type_selector` dropdown menu, select `VlnPlot`.
+This stands for violin plot.
 
 <input type="checkbox"> For the `Features` field type in `nCount_RNA`.
 
@@ -172,18 +172,162 @@ You should see a green message about the job being in the queue and a new block 
     <img width="50%" src="resources/images/plot_view_singlecell.png" class="img_shad">
 </p>
 
+This plot shows us the spread of cells in our data containing a given number of counts (or transcripts) observed in a given cell. We can use this plot, and others like it in a moment, to help filter out the uninformative cells.
+
+<p align="center" >
+    <img width="50%" src="resources/images/plot1_singlecell.png" class="img_shad">
+</p>
+
+We see a severe drop off in the number of cells that contain fewer than 500 and more than 10,000 transcripts. These will be our nCount thresholds that we filter based on.
 
 #### QC: Visualize Features
 
-#### Finding our filtering parameters
+In a similar fashion we can visualize the spread of cells in our data expressing a given number of features (or genes).
+
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search again. 
+
+<input type="checkbox"> Select `**Plot** with Seurat`. 
+
+<input type="checkbox"> Ensure that the RDS file field shows our Initial Seurat Object.
+
+<input type="checkbox"> For the `Plot_type_selector` dropdown menu, select `VlnPlot`.
+
+<input type="checkbox"> For the `Features` field type in `nFeature_RNA`.
+
+<input type="checkbox"> Scroll down to `Log` and toggle it to yes.
+
+<input type="checkbox"> Click the Run Tool button.
+
+
+Now, we could pick filtering thresholds based on these plots, and in a typical pipeline we would also plot the proportion of features that map to the mitochondrial genome and to other QC checks but we will stop here for now.
+
+
+<p align="center" >
+    <img width="50%" src="resources/images/plot2_singlecell.png" class="img_shad">
+</p>
+
+In this plot, we can see that very few cells in the dataset contain fewer than ~500 genes. Biologically, this makes sense, and the cells appear to be outliers in the data. As such, we will set our lower threshold of genes (nFeature_RNA) at 500.
+
 
 #### Filter Cells
 
+Recall that from our first plot we saw a severe drop off in the number of cells that contain fewer than 500 and more than 10,000 transcripts. These will be our nCount thresholds that we filter based on. and that our lower thershold of genes would be 500 from our second plot.
+
+Will will now apply these thresholds to filter our data.
+
+<input type="checkbox"> Search for the `Seurat FilterCells` tool in the tool search. 
+
+<input type="checkbox"> Select `Seurat FilterCells`. 
+
+<input type="checkbox"> Ensure that the RDS file field shows our Initial Seurat Object.
+
+
+
+<input type="checkbox">  In Subsets used to filter cells”, `Name of Parameter to filter on` field, select `nCount_RNA` from the dropdown menu.
+
+<input type="checkbox"> Select 500.0 for the Minimum value.
+
+<input type="checkbox"> Select 10000.0 for the Maximum value.
+
+<input type="checkbox"> Click on the button that says `Insert Subsets used to filter cells`
+
+<p align="center" >
+    <img width="50%" src="resources/images/subset_button_singlecell.png" class="img_shad">
+</p>
+
+<input type="checkbox"> For the `Name of Parameter to filter on` field, select `nFeature_RNA` from the dropdown menu.
+
+<input type="checkbox"> Select 500.0 for the Minimum value.
+
+<input type="checkbox"> Select 1000000000.0 for the Maximum value.
+
+<input type="checkbox"> Click the Run Tool button.
+
+You will see a green message a new block in the history that says "Seurat Filter cells on data", after a few moments it will turn green. 
+
+
+<input type="checkbox"> Rename the output object to be `Filtered Seurat Object` by clicking on the pencil button and replacing the name and saving the changes.
+
+
+
 #### Normalize Data
+
+Now we will normalize our data. This helps reduce the differences between gene and UMI counts by fitting total counts across cells in our data to be comparable to one another. SCTransform regularizes the gene expression profiles via a negative binomial regression while also controlling for overfitting of the data.
+
+<input type="checkbox"> Search for the `Seurat NormaliseData` tool in the tool search. 
+
+<input type="checkbox"> Select `Seurat NormaliseData`. 
+
+<input type="checkbox"> Ensure that the RDS file field shows our *Filtered* Seurat Object.
+
+<input type="checkbox"> For the `Normalization Method` ensure that the drop down menu shows `log Normalise`.
+
+<input type="checkbox"> Click the Run Tool button.
+
+
+<p align="center" >
+    <img width="50%" src="resources/images/normalise_singlecell.png" class="img_shad">
+</p>
+
+
+<input type="checkbox"> Once the new SeuratNormalise Data object turns green in the history pane, rename it to be `Normalised Seurat Object` by clicking on the pencil button and replacing the name and saving the changes.
+
 
 #### Find Variable Genes
 
+The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so we could remove these from our data to simplify our analyses.
+
+The find variable genes step flags genes that do vary across cells to expedite future analyses and ensure that we, and Seurat, don’t waste time looking for meaningful differences where they don’t exist.
+
+<input type="checkbox"> Search for the `Seurat FindVariableGenes` tool in the tool search. 
+
+<input type="checkbox"> Select `Seurat FindVariableGenes`. 
+
+<input type="checkbox"> Ensure that the `RDS file` field shows our *Normalised* Seurat Object.
+
+<input type="checkbox"> Ensure that the `Choose the format of the output` field shows RDS with a Seurat Object.
+
+<input type="checkbox"> Click the Run Tool button.
+
+
+This will result in the creation of two new objects: 
+
+1. A new Seurat object with variable features identified and flagged
+2. A tabular file with a list of these variable genes.
+
+This gene list may be used as a sneak peak into understanding what the dataset will look like! We can begin to understand which genes are going to be driving downstream clustering of our cells and maybe even make some decisions about whether we are happy with our filtering based on this list.
+
+<input type="checkbox"> Rename the new Seurat object called `Seurat FindVariableGenes on Data some number:Seurat RDS` to be `Normalised Seurat Object with Variable Features` by clicking on the pencil button, replacing the name and clicking save.
+
 #### Scale Data
+
+Now we will scale the data.
+
+What is scaling?
+
+This is an important step to set up our data for further dimensionality reduction. It will transform the dataset such that all genes have the same variance and a zero mean. It helps negate sequencing depth differences between samples, since the gene levels across the cells become comparable.
+
+Note: that the differences from scaling etc. are not the values you have at the end - i.e. if your cell has average GAPDH levels, it will not appear as a ‘0’ when you calculate gene differences between clusters.
+
+<input type="checkbox"> Search for the `Seurat ScaleData` tool in the tool search. 
+
+<input type="checkbox"> Select `Seurat ScaleData`. 
+
+<input type="checkbox"> Ensure that the `RDS file` field shows our object called Normalised Seurat Object with Variable Features.
+
+<input type="checkbox"> Ensure that the `Choose the format of the output` field shows RDS with a Seurat Object.
+
+<input type="checkbox"> For the `Genes to use` dropdown menu select `Seurat FindVariableGenes on data 12: Variable genes **tabular file**`. This is the gene list we just made in the last step.
+
+<input type="checkbox"> For `Vars to regress` ensure that it says `nCount_RNA`.
+
+<input type="checkbox"> For `Statistical Model` ensure that it says `Linear model`.
+
+<input type="checkbox"> Click the Run Tool button.
+
+This step can take a few moments.
+
+<input type="checkbox"> Once the new object turns green, rename it to be `Scaled,Preprocessed Seurat Object` by clicking on the pencil button, replacing the name and clicking save.
 
 ### Dimensionality Reduction
 
