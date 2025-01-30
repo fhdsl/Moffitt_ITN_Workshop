@@ -321,6 +321,8 @@ Note: that the differences from scaling etc. are not the values you have at the 
 
 <input type="checkbox"> For `Vars to regress` ensure that it says `nCount_RNA`.
 
+This function allow us to mitigate the effects of confounding factors in our dataset. In true research practice, one might regress out multiple variables including but not limited to perc.mt, cell cycle scoring, and feature count. As currently written, this tool only allows us to regress out a single variable.
+
 <input type="checkbox"> For `Statistical Model` ensure that it says `Linear model`.
 
 <input type="checkbox"> Click the Run Tool button.
@@ -329,9 +331,49 @@ This step can take a few moments.
 
 <input type="checkbox"> Once the new object turns green, rename it to be `Scaled,Preprocessed Seurat Object` by clicking on the pencil button, replacing the name and clicking save.
 
+Nice! We now have a preprocessed Seurat object!
+
 ### Dimensionality Reduction
 
+Although we’ve made our expression values comparable to one another and our overall dataset less computationally demanding, we still have way too many dimensions (n cells x n genes!).
+
+Transcript changes are not usually singular–which is to say, genes function and exist in pathways and groups. It would be easier to analyse our data if we could group these differences. To address this we will run principal component analysis (PCA).
+
 #### Run PCA
+
+Principal components (PCs) are calculated from highly dimensional data to find the most representative spread in the dataset. So in our highly variable gene dimensions, there will be one line (axis) that yields the most spread and variation across the cells. That will be our first principal component.
+
+
+We can calculate the first handful of principal components in our data to drastically reduce the number of dimensions.
+
+<input type="checkbox"> Search for the `Seurat RunPCA` tool in the tool search. 
+
+<input type="checkbox"> Select `Seurat RunPCA`. 
+
+<input type="checkbox"> Ensure that the `RDS file` field shows our object called Scaled, Preprocessed Seurat Object.
+
+<input type="checkbox"> Ensure that the `Choose the format of the output` field shows RDS with a Seurat Object.
+
+<input type="checkbox"> For the dropdown menu in the `Genes to Scale` section, select the variable genes tabular file. 
+
+
+<p align="center" >
+    <img width="50%" src="resources/images/pca_setup_singlecell.png" class="img_shad">
+</p>
+
+<input type="checkbox"> Click the Run Tool button.
+
+You will see 4 new objects: `Seurat Std dev`, `Seurat Loadings`, `Seurat Embeddings`, and `Seurat RDS` (the object type we have mostly been using).
+
+<input type="checkbox"> Once the new object turns green, rename the one that says `Seurat RDS` to be `PCA Processed Seurat Object` by clicking on the pencil button, replacing the name and clicking save.
+
+So what are all these new objects?
+
+- Seurat RDS - includes all of the following PCA metadata
+- Seurat Embeddings - Principal component values for each of the cells in your dataset
+- Seurat Loadings -  Principal component values for each of the genes in your dataset
+- Seurat Std dev - Standard deviations of each principal component coordinates
+
 
 #### Run UMAP
 
