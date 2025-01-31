@@ -73,9 +73,9 @@ This will open an interactive panel for data upload.
 
 <input type="checkbox"> For the `Only Select Classification Models if you don't want to compare all models`, select the following:
 
-  <input type="checkbox"> Logistic Regression <br/>
-  <input type="checkbox"> Decision Tree Classifier <br/>
-  <input type="checkbox"> Random Forest Classifier <br/>
+    <input type="checkbox"> Logistic Regression <br/>
+    <input type="checkbox"> Decision Tree Classifier <br/>
+    <input type="checkbox"> Random Forest Classifier <br/>
 
 <input type="checkbox"> Under the `Customize Default Settings?`section, switch the "No" to a "Yes".
 
