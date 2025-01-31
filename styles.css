@@ -1,3 +1,14 @@
+/*------------ warning box --------- */
+
+div.warning{
+  border: 4px #e0471c;
+  border-style: solid;
+  background-size: 70px;
+  background-position: 15px center;
+  background-color: #e8ebee;
+  background-image: url("/resources/images/warning.png");
+}
+
 /*------------- table code---------------- */
 /*table code from https://jsfiddle.net/davidThomas/vk7eP/3/*/
 
