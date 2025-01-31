@@ -15,7 +15,7 @@ knitr::opts_chunk$set(number_sections = FALSE)
 
 ## Overview of activity and data
 
-Our Galaxy activity is a condensed tutorial adapted from the "Building the LORIS LLR6 PanCancer Model Using PyCaret" Galaxy Training Tutorial.
+Our Galaxy activity is a condensed tutorial adapted from the ["Building the LORIS LLR6 PanCancer Model Using PyCaret" Galaxy Training Tutorial](https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html).
 
 ```{r echo=FALSE, fig.alt="Galaxy Training Tutorial titled 'Building the LORIS LLR6 PanCancer Model Using PyCaret'", fig.link="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32af3c023b6_0_0")
