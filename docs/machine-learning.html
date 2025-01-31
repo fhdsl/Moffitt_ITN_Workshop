@@ -421,23 +421,126 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Machine Learning with Galaxy</h1>
+<h3 class="subtitle">Activity</h3>
 
 </div>
 
 
-<p>Note the galaxy link they should use: <a
-href="https://usegalaxy.org/join-training/itn-at-moffitt-2025/"
-class="uri">https://usegalaxy.org/join-training/itn-at-moffitt-2025/</a></p>
-<div id="tutorial" class="section level2">
-<h2>Tutorial</h2>
-<p>Train dataset: 1: Chowell_train_Response.tsv</p>
-<p>Test dataset: 2: Chowell_test_Response.tsv</p>
-<p>Select the target column: c22: Response</p>
-<p>Task: - classification - Only Select Classification Models if you
-don’t want to compare all models - Logistic Regression - Decision Tree
-Classifier - Random Forest Classifier</p>
-<p>Customize Default Settings? No –&gt; Yes Cross Validation Folds –&gt;
-2</p>
+<div id="overview-of-activity-and-data" class="section level2">
+<h2>Overview of activity and data</h2>
+<p>Our Galaxy activity is a condensed tutorial adapted from the <a
+href="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html">“Building
+the LORIS LLR6 PanCancer Model Using PyCaret” Galaxy Training
+Tutorial</a>.</p>
+<p><a href="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html" target="_blank"><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32af3c023b6_0_0.png" alt="Galaxy Training Tutorial titled 'Building the LORIS LLR6 PanCancer Model Using PyCaret'" width="100%" /></a></p>
+<p>The data that the tutorial uses is <a
+href="https://zenodo.org/records/13885908">deposited on and available
+from zenodo</a>. For more info on the dataset, checkout the tutorial
+linked above.</p>
+</div>
+<div id="activity-steps" class="section level2">
+<h2>Activity steps</h2>
+<div id="open-galaxy" class="section level3">
+<h3>Open Galaxy</h3>
+<p><input type="checkbox"> Please <a
+href="https://usegalaxy.org/join-training/itn-at-moffitt-2025/">use this
+link to access the Galaxy platform specifically for our
+activity</a>.<br/></p>
+<p>Note: this link will only be active for this workshop, but you can
+continue to use Galaxy resources for free by visiting <a
+href="https://usegalaxy.org/">usegalaxy.org</a>.</p>
+<p><a href="https://usegalaxy.org/join-training/itn-at-moffitt-2025/" target="_blank"><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32af3c023b6_0_18.png" alt="Galaxy Home page" width="100%" /></a></p>
+</div>
+<div id="set-up-galaxys-history-pane" class="section level3">
+<h3>Set up Galaxy’s history pane</h3>
+<p><input type="checkbox"> If you have files in your history already,
+use the <code>+</code> button on the top right of the history pane to
+<code>Create new history</code>. <br/></p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_194.png" alt="If needed (e.g., because there are already files in your history), create a new history" width="100%" /></p>
+<p><input type="checkbox"> Click the pencil button next to “Unnamed
+history”.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_165.png" alt="Pencil button for renaming the history" width="100%" /></p>
+<p><input type="checkbox"> Fill in the name with something
+descriptive/appropriate.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_7.png" alt="Replace 'Unnamed history' with a descriptive name for the history." width="100%" /></p>
+<p><input type="checkbox"> Click “Save”.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_199.png" alt="Click 'Save' to save the new history name" width="100%" /></p>
+<p>Now that our History pane is empty and named a descriptive title,
+we’ll need to load data.</p>
+</div>
+<div id="data-upload" class="section level3">
+<h3>Data upload</h3>
+<p><input type="checkbox"> Copy these links:</p>
+<pre><code>https://zenodo.org/records/13885908/files/Chowell_train_Response.tsv
+https://zenodo.org/records/13885908/files/Chowell_test_Response.tsv</code></pre>
+<p><input type="checkbox"> In Galaxy, click the “Upload” button in the
+top left of the page.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_12.png" alt="'Upload' button for data upload highlighted in the upper left corner" width="100%" /></p>
+<p>This will open an interactive panel for data upload.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_17.png" alt="Interactive panel for data upload" width="100%" /></p>
+<p><input type="checkbox"> Click the “Paste/Fetch Data” button in the
+middle of the bottom stretch of options.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_205.png" alt="The Paste/Fetch data button is highlighted within the bottom stretch of options" width="100%" /></p>
+<p><input type="checkbox"> Paste the copied URLs into the middle
+box.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_27.png" alt="paste the copied URLs into the middle highlighted box" width="100%" /></p>
+<p><input type="checkbox"> Click the blue “Start” button in the bottom
+stretch of options.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_177.png" alt="The 'Start' button in the middle of the bottom stretch of options is highlighted." width="100%" /></p>
+<p><input type="checkbox"> Click the “Close” button at the end of the
+bottom stretch of options.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_32.png" alt="The 'Close' button in the bottom stretch of options is highlighted." width="100%" /></p>
+</div>
+<div id="using-pycaret-model-comparison-tool" class="section level3">
+<h3>Using PyCaret Model Comparison Tool</h3>
+<p><input type="checkbox"> On the top left of the page, the tool pane
+has a search bar. Copy and paste <code>PyCaret Model Comparison</code>
+into the tool search.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_185.png" alt="Tool search bar where to copy and paste the name of the tool 'Pycaret Model Comparison'" width="100%" /></p>
+<p><input type="checkbox"> Select
+<code>PyCaret Model Comparison</code>.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_54.png" alt="Select PyCaret Model Comparison from the options listed below the tool search bar" width="100%" /></p>
+<p><input type="checkbox"> In the middle pane, if the
+<code>Train Dataset (CSV or TSV)</code> is not already filled in with
+“Chowell_train_Response.tsv”, click the down arrow and select it.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_64.png" alt="Select the training dataset for the Train Dataset option" width="100%" /></p>
+<p><input type="checkbox"> For the
+<code>Test Dataset (CSV or TSV)</code> option, select
+“Chowell_test_Response.tsv”.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_74.png" alt="Select the test dataset for the Test Dataset option" width="100%" /></p>
+<p><input type="checkbox"> For the <code>Select the target column</code>
+option, select “c22: Response”.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_84.png" alt="Select the 'Response' column as the target column" width="100%" /></p>
+<p><input type="checkbox"> Under the <code>Task</code> section, verify
+that “classification” is selected.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_211.png" alt="Verify that 'classification' is selected for the Task option" width="100%" /></p>
+<p><input type="checkbox"> For the
+<code>Only Select Classification Models if you don't want to compare all models</code>,
+select the following:</p>
+<p>    <input type="checkbox"> Logistic Regression <br/>
+    <input type="checkbox"> Decision Tree Classifier <br/>
+    <input type="checkbox"> Random Forest Classifier <br/></p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_109.png" alt="Select Logistic Regression, Decision Tree Classifier, and Random Forest Classifier from the list for the 'Only Select Classification Models if you do not want to compare all models option.'" width="100%" /></p>
+<p><input type="checkbox"> Under the
+<code>Customize Default Settings?</code>section, switch the “No” to a
+<strong>“Yes”</strong>.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_119.png" alt="Switch the No to Yes under the Customize Default Settings? Option" width="100%" /></p>
+<p><input type="checkbox"> For the <code>Cross Validation Folds</code>
+option, decrease the number of folds to use for cross-validation from 10
+to <strong>2</strong>.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_129.png" alt="Switch 10 to 2 under the Cross Validation Folds option" width="100%" /></p>
+<p><input type="checkbox"> Click the blue <code>&gt;Run Tool</code>
+button. This will add the job to the queue and add the output files to
+the top of the history pane.</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_135.png" alt="Click the Run Tool button to submit the job so that pycaret will compare the classification models using the provided data" width="100%" /></p>
+<p><input type="checkbox"> Click the eye icon (<img
+src="resources/images/eye.png" id="id" class="class" width="25"
+height="20" alt="eye button image" />) next to the output titled
+<code>PyCaret Model Comparison Comparisons results on data 2 and data 1</code>
+to inspect the output (which will be opened in the middle pane).</p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_221.png" alt="Use the eye icon to inspect the output" width="100%" /></p>
+<p><img src="machine-learning_files/figure-html/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ_g32b752d08f4_0_229.png" alt="The output will open in the middle pane where you can inspect it. " width="100%" /></p>
+</div>
 </div>
 
 
