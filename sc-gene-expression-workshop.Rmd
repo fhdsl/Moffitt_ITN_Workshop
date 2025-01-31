@@ -270,10 +270,6 @@ Now we will normalize our data. This helps reduce the differences between gene c
 <input type="checkbox"> Click the Run Tool button.
 
 
-<p align="center" >
-    <img width="50%" src="resources/images/normalise_singlecell.png" class="img_shad">
-</p>
-
 
 <input type="checkbox"> Once the new SeuratNormalise Data object turns green in the history pane, rename it to be `Normalised Seurat Object` by clicking on the pencil button and replacing the name and saving the changes.
 
