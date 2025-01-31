@@ -1,19 +1,31 @@
 ---
 title: "Single Cell Transcriptomics Activity"
-output: html_document
+subtitle: Activity
+output:
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 3
+    number_sections: false
+css: style.css
 ---
-
-Note the galaxy link they should use: https://usegalaxy.org/join-training/itn-at-moffitt-2025/
 
 ## Tutorial Steps
 
-We will be working through a modified/truncated version of the [Galaxy Training Tutorial "Filter, plot, and explore single cell RNA-seq data with Seurat" Tutorial ](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html). 
+We will be working through a modified/truncated version of the [Galaxy Training Tutorial "Filter, plot, and explore single cell RNA-seq data with Seurat" Tutorial ](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html).
 
 Changes include:
 
   - several subsections within QC will be omitted
   - we rearranged the Dimensionality Reduction section
   - we will stop before the Differential Expression Testing: Finding Markers section
+
+:::{.warning}
+You may want to view the whole Galaxy Training Tutorial later for further steps or explanation, but we would recommend not following along with it during this activity considering that we have abbreviated and rearranged a portion of it.
+:::
+
+## Setting up Galaxy 
 
 ### Open Galaxy
 
@@ -32,17 +44,12 @@ Note: this link will only be active for this workshop, but you can continue to u
 
 Now we are ready to start the tutorial!
 
-### Open the tutorial
-
-<input type="checkbox"> Click on the [full tutorial link](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html) to follow along.
-
-### Get Data onto Galaxy and generate a Seurat object
+## Get Data onto Galaxy and generate a Seurat object
 
 <input type="checkbox"> Click on the "Get Data onto Galaxy and generate a Seurat object" link to get started in the tutorial.
 
-### 
 
-#### EBI Data Retrieval
+### EBI Data Retrieval
 
 <input type="checkbox"> Copy and paste  `EBI SCXA Data Retrieval` into the tool search.
 
@@ -52,7 +59,7 @@ Now we are ready to start the tutorial!
 
 <input type="checkbox"> Select `EBI SCXA DATa Retrieval`.
 
-<input type="checkbox"> Copy paste `E-MTAB-6945` into the `SC-Atlas experiment accession` field 
+<input type="checkbox"> Copy paste `E-MTAB-6945` into the `SC-Atlas experiment accession` field
 
 <input type="checkbox"> Make sure the `“Choose the type of matrix to download”` field says `Raw filtered counts`.
 
@@ -62,20 +69,20 @@ Now we are ready to start the tutorial!
     <img width="50%" src="resources/images/EBI_singlecell.png" class="img_shad">
 </p>
 
-You will see your history pane show some new activity, with rectangles showing the data file upload first in gray (to show that the job has been requested), then yellow (to show that Galaxy is working on it), and finally green (to show that the job is complete). 
+You will see your history pane show some new activity, with rectangles showing the data file upload first in gray (to show that the job has been requested), then yellow (to show that Galaxy is working on it), and finally green (to show that the job is complete).
 
-Note: do not worry about the numbers next to each step - depending on how many times you run requests you will have different numbers. 
+Note: do not worry about the numbers next to each step - depending on how many times you run requests you will have different numbers.
 
 <p align="center" >
     <img width="50%" src="resources/images/gal_data_singlecell.png" class="img_shad">
 </p>
 
 
-You have now imported the `exp_design.tsv`, `barcodes.tsv`, `genes.tsv`, `matrix.mtx` and files into Galaxy! Note that each file starts with `EBI SCXA Data Retrieval on E-MTAB-6945` to indicate how we got them. 
+You have now imported the `exp_design.tsv`, `barcodes.tsv`, `genes.tsv`, `matrix.mtx` and files into Galaxy! Note that each file starts with `EBI SCXA Data Retrieval on E-MTAB-6945` to indicate how we got them.
 
-#### Generating a Seurat Read10X Object
+### Generating a Seurat Read10X Object
 
-Now we need to get our data into a format that the Seurat tools will recognize. 
+Now we need to get our data into a format that the Seurat tools will recognize.
 
 <input type="checkbox"> Copy paste `Seurat Read10x` into the tools search.
 
@@ -112,7 +119,7 @@ Continue with the rest of the files to select the appropriate file for each fiel
 
 <input type="checkbox"> Click `Run Tool` Button.
 
-You should see a green message indicating that the job is now in the queue. 
+You should see a green message indicating that the job is now in the queue.
 
 <input type="checkbox"> Click on the pencil button of the new output that shows up in the history pane.
 
@@ -129,13 +136,13 @@ You should see a green message indicating that the job is now in the queue.
 
 Now we have a Seurat object so we can start using Seurat to work with our data!
 
-### QC and further processing of the Seurat object
+## QC and further processing of the Seurat object
 
 Our first step is to do some Quality Control checks aka QC to evaluate our data.
 
-#### QC: Visualize Counts
+### QC: Visualize Counts
 
-There will be a number of ‘cells’ that are actually just empty droplets or low-quality. There will also be genes that could be sequencing artifacts or that appear with such low frequency that statistical tools will fail to accurately analyze them.
+There will be a number of "cells" that are actually just empty droplets or low-quality. There will also be genes that could be sequencing artifacts or that appear with such low frequency that statistical tools will fail to accurately analyze them.
 
 This background noise of both cells and genes not only makes it harder to distinguish real biological information from artifacts, but also makes it computationally demanding to analyze.
 
@@ -143,9 +150,9 @@ We want to filter our cells, but first we need to know what our data looks like 
 
 We will not have time to go through all of the possible plots one might use, but we will do some evaluations. Remember that you can always do the full tutorial in your own time.
 
-<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search. 
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
-<input type="checkbox"> Select `**Plot** with Seurat`. 
+<input type="checkbox"> Select `**Plot** with Seurat`.
 
 <p align="center" >
     <img width="50%" src="resources/images/plot_tool_singlecell.png" class="img_shad">
@@ -180,13 +187,13 @@ This plot shows us the spread of cells in our data containing a given number of 
 
 We see a severe drop off in the number of cells that contain fewer than 500 and more than 10,000 transcripts. These will be our nCount thresholds that we filter based on.
 
-#### QC: Visualize Features
+### QC: Visualize Features
 
 In a similar fashion we can visualize the spread of cells in our data expressing a given number of features (or genes).
 
-<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search again. 
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search again.
 
-<input type="checkbox"> Select `**Plot** with Seurat`. 
+<input type="checkbox"> Select `**Plot** with Seurat`.
 
 <input type="checkbox"> Ensure that the RDS file field shows our Initial Seurat Object.
 
@@ -209,15 +216,15 @@ Now, we could pick filtering thresholds based on these plots, and in a typical p
 In this plot, we can see that very few cells in the dataset contain fewer than ~500 genes. Biologically, this makes sense, and the cells appear to be outliers in the data. As such, we will set our lower threshold of genes (nFeature_RNA) at 500.
 
 
-#### Filter Cells
+### Filter Cells
 
 Recall that from our first plot we saw a severe drop off in the number of cells that contain fewer than 500 and more than 10,000 transcripts. These will be our nCount thresholds that we filter based on. and that our lower threshold of genes would be 500 from our second plot.
 
 Will will now apply these thresholds to filter our data.
 
-<input type="checkbox"> Search for the `Seurat FilterCells` tool in the tool search. 
+<input type="checkbox"> Search for the `Seurat FilterCells` tool in the tool search.
 
-<input type="checkbox"> Select `Seurat FilterCells`. 
+<input type="checkbox"> Select `Seurat FilterCells`.
 
 <input type="checkbox"> Ensure that the RDS file field shows our Initial Seurat Object.
 
@@ -243,20 +250,20 @@ Will will now apply these thresholds to filter our data.
 
 <input type="checkbox"> Click the Run Tool button.
 
-You will see a green message a new block in the history that says "Seurat Filter cells on data", after a few moments it will turn green. 
+You will see a green message a new block in the history that says "Seurat Filter cells on data", after a few moments it will turn green.
 
 
 <input type="checkbox"> Rename the output object to be `Filtered Seurat Object` by clicking on the pencil button and replacing the name and saving the changes.
 
 
 
-#### Normalize Data
+### Normalize Data
 
 Now we will normalize our data. This helps reduce the differences between gene counts by fitting total counts across cells in our data to be comparable to one another. SCTransform regularizes the gene expression profiles via a negative binomial regression while also controlling for overfitting of the data.
 
-<input type="checkbox"> Search for the `Seurat NormaliseData` tool in the tool search. 
+<input type="checkbox"> Search for the `Seurat NormaliseData` tool in the tool search.
 
-<input type="checkbox"> Select `Seurat NormaliseData`. 
+<input type="checkbox"> Select `Seurat NormaliseData`.
 
 <input type="checkbox"> Ensure that the RDS file field shows our *Filtered* Seurat Object.
 
@@ -265,23 +272,19 @@ Now we will normalize our data. This helps reduce the differences between gene c
 <input type="checkbox"> Click the Run Tool button.
 
 
-<p align="center" >
-    <img width="50%" src="resources/images/normalise_singlecell.png" class="img_shad">
-</p>
-
 
 <input type="checkbox"> Once the new SeuratNormalise Data object turns green in the history pane, rename it to be `Normalised Seurat Object` by clicking on the pencil button and replacing the name and saving the changes.
 
 
-#### Find Variable Genes
+### Find Variable Genes
 
 The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so we could remove these from our data to simplify our analysis.
 
 The find variable genes, this step flags genes that do vary across cells to expedite future analyses and ensure that we, and Seurat, don’t waste time looking for meaningful differences where they don’t exist.
 
-<input type="checkbox"> Search for the `Seurat FindVariableGenes` tool in the tool search. 
+<input type="checkbox"> Search for the `Seurat FindVariableGenes` tool in the tool search.
 
-<input type="checkbox"> Select `Seurat FindVariableGenes`. 
+<input type="checkbox"> Select `Seurat FindVariableGenes`.
 
 <input type="checkbox"> Ensure that the `RDS file` field shows our *Normalised* Seurat Object.
 
@@ -290,7 +293,7 @@ The find variable genes, this step flags genes that do vary across cells to expe
 <input type="checkbox"> Click the Run Tool button.
 
 
-This will result in the creation of two new objects: 
+This will result in the creation of two new objects:
 
 1. A new Seurat object with variable features identified and flagged
 2. A tabular file with a list of these variable genes.
@@ -299,7 +302,7 @@ This gene list may be used as a sneak peak into understanding what the dataset w
 
 <input type="checkbox"> Rename the new Seurat object called `Seurat FindVariableGenes on Data some number:Seurat RDS` to be `Normalised Seurat Object with Variable Features` by clicking on the pencil button, replacing the name and clicking save.
 
-#### Scale Data
+### Scale Data
 
 Now we will scale the data.
 
@@ -309,9 +312,9 @@ This is an important step to set up our data for further dimensionality reductio
 
 Note: that the differences from scaling etc. are not the values you have at the end - i.e. if your cell has average GAPDH levels, it will not appear as a "0" when you calculate gene differences between clusters.
 
-<input type="checkbox"> Search for the `Seurat ScaleData` tool in the tool search. 
+<input type="checkbox"> Search for the `Seurat ScaleData` tool in the tool search.
 
-<input type="checkbox"> Select `Seurat ScaleData`. 
+<input type="checkbox"> Select `Seurat ScaleData`.
 
 <input type="checkbox"> Ensure that the `RDS file` field shows our object called Normalised Seurat Object with Variable Features.
 
@@ -333,28 +336,28 @@ This step can take a few moments.
 
 Nice! We now have a preprocessed Seurat object!
 
-### Dimensionality Reduction
+## Dimensionality Reduction
 
 Although we’ve made our expression values comparable to one another and our overall dataset less computationally demanding, we still have way too many dimensions (n cells x n genes!).
 
 Transcript changes are not usually singular–which is to say, genes function and exist in pathways and groups. It would be easier to analyze our data if we could group these differences. To address this we will run principal component analysis (PCA).
 
-#### Run PCA
+### Run PCA
 
 Principal components (PCs) are calculated from highly dimensional data to find the most representative spread in the dataset. So in our highly variable gene dimensions, there will be one line (axis) that yields the most spread and variation across the cells. That will be our first principal component.
 
 
 We can calculate the first handful of principal components in our data to drastically reduce the number of dimensions.
 
-<input type="checkbox"> Search for the `Seurat RunPCA` tool in the tool search. 
+<input type="checkbox"> Search for the `Seurat RunPCA` tool in the tool search.
 
-<input type="checkbox"> Select `Seurat RunPCA`. 
+<input type="checkbox"> Select `Seurat RunPCA`.
 
 <input type="checkbox"> Ensure that the `RDS file` field shows our object called Scaled, Preprocessed Seurat Object.
 
 <input type="checkbox"> Ensure that the `Choose the format of the output` field shows RDS with a Seurat Object.
 
-<input type="checkbox"> For the dropdown menu in the `Genes to Scale` section, select the variable genes tabular file. 
+<input type="checkbox"> For the dropdown menu in the `Genes to Scale` section, select the variable genes tabular file.
 
 
 <p align="center" >
@@ -375,16 +378,16 @@ So what are all these new objects?
 - Seurat Std dev - Standard deviations of each principal component coordinates
 
 
-#### Run UMAP
+### Run UMAP
 
 Next we will use UMAP, the most recently developed, and most widely used dimensionality reduction method for visualization of principal component data. It has been optimized since tSNE to better preserve global structure and is less computationally demanding.
 
 Note that this is where the walkthrough diverges from the Galaxy Training tutorial, rearranging the dimensionality reduction steps.
 
 
-<input type="checkbox"> Search for the `Seurat UMAP` tool in the tool search. 
+<input type="checkbox"> Search for the `Seurat UMAP` tool in the tool search.
 
-<input type="checkbox"> Select `Seurat UMAP`. 
+<input type="checkbox"> Select `Seurat UMAP`.
 
 <input type="checkbox"> Ensure that the `RDS file` field shows our object called PCA Processed Seurat Object.
 
@@ -395,47 +398,89 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 <input type="checkbox"> Click the Run Tool button.
 
 
-#### Plot Gapdh
+### Plot Gapdh
 
-Use the output of the previous step "Seurat UMAP on data X: Seurat RDS" as the input for this one.
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
-Keep the Plot_type_selector as FeaturePlot and Features as Gapdh as described in the Galaxy Training Tutorial.
+<input type="checkbox"> Select `Plot with Seurat`.
 
-#### Plot Il2ra
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the previous step).
 
-Use the output of the Run UMAP step "Seurat UMAP on data X: Seurat RDS" as the input for this one.
+<input type="checkbox"> Confirm that the `Plot_type_selector` option is "FeaturePlot".
 
-Keep the Plot_type_selector as FeaturePlot and Features as Il2ra as described in the Galaxy Training Tutorial.
+<input type="checkbox"> For the `Features` option, type `Gapdh`.
 
-NOTE: If you plot UMAP at this stage, do not use "Group by: RNA_nn_res.0.5" argument
+<input type="checkbox"> Click the Run Tool button.
 
-#### Find Neighbors
+<input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
 
-Input is Y: Seurat UMAP on data X: Seurat RDS (the output of the Run UMAP step "Seurat UMAP on data X: Seurat RDS")
+### Plot Il2ra
 
-“Reduction”: PCA
-“Dimensions”: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-“Assay”: RNA
---> Z: Seurat FindNeighbours on data Y: Seurat RDS
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
-#### Find Clusters
+<input type="checkbox"> Select `Plot with Seurat`.
 
-In “Advanced Options “
-“Resolution”: 0.5
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the Run UMAP step).
 
-Z:Seurat FindNeighbours on data Y: Seurat RDS
---> A: Seurat FindClusters on data Z: Seurat RDS
+<input type="checkbox"> Confirm that the `Plot_type_selector` option is "FeaturePlot".
 
-#### Plot UMAP
+<input type="checkbox"> For the `Features` option, type `Il2ra`.
 
-Group by: RNA_nn_res.0.5
+<input type="checkbox"> Click the Run Tool button.
 
-A: Seurat FindClusters on data Z: Seurat RDS
---> B: Seurat DimPlot on data A: png plot
+<input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
+
+
+
+<details><summary>Can I plot UMAP clusters at this stage?</summary>
+
+If you wanted to plot a UMAP projection at this stage using the `Plot with Seurat` tool and `Plot_type_selector` `DimPlot` option (as described in the Galaxy Training tutorial), do not use "Group by: RNA_nn_res.0.5" argument. Because the Find Neighbors and Find Clusters steps haven't been used yet, this option isn't relevant yet, and you won't be able to visualize clusters.
+</details>
+
+### Find Neighbors
+
+<input type="checkbox"> Search for the `Seurat FindNeighbours` tool in the tool search.
+
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the Run UMAP step).
+
+<input type="checkbox"> For the `Reduction` option, type `pca`.
+
+<input type="checkbox"> For the `Dimensions` option, copy and paste `1,2,3,4,5,6,7,8,9,10,11,12,13,14,15`.
+
+<input type="checkbox"> For the `Assay` option, type `RNA`.
+
+<input type="checkbox"> Click the Run Tool button.
+
+The output of this will be
+"Seurat FindNeighbours on data Y: Seurat RDS" (and a corresponding CSV file)
+
+### Find Clusters
+
+<input type="checkbox"> Search for the `Seurat FindClusters` tool in the tool search.
+
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat FindNeighbours on data Y: Seurat RDS" as the input for this step.
+
+<input type="checkbox"> In the `Advanced Options` section, for the `Resolution` option, type `0.5`
+
+<input type="checkbox"> Click the Run Tool button.
+
+The output of this will be "Seurat FindClusters on data Z: Seurat RDS" (and a corresponding CSV file)
+
+### Plot UMAP
+
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
+
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat FindClusters on data Z: Seurat RDS" as the input for this step.
+
+<input type="checkbox"> Select "DimPlot" for the `Plot_type_selector` option.
+
+<input type="checkbox"> For the `Group by` option, type `RNA_nn_res.0.5`
+
+<input type="checkbox"> Click the Run Tool button.
+
+<input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
 
 ## Other Resources
-
-
 
 - [Further information on Seurat and its manual](https://satijalab.org/seurat/)
 
