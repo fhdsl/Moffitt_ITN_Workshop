@@ -25,6 +25,8 @@ Changes include:
 You may want to view the whole Galaxy Training Tutorial later for further steps or explanation, but we would recommend not following along with it during this activity considering that we have abbreviated and rearranged a portion of it.
 :::
 
+## Setting up Galaxy 
+
 ### Open Galaxy
 
 <input type="checkbox"> Please [use this link to access the Galaxy platform specifically for our activity](https://usegalaxy.org/join-training/itn-at-moffitt-2025/).<br/>
@@ -42,12 +44,12 @@ Note: this link will only be active for this workshop, but you can continue to u
 
 Now we are ready to start the tutorial!
 
-### Get Data onto Galaxy and generate a Seurat object
+## Get Data onto Galaxy and generate a Seurat object
 
 <input type="checkbox"> Click on the "Get Data onto Galaxy and generate a Seurat object" link to get started in the tutorial.
 
 
-#### EBI Data Retrieval
+### EBI Data Retrieval
 
 <input type="checkbox"> Copy and paste  `EBI SCXA Data Retrieval` into the tool search.
 
@@ -78,7 +80,7 @@ Note: do not worry about the numbers next to each step - depending on how many t
 
 You have now imported the `exp_design.tsv`, `barcodes.tsv`, `genes.tsv`, `matrix.mtx` and files into Galaxy! Note that each file starts with `EBI SCXA Data Retrieval on E-MTAB-6945` to indicate how we got them.
 
-#### Generating a Seurat Read10X Object
+### Generating a Seurat Read10X Object
 
 Now we need to get our data into a format that the Seurat tools will recognize.
 
@@ -134,11 +136,11 @@ You should see a green message indicating that the job is now in the queue.
 
 Now we have a Seurat object so we can start using Seurat to work with our data!
 
-### QC and further processing of the Seurat object
+## QC and further processing of the Seurat object
 
 Our first step is to do some Quality Control checks aka QC to evaluate our data.
 
-#### QC: Visualize Counts
+### QC: Visualize Counts
 
 There will be a number of ‘cells’ that are actually just empty droplets or low-quality. There will also be genes that could be sequencing artifacts or that appear with such low frequency that statistical tools will fail to accurately analyze them.
 
@@ -185,7 +187,7 @@ This plot shows us the spread of cells in our data containing a given number of 
 
 We see a severe drop off in the number of cells that contain fewer than 500 and more than 10,000 transcripts. These will be our nCount thresholds that we filter based on.
 
-#### QC: Visualize Features
+### QC: Visualize Features
 
 In a similar fashion we can visualize the spread of cells in our data expressing a given number of features (or genes).
 
@@ -214,7 +216,7 @@ Now, we could pick filtering thresholds based on these plots, and in a typical p
 In this plot, we can see that very few cells in the dataset contain fewer than ~500 genes. Biologically, this makes sense, and the cells appear to be outliers in the data. As such, we will set our lower threshold of genes (nFeature_RNA) at 500.
 
 
-#### Filter Cells
+### Filter Cells
 
 Recall that from our first plot we saw a severe drop off in the number of cells that contain fewer than 500 and more than 10,000 transcripts. These will be our nCount thresholds that we filter based on. and that our lower threshold of genes would be 500 from our second plot.
 
@@ -255,7 +257,7 @@ You will see a green message a new block in the history that says "Seurat Filter
 
 
 
-#### Normalize Data
+### Normalize Data
 
 Now we will normalize our data. This helps reduce the differences between gene counts by fitting total counts across cells in our data to be comparable to one another. SCTransform regularizes the gene expression profiles via a negative binomial regression while also controlling for overfitting of the data.
 
@@ -274,7 +276,7 @@ Now we will normalize our data. This helps reduce the differences between gene c
 <input type="checkbox"> Once the new SeuratNormalise Data object turns green in the history pane, rename it to be `Normalised Seurat Object` by clicking on the pencil button and replacing the name and saving the changes.
 
 
-#### Find Variable Genes
+### Find Variable Genes
 
 The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so we could remove these from our data to simplify our analysis.
 
@@ -300,7 +302,7 @@ This gene list may be used as a sneak peak into understanding what the dataset w
 
 <input type="checkbox"> Rename the new Seurat object called `Seurat FindVariableGenes on Data some number:Seurat RDS` to be `Normalised Seurat Object with Variable Features` by clicking on the pencil button, replacing the name and clicking save.
 
-#### Scale Data
+### Scale Data
 
 Now we will scale the data.
 
@@ -334,13 +336,13 @@ This step can take a few moments.
 
 Nice! We now have a preprocessed Seurat object!
 
-### Dimensionality Reduction
+## Dimensionality Reduction
 
 Although we’ve made our expression values comparable to one another and our overall dataset less computationally demanding, we still have way too many dimensions (n cells x n genes!).
 
 Transcript changes are not usually singular–which is to say, genes function and exist in pathways and groups. It would be easier to analyze our data if we could group these differences. To address this we will run principal component analysis (PCA).
 
-#### Run PCA
+### Run PCA
 
 Principal components (PCs) are calculated from highly dimensional data to find the most representative spread in the dataset. So in our highly variable gene dimensions, there will be one line (axis) that yields the most spread and variation across the cells. That will be our first principal component.
 
@@ -376,7 +378,7 @@ So what are all these new objects?
 - Seurat Std dev - Standard deviations of each principal component coordinates
 
 
-#### Run UMAP
+### Run UMAP
 
 Next we will use UMAP, the most recently developed, and most widely used dimensionality reduction method for visualization of principal component data. It has been optimized since tSNE to better preserve global structure and is less computationally demanding.
 
@@ -396,7 +398,7 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 <input type="checkbox"> Click the Run Tool button.
 
 
-#### Plot Gapdh
+### Plot Gapdh
 
 <input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
@@ -412,7 +414,7 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 
 <input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
 
-#### Plot Il2ra
+### Plot Il2ra
 
 <input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
@@ -435,7 +437,7 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 If you wanted to plot a UMAP projection at this stage using the `Plot with Seurat` tool and `Plot_type_selector` `DimPlot` option (as described in the Galaxy Training tutorial), do not use "Group by: RNA_nn_res.0.5" argument. Because the Find Neighbors and Find Clusters steps haven't been used yet, this option isn't relevant yet, and you won't be able to visualize clusters.
 </details>
 
-#### Find Neighbors
+### Find Neighbors
 
 <input type="checkbox"> Search for the `Seurat FindNeighbours` tool in the tool search.
 
@@ -452,7 +454,7 @@ If you wanted to plot a UMAP projection at this stage using the `Plot with Seura
 The output of this will be
 "Seurat FindNeighbours on data Y: Seurat RDS" (and a corresponding CSV file)
 
-#### Find Clusters
+### Find Clusters
 
 <input type="checkbox"> Search for the `Seurat FindClusters` tool in the tool search.
 
@@ -464,7 +466,7 @@ The output of this will be
 
 The output of this will be "Seurat FindClusters on data Z: Seurat RDS" (and a corresponding CSV file)
 
-#### Plot UMAP
+### Plot UMAP
 
 <input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
