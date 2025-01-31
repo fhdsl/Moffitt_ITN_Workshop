@@ -142,7 +142,7 @@ Our first step is to do some Quality Control checks aka QC to evaluate our data.
 
 ### QC: Visualize Counts
 
-There will be a number of ‘cells’ that are actually just empty droplets or low-quality. There will also be genes that could be sequencing artifacts or that appear with such low frequency that statistical tools will fail to accurately analyze them.
+There will be a number of "cells" that are actually just empty droplets or low-quality. There will also be genes that could be sequencing artifacts or that appear with such low frequency that statistical tools will fail to accurately analyze them.
 
 This background noise of both cells and genes not only makes it harder to distinguish real biological information from artifacts, but also makes it computationally demanding to analyze.
 

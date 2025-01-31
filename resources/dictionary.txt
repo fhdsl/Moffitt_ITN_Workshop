@@ -87,6 +87,7 @@ Preprocessed
 proteomics
 proteomic
 pT
+px
 py
 pycaret
 PyCaret
@@ -125,6 +126,7 @@ TP
 trainings
 transcriptomics
 Transcriptomics
+tSNE
 tsv
 UMAP
 UseGalaxy
@@ -135,3 +137,5 @@ walkthrough
 wikipedia
 www
 Yay
+zenodo
+Zenodo

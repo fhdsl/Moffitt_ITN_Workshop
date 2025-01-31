@@ -22,7 +22,7 @@ Our Galaxy activity is a condensed tutorial adapted from the ["Building the LORI
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32af3c023b6_0_0")
 ```
 
-The data that the tutorial uses is [deposited on and available from zenodo](https://zenodo.org/records/13885908). For more info on the dataset, checkout the tutorial linked above.
+The data that the tutorial uses is [deposited on and available from Zenodo](https://zenodo.org/records/13885908). For more info on the dataset, checkout the tutorial linked above.
 
 ## Activity steps
 
