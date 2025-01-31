@@ -57,19 +57,30 @@ This will open an interactive panel for data upload.
 
 <input type="checkbox"> Click the "Close" button at the end of the bottom stretch of options.
 
-Train dataset: 1: Chowell_train_Response.tsv
+### Using PyCaret Model Comparison Tool
 
-Test dataset: 2: Chowell_test_Response.tsv
+<input type="checkbox"> On the top left of the page, the tool pane has a search bar. Copy and paste `PyCaret Model Comparison` into the tool search.
 
-Select the target column: c22: Response
+<input type="checkbox"> Select `PyCaret Model Comparison`.
 
-Task:
-  - classification
-  - Only Select Classification Models if you don't want to compare all models
-    - Logistic Regression
-    - Decision Tree Classifier
-    - Random Forest Classifier
+<input type="checkbox"> In the middle pane, if the `Train Dataset (CSV or TSV)` is not already filled in with "Chowell_train_Response.tsv", click the down arrow and select it.
 
-Customize Default Settings?
-No --> Yes
-Cross Validation Folds --> 2
+<input type="checkbox"> For the `Test Dataset (CSV or TSV)` option, select "Chowell_test_Response.tsv".
+
+<input type="checkbox"> For the `Select the target column` option, select "c22: Response".
+
+<input type="checkbox"> Under the `Task` section, verify that "classification" is selected.
+
+<input type="checkbox"> For the `Only Select Classification Models if you don't want to compare all models`, select the following:
+
+  <input type="checkbox"> Logistic Regression <br/>
+  <input type="checkbox"> Decision Tree Classifier <br/>
+  <input type="checkbox"> Random Forest Classifier <br/>
+
+<input type="checkbox"> Under the `Customize Default Settings?`section, switch the "No" to a "Yes".
+
+<input type="checkbox"> For the `Cross Validation Folds` option, decrease the number of folds to use for cross-validation from 10 to **2**.
+
+<input type="checkbox"> Click the blue ">Run Tool" button. This will add the job to the queue and add the output files to the top of the history pane.
+
+<input type="checkbox"> Click the eye icon next to the output titled `PyCaret Model Comparison Comparisons results on data 2 and data 1` to inspect the output (which will be opened in the middle pane).
