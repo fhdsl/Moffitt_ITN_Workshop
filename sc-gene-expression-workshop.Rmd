@@ -406,7 +406,7 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 
 <input type="checkbox"> Select `Plot with Seurat`.
 
-<input type="checkbox"> Ensure that the `RDS file` field shows step "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the previous step).
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the previous step).
 
 <input type="checkbox"> Confirm that the `Plot_type_selector` option is "FeaturePlot".
 
@@ -422,7 +422,7 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 
 <input type="checkbox"> Select `Plot with Seurat`.
 
-<input type="checkbox"> Ensure that the `RDS file` field shows step "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the Run UMAP step).
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the Run UMAP step).
 
 <input type="checkbox"> Confirm that the `Plot_type_selector` option is "FeaturePlot".
 
@@ -432,7 +432,7 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 
 <input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
 
-:::{.notice}
+::: {.notice}
 
 Can I plot UMAP clusters at this stage?
 
@@ -441,27 +441,46 @@ If you wanted to plot a UMAP projection at this stage using the `Plot with Seura
 
 #### Find Neighbors
 
-Input is Y: Seurat UMAP on data X: Seurat RDS (the output of the Run UMAP step "Seurat UMAP on data X: Seurat RDS")
+<input type="checkbox"> Search for the `Seurat FindNeighbours` tool in the tool search.
 
-“Reduction”: PCA <br/>
-“Dimensions”: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 <br/>
-“Assay”: RNA <br/>
---> Z: Seurat FindNeighbours on data Y: Seurat RDS <br/>
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the Run UMAP step).
+
+<input type="checkbox"> For the `Reduction` option, type `pca`.
+
+<input type="checkbox"> For the `Dimensions` option, copy and paste `1,2,3,4,5,6,7,8,9,10,11,12,13,14,15`.
+
+<input type="checkbox"> For the `Assay` option, type `RNA`.
+
+<input type="checkbox"> Click the Run Tool button.
+
+The output of this will be
+"Seurat FindNeighbours on data Y: Seurat RDS" (and a corresponding CSV file)
 
 #### Find Clusters
 
-In “Advanced Options “ <br/>
-“Resolution”: 0.5
+<input type="checkbox"> Search for the `Seurat FindClusters` tool in the tool search.
 
-Z:Seurat FindNeighbours on data Y: Seurat RDS <br/>
---> A: Seurat FindClusters on data Z: Seurat RDS
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat FindNeighbours on data Y: Seurat RDS" as the input for this step.
+
+<input type="checkbox"> In the `Advanced Options` section, for the `Resolution` option, type `0.5`
+
+<input type="checkbox"> Click the Run Tool button.
+
+The output of this will be "Seurat FindClusters on data Z: Seurat RDS" (and a corresponding CSV file)
 
 #### Plot UMAP
 
-Group by: RNA_nn_res.0.5
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
-A: Seurat FindClusters on data Z: Seurat RDS <br/>
---> B: Seurat DimPlot on data A: png plot
+<input type="checkbox"> Ensure that the `RDS file` field shows "Seurat FindClusters on data Z: Seurat RDS" as the input for this step.
+
+<input type="checkbox"> Select "DimPlot" for the `Plot_type_selector` option.
+
+<input type="checkbox"> For the `Group by` option, type `RNA_nn_res.0.5`
+
+<input type="checkbox"> Click the Run Tool button.
+
+<input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
 
 ## Other Resources
 
