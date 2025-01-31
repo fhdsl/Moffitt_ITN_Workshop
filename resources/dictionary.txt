@@ -4,7 +4,7 @@ auth
 autofilled
 automations
 bc
-biocondtor
+bioconductor
 bioinformatics
 Bootstap
 ccRCC
@@ -19,11 +19,13 @@ csv
 Ctrl
 custimization
 cwrigh
+dev
 Dockerfile
 Dockerhub
 DimPlot
 dropdown
 EBI
+Embeddings
 et
 ExhauCRF
 Fclient
@@ -59,12 +61,16 @@ json
 lightblue
 lightgreen
 LLR
+Loadings
 md
 moffitt
 Moffitt
 Murphey
 nb
+nCount
+nFeature
 nn
+Normalised
 omics
 OTTR
 PanCancer
@@ -76,10 +82,12 @@ pos
 positivity
 png
 Pre
+preprocessed
 Preprocessed
 proteomics
 proteomic
 pT
+px
 py
 pycaret
 PyCaret
@@ -98,6 +106,7 @@ RStudio
 samplename
 SCTransform
 scalefactors
+SeuratNormalise
 slido
 Slido
 spatialGE
@@ -117,6 +126,7 @@ TP
 trainings
 transcriptomics
 Transcriptomics
+tSNE
 tsv
 UMAP
 UseGalaxy
@@ -127,3 +137,5 @@ walkthrough
 wikipedia
 www
 Yay
+zenodo
+Zenodo
