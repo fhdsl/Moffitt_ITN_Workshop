@@ -3,10 +3,15 @@
 div.warning{
   border: 4px #e0471c;
   border-style: solid;
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
   background-size: 70px;
+  background-repeat: no-repeat;
   background-position: 15px center;
+  min-height: 120px;
   background-color: #e8ebee;
-  background-image: url("/resources/images/warning.png");
+  background-image: url("./resources/images/warning.png");
 }
 
 /*------------- table code---------------- */
