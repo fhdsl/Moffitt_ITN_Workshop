@@ -402,17 +402,37 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 
 #### Plot Gapdh
 
-Use the output of the previous step "Seurat UMAP on data X: Seurat RDS" as the input for this one.
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
-Keep the Plot_type_selector as FeaturePlot and Features as Gapdh as described in the Galaxy Training Tutorial.
+<input type="checkbox"> Select `Plot with Seurat`.
+
+<input type="checkbox"> Ensure that the `RDS file` field shows step "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the previous step).
+
+<input type="checkbox"> Confirm that the `Plot_type_selector` option is "FeaturePlot".
+
+<input type="checkbox"> For the `Features` option, type `Gapdh`.
+
+<input type="checkbox"> Click the Run Tool button.
+
+<input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
 
 #### Plot Il2ra
 
-Use the output of the Run UMAP step "Seurat UMAP on data X: Seurat RDS" as the input for this one.
+<input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
-Keep the Plot_type_selector as FeaturePlot and Features as Il2ra as described in the Galaxy Training Tutorial.
+<input type="checkbox"> Select `Plot with Seurat`.
 
-NOTE: If you plot UMAP at this stage, do not use "Group by: RNA_nn_res.0.5" argument
+<input type="checkbox"> Ensure that the `RDS file` field shows step "Seurat UMAP on data X: Seurat RDS" as the input for this step (this file is the output from the Run UMAP step).
+
+<input type="checkbox"> Confirm that the `Plot_type_selector` option is "FeaturePlot".
+
+<input type="checkbox"> For the `Features` option, type `Il2ra`.
+
+<input type="checkbox"> Click the Run Tool button.
+
+<input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
+
+NOTE: If you wanted to plot a UMAP projection at this stage using the `Plot with Seurat` tool and `Plot_type_selector` `DimPlot` option (as described in the Galaxy Training tutorial), do not use "Group by: RNA_nn_res.0.5" argument. Because the Find Neighbors and Find Clusters steps haven't been used yet, this option isn't relevant yet.
 
 #### Find Neighbors
 
