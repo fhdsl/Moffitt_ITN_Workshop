@@ -1,5 +1,6 @@
 ---
 title: Machine Learning with Galaxy
+subtitle: Activity
 output:
   html_document:
     toc: true
@@ -17,7 +18,7 @@ knitr::opts_chunk$set(number_sections = FALSE)
 
 Our Galaxy activity is a condensed tutorial adapted from the ["Building the LORIS LLR6 PanCancer Model Using PyCaret" Galaxy Training Tutorial](https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html).
 
-```{r echo=FALSE, fig.alt="Galaxy Training Tutorial titled 'Building the LORIS LLR6 PanCancer Model Using PyCaret'", fig.link="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html"}
+```{r echo=FALSE, out.width="100%", fig.alt="Galaxy Training Tutorial titled 'Building the LORIS LLR6 PanCancer Model Using PyCaret'", fig.link="https://training.galaxyproject.org/training-material/topics/statistics/tutorials/loris_model/tutorial.html"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32af3c023b6_0_0")
 ```
 
@@ -31,7 +32,7 @@ The data that the tutorial uses is [deposited on and available from zenodo](http
 
 Note: this link will only be active for this workshop, but you can continue to use Galaxy resources for free by visiting [usegalaxy.org](https://usegalaxy.org/).
 
-```{r echo=FALSE, fig.alt = "Galaxy Home page", fig.link = "https://usegalaxy.org/join-training/itn-at-moffitt-2025/"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Galaxy Home page", fig.link = "https://usegalaxy.org/join-training/itn-at-moffitt-2025/"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32af3c023b6_0_18")
 ```
 
@@ -39,24 +40,25 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbW
 
 <input type="checkbox"> If you have files in your history already, use the `+` button on the top right of the history pane to `Create new history`. <br/>
 
-```{r echo=FALSE, fig.alt = "If needed (e.g., because there are already files in your history), create a new history"}
+```{r echo=FALSE, out.width="100%", fig.alt = "If needed (e.g., because there are already files in your history), create a new history"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_194")
 ```
 
 <input type="checkbox"> Click the pencil button next to "Unnamed history".
 
-```{r echo=FALSE, fig.alt = "Pencil button for renaming the history"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Pencil button for renaming the history"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_165")
 ```
 
 <input type="checkbox"> Fill in the name with something descriptive/appropriate.
 
-```{r echo=FALSE, fig.alt = "Replace 'Unnamed history' with a descriptive name for the history."}
+```{r echo=FALSE, out.width="100%", fig.alt = "Replace 'Unnamed history' with a descriptive name for the history."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_7")
 ```
 
 <input type="checkbox"> Click "Save".
-```{r echo=FALSE, fig.alt = "Click 'Save' to save the new history name"}
+
+```{r echo=FALSE, out.width="100%", fig.alt = "Click 'Save' to save the new history name"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_199")
 ```
 
@@ -73,37 +75,37 @@ https://zenodo.org/records/13885908/files/Chowell_test_Response.tsv
 
 <input type="checkbox"> In Galaxy, click the "Upload" button in the top left of the page.
 
-```{r echo=FALSE, fig.alt = "'Upload' button for data upload highlighted in the upper left corner"}
+```{r echo=FALSE, out.width="100%", fig.alt = "'Upload' button for data upload highlighted in the upper left corner"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_12")
 ```
 
 This will open an interactive panel for data upload.
 
-```{r echo=FALSE, fig.alt = "Interactive panel for data upload"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Interactive panel for data upload"}
 ottrpal::include_slide('https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_17')
 ```
 
 <input type="checkbox"> Click the "Paste/Fetch Data" button in the middle of the bottom stretch of options.
 
-```{r echo=FALSE, fig.alt = "The Paste/Fetch data button is highlighted within the bottom stretch of options"}
+```{r echo=FALSE, out.width="100%", fig.alt = "The Paste/Fetch data button is highlighted within the bottom stretch of options"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_205")
 ```
 
 <input type="checkbox"> Paste the copied URLs into the middle box.
 
-```{r echo=FALSE, fig.alt = "paste the copied URLs into the middle highlighted box"}
+```{r echo=FALSE, out.width="100%", fig.alt = "paste the copied URLs into the middle highlighted box"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_27")
 ```
 
 <input type="checkbox"> Click the blue "Start" button in the bottom stretch of options.
 
-```{r echo=FALSE, fig.alt = "The 'Start' button in the middle of the bottom stretch of options is highlighted."}
+```{r echo=FALSE, out.width="100%", fig.alt = "The 'Start' button in the middle of the bottom stretch of options is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_177")
 ```
 
 <input type="checkbox"> Click the "Close" button at the end of the bottom stretch of options.
 
-```{r echo=FALSE, fig.alt = "The 'Close' button in the bottom stretch of options is highlighted."}
+```{r echo=FALSE, out.width="100%", fig.alt = "The 'Close' button in the bottom stretch of options is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_32")
 ```
 
@@ -111,37 +113,37 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbW
 
 <input type="checkbox"> On the top left of the page, the tool pane has a search bar. Copy and paste `PyCaret Model Comparison` into the tool search.
 
-```{r echo=FALSE, fig.alt = "Tool search bar where to copy and paste the name of the tool 'Pycaret Model Comparison'"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Tool search bar where to copy and paste the name of the tool 'Pycaret Model Comparison'"}
 ottrpal::include_slide('https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_185')
 ```
 
 <input type="checkbox"> Select `PyCaret Model Comparison`.
 
-```{r echo=FALSE, fig.alt = "Select PyCaret Model Comparison from the options listed below the tool search bar"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Select PyCaret Model Comparison from the options listed below the tool search bar"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_54")
 ```
 
 <input type="checkbox"> In the middle pane, if the `Train Dataset (CSV or TSV)` is not already filled in with "Chowell_train_Response.tsv", click the down arrow and select it.
 
-```{r echo=FALSE, fig.alt = "Select the training dataset for the Train Dataset option"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Select the training dataset for the Train Dataset option"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_64")
 ```
 
 <input type="checkbox"> For the `Test Dataset (CSV or TSV)` option, select "Chowell_test_Response.tsv".
 
-```{r echo=FALSE, fig.alt = "Select the test dataset for the Test Dataset option"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Select the test dataset for the Test Dataset option"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_74")
 ```
 
 <input type="checkbox"> For the `Select the target column` option, select "c22: Response".
 
-```{r echo=FALSE, fig.alt = "Select the 'Response' column as the target column"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Select the 'Response' column as the target column"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_84")
 ```
 
 <input type="checkbox"> Under the `Task` section, verify that "classification" is selected.
 
-```{r echo=FALSE, fig.alt = "Verify that 'classification' is selected for the Task option"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Verify that 'classification' is selected for the Task option"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_211")
 ```
 
@@ -151,34 +153,34 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbW
 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> Decision Tree Classifier <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> Random Forest Classifier <br/>
 
-```{r echo=FALSE, fig.alt = "Select Logistic Regression, Decision Tree Classifier, and Random Forest Classifier from the list for the 'Only Select Classification Models if you do not want to compare all models option.'"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Select Logistic Regression, Decision Tree Classifier, and Random Forest Classifier from the list for the 'Only Select Classification Models if you do not want to compare all models option.'"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_109")
 ```
 
 <input type="checkbox"> Under the `Customize Default Settings?`section, switch the "No" to a **"Yes"**.
 
-```{r echo=FALSE, fig.alt = "Switch the No to Yes under the Customize Default Settings? Option"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Switch the No to Yes under the Customize Default Settings? Option"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_119")
 ```
 
 <input type="checkbox"> For the `Cross Validation Folds` option, decrease the number of folds to use for cross-validation from 10 to **2**.
 
-```{r echo=FALSE, fig.alt = "Switch 10 to 2 under the Cross Validation Folds option"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Switch 10 to 2 under the Cross Validation Folds option"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_129")
 ```
 
 <input type="checkbox"> Click the blue `>Run Tool` button. This will add the job to the queue and add the output files to the top of the history pane.
 
-```{r echo=FALSE, fig.alt = "Click the Run Tool button to submit the job so that pycaret will compare the classification models using the provided data"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Click the Run Tool button to submit the job so that pycaret will compare the classification models using the provided data"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_135")
 ```
 
 <input type="checkbox"> Click the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output titled `PyCaret Model Comparison Comparisons results on data 2 and data 1` to inspect the output (which will be opened in the middle pane).
 
-```{r echo=FALSE, fig.alt = "Use the eye icon to inspect the output"}
+```{r echo=FALSE, out.width="100%", fig.alt = "Use the eye icon to inspect the output"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_221")
 ```
 
-```{r echo=FALSE, fig.alt = "The output will open in the middle pane where you can inspect it. "}
+```{r echo=FALSE, out.width="100%", fig.alt = "The output will open in the middle pane where you can inspect it. "}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1M_iYtmfFGnZVHhbWLr81JWlKVO9mXPTHQefmGIvrHIQ/edit#slide=id.g32b752d08f4_0_229")
 ```
