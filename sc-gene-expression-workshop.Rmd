@@ -432,7 +432,12 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 
 <input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
 
-NOTE: If you wanted to plot a UMAP projection at this stage using the `Plot with Seurat` tool and `Plot_type_selector` `DimPlot` option (as described in the Galaxy Training tutorial), do not use "Group by: RNA_nn_res.0.5" argument. Because the Find Neighbors and Find Clusters steps haven't been used yet, this option isn't relevant yet.
+:::{.notice}
+
+Can I plot UMAP clusters at this stage?
+
+If you wanted to plot a UMAP projection at this stage using the `Plot with Seurat` tool and `Plot_type_selector` `DimPlot` option (as described in the Galaxy Training tutorial), do not use "Group by: RNA_nn_res.0.5" argument. Because the Find Neighbors and Find Clusters steps haven't been used yet, this option isn't relevant yet, and you won't be able to visualize clusters.
+:::
 
 #### Find Neighbors
 
