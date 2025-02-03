@@ -23,7 +23,7 @@ Changes include:
 You may want to view the whole Galaxy Training Tutorial later for further steps or explanation, but we would recommend not following along with it during this activity considering that we have abbreviated and rearranged a portion of it.
 :::
 
-## Setting up Galaxy 
+## Setting up Galaxy
 
 ### Open Galaxy
 
@@ -257,7 +257,7 @@ You will see a green message a new block in the history that says "Seurat Filter
 
 ### Normalize Data
 
-Now we will normalize our data. This helps reduce the differences between gene counts by fitting total counts across cells in our data to be comparable to one another. 
+Now we will normalize our data. This helps reduce the differences between gene counts by fitting total counts across cells in our data to be comparable to one another.
 
 <input type="checkbox"> Search for the `Seurat NormaliseData` tool in the tool search.
 
@@ -276,9 +276,9 @@ Now we will normalize our data. This helps reduce the differences between gene c
 
 ### Find Variable Genes
 
-The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so a researcher could choose to remove these from the data to simplify their analysis. Here, we are just flagging genes that show variability in expression from cell to cell to use for dimensional reduction purposes later.
+The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so we don’t want to waste time looking for meaningful differences where they don’t exist.
 
-The find variable genes, this step flags genes that do vary across cells to expedite future analyses and ensure that we, and Seurat, don’t waste time looking for meaningful differences where they don’t exist.
+The `FindVariableFeatures` function flags genes that do vary across cells and allows us to focus on these genes for downstream analysis like clustering and dimensionality reduction.
 
 <input type="checkbox"> Search for the `Seurat FindVariableGenes` tool in the tool search.
 
