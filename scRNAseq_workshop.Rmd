@@ -1,6 +1,5 @@
 ---
 title: "**Tools for Genomics and Single-Cell RNA-seq**"
-subtitle: "Workshop Material"
 output:
   html_document
 ---

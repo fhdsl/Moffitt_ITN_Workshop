@@ -11,8 +11,6 @@ output:
 css: style.css
 ---
 
-## Tutorial Steps
-
 We will be working through a modified/truncated version of the [Galaxy Training Tutorial "Filter, plot, and explore single cell RNA-seq data with Seurat" Tutorial ](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_FilterPlotandExplore_SeuratTools/tutorial.html).
 
 Changes include:
@@ -25,7 +23,7 @@ Changes include:
 You may want to view the whole Galaxy Training Tutorial later for further steps or explanation, but we would recommend not following along with it during this activity considering that we have abbreviated and rearranged a portion of it.
 :::
 
-## Setting up Galaxy 
+## Setting up Galaxy
 
 ### Open Galaxy
 
@@ -259,7 +257,7 @@ You will see a green message a new block in the history that says "Seurat Filter
 
 ### Normalize Data
 
-Now we will normalize our data. This helps reduce the differences between gene counts by fitting total counts across cells in our data to be comparable to one another. SCTransform regularizes the gene expression profiles via a negative binomial regression while also controlling for overfitting of the data.
+Now we will normalize our data. This helps reduce the differences between gene counts by fitting total counts across cells in our data to be comparable to one another.
 
 <input type="checkbox"> Search for the `Seurat NormaliseData` tool in the tool search.
 
@@ -278,9 +276,9 @@ Now we will normalize our data. This helps reduce the differences between gene c
 
 ### Find Variable Genes
 
-The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so we could remove these from our data to simplify our analysis.
+The datasets have loads of genes, but not all of them vary in expression from cell to cell. For instance, housekeeping genes are defined as not changing much from cell to cell, so we don’t want to waste time looking for meaningful differences where they don’t exist.
 
-The find variable genes, this step flags genes that do vary across cells to expedite future analyses and ensure that we, and Seurat, don’t waste time looking for meaningful differences where they don’t exist.
+The `FindVariableFeatures` function flags genes that do vary across cells and allows us to focus on these genes for downstream analysis like clustering and dimensionality reduction.
 
 <input type="checkbox"> Search for the `Seurat FindVariableGenes` tool in the tool search.
 
@@ -431,11 +429,12 @@ Note that this is where the walkthrough diverges from the Galaxy Training tutori
 <input type="checkbox"> View the resulting plot by clicking the eye icon (![eye button image](resources/images/eye.png){#id .class width=25 height=20px}) next to the output `.png` file in the history.
 
 
-
 <details><summary>Can I plot UMAP clusters at this stage?</summary>
 
 If you wanted to plot a UMAP projection at this stage using the `Plot with Seurat` tool and `Plot_type_selector` `DimPlot` option (as described in the Galaxy Training tutorial), do not use "Group by: RNA_nn_res.0.5" argument. Because the Find Neighbors and Find Clusters steps haven't been used yet, this option isn't relevant yet, and you won't be able to visualize clusters.
 </details>
+
+## Cell Clustering
 
 ### Find Neighbors
 
@@ -466,7 +465,7 @@ The output of this will be
 
 The output of this will be "Seurat FindClusters on data Z: Seurat RDS" (and a corresponding CSV file)
 
-### Plot UMAP
+### Plot UMAP (with clusters)
 
 <input type="checkbox"> Search for the `Plot with Seurat` tool in the tool search.
 
