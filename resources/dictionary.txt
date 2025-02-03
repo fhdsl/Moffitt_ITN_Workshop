@@ -112,11 +112,17 @@ Slido
 spatialGE
 spatialge
 spatialTIME
+spw
 SRB
 STdeconvolve
 STCLUST
+stclust
+STclust
+STGRADIENT
+STlist
 subdir
 taxotere
+textbox
 th
 tibble
 tls
@@ -133,6 +139,7 @@ UseGalaxy
 usegalaxy
 VectraPolarisData
 Visium
+visium
 walkthrough
 wikipedia
 www
