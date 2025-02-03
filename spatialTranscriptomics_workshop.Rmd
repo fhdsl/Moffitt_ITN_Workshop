@@ -25,6 +25,6 @@ href="https://spatialge.moffitt.org/" target="_blank"> Resource Link </a></div>
 
 ## Additional Resources
 
-- [The accompanying paper for spatialGE](https://academic.oup.com/bioinformatics/article/38/9/2645/6544582) 
+- [The accompanying paper for spatialGE](https://doi.org/10.1158/0008-5472.CAN-24-2346) 
 - [Tutorials on how to use the spatialGE R package](https://fridleylab.github.io/spatialGE/)
 - [The code for spatialGE](https://github.com/FridleyLab/spatialGE)
