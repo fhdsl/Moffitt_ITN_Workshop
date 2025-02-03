@@ -85,7 +85,7 @@ that's sensible. Could be something related to the workshop such as
 "ITN-Moffitt workshop".\
 <input type="checkbox"> Then click "Create".
 
-## Uploading the dataset
+### Uploading the dataset
 
 **IMPORTANT:** *For each sample we will repeat the following steps to
 upload each sample's set of files.*
@@ -135,7 +135,7 @@ navigate.
 
 <details>
 
-<summary>Adding sample metadata manually</summary>
+<summary>Homework: Manually adding sample metadata</summary>
 
 Metadata can also be added manually. To do so, follow these steps:
 
@@ -175,7 +175,7 @@ sample names used during file import.
 
 <details>
 
-<summary>Additional samples in the data set</summary>
+<summary>Homework: Additional samples in the data set</summary>
 
 Users are encouraged to try spatialGE with these additional samples
 after the workshop. These samples were not used in the workshop for
@@ -221,7 +221,7 @@ email instead of waiting on the page.
 
 <details>
 
-<summary>Loading data into the command-line version of spatialGE</summary>
+<summary>Advanced task: Loading data into the command-line version of spatialGE</summary>
 
 Most of analyses in this step-by-step tutorial can also be performed with the
 spatialGE R package. To do so, start by installing the spatialGE package:
@@ -291,7 +291,7 @@ counts. Use 20% in this case.
 
 <details>
 
-<summary>Performing gene-level filtering</summary>
+<summary>Homework: Performing gene-level filtering</summary>
 
 Users can also remove genes with low number of counts. This is advisable
 in most cases. However, since ST features a high gene dropout (i.e.,
@@ -302,9 +302,31 @@ set.
 To perform a gene count filter:
 
 <input type="checkbox"> Now, to filter out genes, click "Filter genes".\
-<input type="checkbox"> Filter out genes with less than 2000 counts.\
+<input type="checkbox"> Filter out genes with less than 100 counts.\
 <input type="checkbox"> Filter out genes expressed in less than 20
 spots.
+
+</details>
+
+####
+
+####  {.click_to_expand_block}
+
+<details>
+
+<summary>Advanced task: Filtering data using the command-line version of spatialGE</summary>
+
+To achieve the same spot- and gene level filtering results as those obtained with
+the web application, users can run the following command in the R console.
+
+```{r eval=F}
+tls_stlist = filter_data(tls_stlist, 
+                         spot_minreads=500,
+                         spot_mingenes=100,
+                         spot_maxpct=0.2,
+                         gene_minreads=100,
+                         gene_minspots=20)
+```
 
 </details>
 
@@ -330,7 +352,23 @@ blue "GENERATE PLOTS" button to update.
 
 ####  {.click_to_expand_block}
 
-<details><summary>Visualizing gene counts in spatial context</summary>
+<details>
+
+<summary>Advanced task: Create count distribution plots with the command-line version of spatialGE</summary>
+
+```{r eval=F}
+spatialGE::distribution_plots(tls_stlist, , plot_meta='total_counts', plot_type='violin')
+```
+
+</details>
+
+####
+
+####  {.click_to_expand_block}
+
+<details>
+
+<summary>Homework: Visualizing gene counts in spatial context</summary>
 
 #### Quilt plot
 
@@ -363,7 +401,12 @@ normalization.\
 
 ####  {.click_to_expand_block}
 
-<details><summary>Assessing data normalization results at the gene level</summary>
+<details>
+
+<summary>Homework: Assessing data normalization results at the gene level</summary>
+
+The spatialGE web app allows users to assess the distribution of counts per spot
+or cell for specific genes. To do so, follow these steps:
 
 <input type="checkbox"> The distribution of counts per spot for a given
 gene can also be plotted. For example, *MAP2K2*. When querying a gene,
@@ -375,6 +418,22 @@ samples, use all-upper case letters.\
 </details>
 
 #### 
+
+####  {.click_to_expand_block}
+
+<details>
+
+<summary>Advanced task: Data normalization using the command-line version of sptialGE</summary>
+
+```{r eval=F}
+# Perform data normalization using SCTransform
+# NOTE: To use log-transformation set `method='log'`
+tls_stlist = transform_data(tls_stlist, method='sct')
+```
+
+</details>
+
+####
 
 ## Visualization
 
@@ -396,7 +455,9 @@ Images can be exported in multiple formats (PNG/SVG/PDF).
 
 <details>
 
-<summary>Generation of gene expression surfaces</summary>
+<summary>Homework: Generation of gene expression surfaces</summary>
+
+### Gene expression surface ("kriging")
 
 Users can also generate a "expression surface" to visualize expression of a gene in
 the spatial context. This is a type of plot where expression values are inferred 
@@ -412,7 +473,21 @@ plot.
 
 #### 
 
-## Spatial Domain Detection
+####  {.click_to_expand_block}
+
+<details>
+
+<summary>Advanced task: Create spatial gene expression plots using the command-line version of spatialGE</summary>
+
+```{r eval=F}
+STplot(tls_stlist, genes=c('IGKC', 'MS4A1', 'COL1A1'))
+```
+
+</details>
+
+####
+
+## Spatial Domain Detection {#detect-spatial-domains}
 
 <input type="checkbox"> Click the "Spatial domain detection" on the left
 side menu.\
@@ -428,22 +503,37 @@ Images can be exported in multiple formats (PNG/SVG/PDF).
 
 ####  {.click_to_expand_block}
 
-<details><summary>Other analysis types to explore</summary>
+<details>
 
-We strongly encourage the users to run these more advanced analyses. These were not
+<summary>Advanced task: Domain detection using the command-line version of spatialGE</summary>
+
+```{r eval=F}
+tls_stlist = STclust(tls_stlist, ks=c(3:5))
+
+# Plot the detected domains
+STplot(tls_stlist, ks=3:5)
+```
+
+</details>
+
+####
+
+####  {.click_to_expand_block}
+
+<details>
+
+<summary>Homework: Other analysis types to explore</summary>
+
+We encourage the users to run these more advanced analyses. These were not
 included due to time necessary to complete them. However, these are some of the 
 advanced analysis types that can help in hypothesis generation using spatial
 transcriptomics data.
 
-## Spatially variable gene testing (Moran's and Geary's C)
-
-
 ## Phenotyping
 
 In spatialGE, inferring cell types on Visium data sets is achieved with
-STdeconvolve ([Miller et al.
-2022](https://doi.org/10.1038/s41467-022-30033-z)). The STdeconvolve is
-performed in two stages:
+STdeconvolve ([Miller et al. 2022](https://doi.org/10.1038/s41467-022-30033-z)). 
+The STdeconvolve is performed in two stages:
 
 1.  The method attempts to fit a series of models composed of "latent
     topics". Each latent topic represents a cell type, a cell state, or
@@ -466,15 +556,26 @@ with high variation will be used to detect the domains.\
 <input type="checkbox"> To begin stage 2, select the "CellMarker
 signatures (v2.0, Human-Cancer)" reference data set from the "Gene
 signatures" drop-down.\
-<input type="checkbox"> Then, click "ASSIGN IDENTITIES" to begin GSEA.\
+<input type="checkbox"> Then, click "ASSIGN IDENTITIES" to begin GSEA.
 
-# Spatial gradient detection
+## Spatial gradient detection
 
+In spatialGE, users can test if a gene shows higher (or lower) expression closer to
+a specific cluster or spatial domain ("spatial gradient"). The method is useful to 
+investigate spatial patterns at the interface of spatial domains.
 
+Using the steps previsouly outlined to [detect spatial domains](#detect-spatial-domains),
+it seems spatial domain 3 in the plot with title "stclust_spw0_k3", is an immune-infiltrated
+area. With the following steps, users can test for genes with spatial expression
+gradients with respect to this immune region:
 
-# Spatial gene set enrichment
-
-
+<input type="checkbox"> Click the "Spatial gradients" module on the left side menu.\
+<input type="checkbox"> Using the table at the top, select all samples.\
+<input type="checkbox"> Write "1000" in the "Number of most variable genes to use" textbox.\
+<input type="checkbox"> From the "Annotation to test" drop-down, select "
+STclust; Domains (k): 03; No spatial weight".\
+<input type="checkbox"> From the "reference cluster" drop-down, select "3".\
+<input type="checkbox"> Then, click "RUN STGRADIENT".
 
 </details>
 
