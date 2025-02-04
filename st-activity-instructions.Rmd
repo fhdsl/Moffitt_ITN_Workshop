@@ -43,13 +43,13 @@ Each sample's folder contains a several files resulting from the
 -   sample_b_01
     -   GSM5924046_frozen_b_1_filtered_feature_bc_matrix.h5 (the gene
         expression data)
-    - spatial
-      -   GSM5924046_frozen_b_1_tissue_positions_list.csv (spot x,y
-        spatial positions)
-      -   GSM5924046_frozen_b_1_tissue_hires_image.png (The H&E-stained
-        tissue image)
-      -   GSM5924046_frozen_b_1_scalefactors_json.json (to scale the H&E
-        image and plots)
+    -   spatial
+        -   GSM5924046_frozen_b_1_tissue_positions_list.csv (spot x,y
+            spatial positions)
+        -   GSM5924046_frozen_b_1_tissue_hires_image.png (The
+            H&E-stained tissue image)
+        -   GSM5924046_frozen_b_1_scalefactors_json.json (to scale the
+            H&E image and plots)
 -   sample_b_07 ...
 
 The README describes these samples:
@@ -221,10 +221,12 @@ email instead of waiting on the page.
 
 <details>
 
-<summary>Advanced task: Loading data into the command-line version of spatialGE</summary>
+<summary>Advanced task: Loading data into the command-line version of
+spatialGE</summary>
 
-Most of analyses in this step-by-step tutorial can also be performed with the
-spatialGE R package. To do so, start by installing the spatialGE package:
+Most of analyses in this step-by-step tutorial can also be performed
+with the spatialGE R package. To do so, start by installing the
+spatialGE package:
 
 ```{r eval=F}
 # Install devtools if not already installed:
@@ -239,8 +241,8 @@ Then load the spatialGE package:
 library('spatialGE')
 ```
 
-Now, specify the directory paths to the folders containing the data and the metadata
-file:
+Now, specify the directory paths to the folders containing the data and
+the metadata file:
 
 ```{r eval=F}
 counts_fp = c('./activity-files/spatial_transcriptomics_activity_files/visium_samples/sample_b_01/',
@@ -251,8 +253,8 @@ counts_fp = c('./activity-files/spatial_transcriptomics_activity_files/visium_sa
 meta_file = './activity-files/spatial_transcriptomics_activity_files/additional_activity_files_for_home/meylan_etal_2022_tumor_grade.csv'
 ```
 
-Finally, create an STlist. The STlist is the R object in spatialGE that holds the
-data and results:
+Finally, create an STlist. The STlist is the R object in spatialGE that
+holds the data and results:
 
 ```{r eval=F}
 tls_stlist = STlist(rnacounts=counts_fp, samples=meta_file)
@@ -260,7 +262,7 @@ tls_stlist = STlist(rnacounts=counts_fp, samples=meta_file)
 
 </details>
 
-####
+#### 
 
 ## Filtering your data
 
@@ -308,16 +310,18 @@ spots.
 
 </details>
 
-####
+#### 
 
 ####  {.click_to_expand_block}
 
 <details>
 
-<summary>Advanced task: Filtering data using the command-line version of spatialGE</summary>
+<summary>Advanced task: Filtering data using the command-line version of
+spatialGE</summary>
 
-To achieve the same spot- and gene level filtering results as those obtained with
-the web application, users can run the following command in the R console.
+To achieve the same spot- and gene level filtering results as those
+obtained with the web application, users can run the following command
+in the R console.
 
 ```{r eval=F}
 tls_stlist = filter_data(tls_stlist, 
@@ -354,7 +358,8 @@ blue "GENERATE PLOTS" button to update.
 
 <details>
 
-<summary>Advanced task: Create count distribution plots with the command-line version of spatialGE</summary>
+<summary>Advanced task: Create count distribution plots with the
+command-line version of spatialGE</summary>
 
 ```{r eval=F}
 spatialGE::distribution_plots(tls_stlist, , plot_meta='total_counts', plot_type='violin')
@@ -362,7 +367,7 @@ spatialGE::distribution_plots(tls_stlist, , plot_meta='total_counts', plot_type=
 
 </details>
 
-####
+#### 
 
 ####  {.click_to_expand_block}
 
@@ -370,7 +375,7 @@ spatialGE::distribution_plots(tls_stlist, , plot_meta='total_counts', plot_type=
 
 <summary>Homework: Visualizing gene counts in spatial context</summary>
 
-#### Quilt plot
+**Quilt plot**
 
 The quilt plot tab within the QC and Data Transformation module allows
 visualization of the counts or detected genes per spot. This
@@ -403,10 +408,11 @@ normalization.\
 
 <details>
 
-<summary>Homework: Assessing data normalization results at the gene level</summary>
+<summary>Homework: Assessing data normalization results at the gene
+level</summary>
 
-The spatialGE web app allows users to assess the distribution of counts per spot
-or cell for specific genes. To do so, follow these steps:
+The spatialGE web app allows users to assess the distribution of counts
+per spot or cell for specific genes. To do so, follow these steps:
 
 <input type="checkbox"> The distribution of counts per spot for a given
 gene can also be plotted. For example, *MAP2K2*. When querying a gene,
@@ -423,7 +429,8 @@ samples, use all-upper case letters.\
 
 <details>
 
-<summary>Advanced task: Data normalization using the command-line version of sptialGE</summary>
+<summary>Advanced task: Data normalization using the command-line
+version of sptialGE</summary>
 
 ```{r eval=F}
 # Perform data normalization using SCTransform
@@ -433,7 +440,7 @@ tls_stlist = transform_data(tls_stlist, method='sct')
 
 </details>
 
-####
+#### 
 
 ## Visualization
 
@@ -457,11 +464,12 @@ Images can be exported in multiple formats (PNG/SVG/PDF).
 
 <summary>Homework: Generation of gene expression surfaces</summary>
 
-### Gene expression surface ("kriging")
+**Gene expression surface ("kriging")**
 
-Users can also generate a "expression surface" to visualize expression of a gene in
-the spatial context. This is a type of plot where expression values are inferred 
-for the spaces not quantified between spots
+Users can also generate a "expression surface" to visualize expression
+of a gene in the spatial context. This is a type of plot where
+expression values are inferred for the spaces not quantified between
+spots
 
 <input type="checkbox"> Click the "Expression surface" tab.\
 <input type="checkbox"> In the `Search and select genes` menu search and
@@ -477,7 +485,8 @@ plot.
 
 <details>
 
-<summary>Advanced task: Create spatial gene expression plots using the command-line version of spatialGE</summary>
+<summary>Advanced task: Create spatial gene expression plots using the
+command-line version of spatialGE</summary>
 
 ```{r eval=F}
 STplot(tls_stlist, genes=c('IGKC', 'MS4A1', 'COL1A1'))
@@ -485,7 +494,7 @@ STplot(tls_stlist, genes=c('IGKC', 'MS4A1', 'COL1A1'))
 
 </details>
 
-####
+#### 
 
 ## Spatial Domain Detection {#detect-spatial-domains}
 
@@ -505,7 +514,8 @@ Images can be exported in multiple formats (PNG/SVG/PDF).
 
 <details>
 
-<summary>Advanced task: Domain detection using the command-line version of spatialGE</summary>
+<summary>Advanced task: Domain detection using the command-line version
+of spatialGE</summary>
 
 ```{r eval=F}
 tls_stlist = STclust(tls_stlist, ks=c(3:5))
@@ -516,7 +526,7 @@ STplot(tls_stlist, ks=3:5)
 
 </details>
 
-####
+#### 
 
 ####  {.click_to_expand_block}
 
@@ -524,16 +534,17 @@ STplot(tls_stlist, ks=3:5)
 
 <summary>Homework: Other analysis types to explore</summary>
 
-We encourage the users to run these more advanced analyses. These were not
-included due to time necessary to complete them. However, these are some of the 
-advanced analysis types that can help in hypothesis generation using spatial
-transcriptomics data.
+We encourage the users to run these more advanced analyses. These were
+not included due to time necessary to complete them. However, these are
+some of the advanced analysis types that can help in hypothesis
+generation using spatial transcriptomics data.
 
-## Phenotyping
+**Phenotyping**
 
 In spatialGE, inferring cell types on Visium data sets is achieved with
-STdeconvolve ([Miller et al. 2022](https://doi.org/10.1038/s41467-022-30033-z)). 
-The STdeconvolve is performed in two stages:
+STdeconvolve ([Miller et al.
+2022](https://doi.org/10.1038/s41467-022-30033-z)). The STdeconvolve is
+performed in two stages:
 
 1.  The method attempts to fit a series of models composed of "latent
     topics". Each latent topic represents a cell type, a cell state, or
@@ -558,26 +569,30 @@ signatures (v2.0, Human-Cancer)" reference data set from the "Gene
 signatures" drop-down.\
 <input type="checkbox"> Then, click "ASSIGN IDENTITIES" to begin GSEA.
 
-## Spatial gradient detection
+**Spatial gradient detection**
 
-In spatialGE, users can test if a gene shows higher (or lower) expression closer to
-a specific cluster or spatial domain ("spatial gradient"). The method is useful to 
-investigate spatial patterns at the interface of spatial domains.
+In spatialGE, users can test if a gene shows higher (or lower)
+expression closer to a specific cluster or spatial domain ("spatial
+gradient"). The method is useful to investigate spatial patterns at the
+interface of spatial domains.
 
-Using the steps previsouly outlined to [detect spatial domains](#detect-spatial-domains),
-it seems spatial domain 3 in the plot with title "stclust_spw0_k3", is an immune-infiltrated
-area. With the following steps, users can test for genes with spatial expression
+Using the steps previsouly outlined to [detect spatial
+domains](#detect-spatial-domains), it seems spatial domain 3 in the plot
+with title "stclust_spw0_k3", is an immune-infiltrated area. With the
+following steps, users can test for genes with spatial expression
 gradients with respect to this immune region:
 
-<input type="checkbox"> Click the "Spatial gradients" module on the left side menu.\
+<input type="checkbox"> Click the "Spatial gradients" module on the left
+side menu.\
 <input type="checkbox"> Using the table at the top, select all samples.\
-<input type="checkbox"> Write "1000" in the "Number of most variable genes to use" textbox.\
-<input type="checkbox"> From the "Annotation to test" drop-down, select "
-STclust; Domains (k): 03; No spatial weight".\
-<input type="checkbox"> From the "reference cluster" drop-down, select "3".\
+<input type="checkbox"> Write "1000" in the "Number of most variable
+genes to use" textbox.\
+<input type="checkbox"> From the "Annotation to test" drop-down, select
+" STclust; Domains (k): 03; No spatial weight".\
+<input type="checkbox"> From the "reference cluster" drop-down, select
+"3".\
 <input type="checkbox"> Then, click "RUN STGRADIENT".
 
 </details>
 
-####
-
+#### 
