@@ -575,7 +575,7 @@ expression closer to a specific cluster or spatial domain ("spatial
 gradient"). The method is useful to investigate spatial patterns at the
 interface of spatial domains.
 
-Using the steps previously outlined to [detect spatialdomains](#detect-spatial-domains), 
+Using the steps previously outlined to [detect spatial domains](#detect-spatial-domains), 
 it seems spatial domain 3 in the plot with title "stclust_spw0_k3", is an immune-infiltrated 
 area. With the following steps, users can test for genes with spatial expression
 gradients with respect to this immune region:
