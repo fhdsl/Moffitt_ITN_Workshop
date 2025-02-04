@@ -8,8 +8,8 @@ output:
     toc_depth: 3
     number_sections: false
 css: style.css
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -166,7 +166,7 @@ to add these data for each sample:
 
 </details>
 
-#### 
+####
 
 **Remember:** The sample IDs in the metadata should match exactly the
 sample names used during file import.
@@ -203,7 +203,7 @@ steps for each sample.*
 
 </details>
 
-#### 
+####
 
 ### After you've entered the data and metadata:
 
@@ -324,7 +324,7 @@ obtained with the web application, users can run the following command
 in the R console.
 
 ```{r eval=F}
-tls_stlist = filter_data(tls_stlist, 
+tls_stlist = filter_data(tls_stlist,
                          spot_minreads=500,
                          spot_mingenes=100,
                          spot_maxpct=0.2,
@@ -334,7 +334,7 @@ tls_stlist = filter_data(tls_stlist,
 
 </details>
 
-#### 
+####
 
 <input type="checkbox"> Once you have all the filter settings as you'd
 like click the blue "APPLY FILTER" button.\
@@ -394,7 +394,7 @@ plot.
 
 </details>
 
-#### 
+####
 
 ## Normalize Data
 
@@ -423,7 +423,7 @@ samples, use all-upper case letters.\
 
 </details>
 
-#### 
+####
 
 ####  {.click_to_expand_block}
 
@@ -469,7 +469,7 @@ Images can be exported in multiple formats (PNG/SVG/PDF).
 Users can also generate a "expression surface" to visualize expression
 of a gene in the spatial context. This is a type of plot where
 expression values are inferred for the spaces not quantified between
-spots
+spots.
 
 <input type="checkbox"> Click the "Expression surface" tab.\
 <input type="checkbox"> In the `Search and select genes` menu search and
@@ -479,7 +479,7 @@ plot.
 
 </details>
 
-#### 
+####
 
 ####  {.click_to_expand_block}
 
@@ -542,9 +542,8 @@ generation using spatial transcriptomics data.
 **Phenotyping**
 
 In spatialGE, inferring cell types on Visium data sets is achieved with
-STdeconvolve ([Miller et al.
-2022](https://doi.org/10.1038/s41467-022-30033-z)). The STdeconvolve is
-performed in two stages:
+STdeconvolve ([Miller et al.2022](https://doi.org/10.1038/s41467-022-30033-z)). 
+The STdeconvolve is performed in two stages:
 
 1.  The method attempts to fit a series of models composed of "latent
     topics". Each latent topic represents a cell type, a cell state, or
@@ -576,10 +575,9 @@ expression closer to a specific cluster or spatial domain ("spatial
 gradient"). The method is useful to investigate spatial patterns at the
 interface of spatial domains.
 
-Using the steps previsouly outlined to [detect spatial
-domains](#detect-spatial-domains), it seems spatial domain 3 in the plot
-with title "stclust_spw0_k3", is an immune-infiltrated area. With the
-following steps, users can test for genes with spatial expression
+Using the steps previously outlined to [detect spatialdomains](#detect-spatial-domains), 
+it seems spatial domain 3 in the plot with title "stclust_spw0_k3", is an immune-infiltrated 
+area. With the following steps, users can test for genes with spatial expression
 gradients with respect to this immune region:
 
 <input type="checkbox"> Click the "Spatial gradients" module on the left
@@ -596,3 +594,4 @@ genes to use" textbox.\
 </details>
 
 #### 
+
