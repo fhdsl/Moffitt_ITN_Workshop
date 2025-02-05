@@ -21,7 +21,7 @@ knitr::opts_chunk$set(number_sections = FALSE)
 
 <input type="checkbox"> Download the files for this activity clicking
 here:
-<https://github.com/fhdsl/ITN_Workshops_2024/archive/refs/heads/main.zip>\
+<https://github.com/fhdsl/Moffitt_ITN_Workshop/archive/refs/heads/main.zip>\
 <input type="checkbox"> Put this file on your desktop so it is easily
 findable.\
 <input type="checkbox"> Double click the zip file (or right click and
