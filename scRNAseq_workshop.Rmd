@@ -16,6 +16,7 @@ In this workshop we will cover:
 - Methods and considerations for normalization and dimensionality reduction
 - Common tools for analysis
 
+[Dr. Xiaofei (Sophia) Song](https://www.moffitt.org/research-science/researchers/xiaofei-song/) will lead this workshop.
 
 <div class = "link_button"><a href="https://docs.google.com/presentation/d/18H84ScncbbRA9KovjfkEULtmWVuOAu6mW7mGjl5BxR8/edit?usp=sharing" target="_blank"> Slides Link</a></div>
 
