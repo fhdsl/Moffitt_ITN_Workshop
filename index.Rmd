@@ -10,6 +10,9 @@ Welcome to the ITN Moffitt Workshop Series!
 
 Over the next two days we will cover the a variety of bioinformatics topics. Please feel free to refer to these materials in the future. 
 
+
+**Wifi:** Moffitt-Guest
+
 ### **Schedule**
 
 
