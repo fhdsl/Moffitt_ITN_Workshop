@@ -14,17 +14,18 @@ In this workshop we will cover:
 - Overview of analysis tools available
 - Overview of how to use spatialGE for analysis
 
+[Dr. Oscar Ospina](https://www.linkedin.com/in/oscareospina/) will lead this workshop.
 
 <div class = "link_button"><a href="https://docs.google.com/presentation/d/1yPqGAAMdBA6DMpNlmV22sr-fB9nLc0oGs-0o_z1mxTY/edit?usp=drive_link" target="_blank"> Slides Link</a></div>
 
 <div class = "slido_button"><a href="https://app.sli.do/event/u34YdHzLCsYKgqCNueqiRp" target="_blank"> Discussion Link </a></div>
 
-<div class = "resource_button"><a 
+<div class = "resource_button"><a
 href="https://spatialge.moffitt.org/" target="_blank"> Resource Link </a></div>
 <br>
 
 ## Additional Resources
 
-- [The accompanying paper for spatialGE](https://doi.org/10.1158/0008-5472.CAN-24-2346) 
+- [The accompanying paper for spatialGE](https://doi.org/10.1158/0008-5472.CAN-24-2346)
 - [Tutorials on how to use the spatialGE R package](https://fridleylab.github.io/spatialGE/)
 - [The code for spatialGE](https://github.com/FridleyLab/spatialGE)

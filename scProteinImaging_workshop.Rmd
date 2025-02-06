@@ -14,12 +14,12 @@ In this workshop we will cover:
 - Overview of single cell multiplex tissue imaging
 - Introduction of the tool spatialTIME for processing single cell multiplex tissue imaging data
 
+[Dr. Alex Soupir](https://www.moffitt.org/research-science/researchers/alex-soupir/) will lead this workshop.
+
 <div class = "link_button"><a href="https://docs.google.com/presentation/d/1lUcVOYB8T0Ex5j6y6LX6nt4rjvVaI8Q23v870vgOKX8/edit#slide=id.g2a47e72aa8a_0_0" target="_blank"> Slides Link</a></div>
 
 <div class = "slido_button"><a href="https://app.sli.do/event/wXDFisUEepzNBEpF2igyQU" target="_blank"> Discussion Link </a></div>
 
-<div class = "resource_button"><a 
+<div class = "resource_button"><a
 href="https://posit.cloud/" target="_blank"> Resource Link </a></div>
 <br>
-
-
