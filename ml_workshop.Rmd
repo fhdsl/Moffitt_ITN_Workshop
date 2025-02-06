@@ -15,13 +15,15 @@ In this workshop we will cover:
 - Methods for evaluating model performance
 - Concepts in tuning models for better performance
 
-We will work through some of the methods from this [study](https://www.nature.com/articles/s43018-024-00772-7). 
+[Dr. Paulo Cilas Morais Lyra Junior](https://www.linkedin.com/in/lyra-jr/) will lead this workshop.
+
+We will work through some of the methods from this [study](https://www.nature.com/articles/s43018-024-00772-7).
 
 <div class = "link_button"><a href="https://docs.google.com/presentation/d/1p6vO1RahBUAu3_lAKL0my5NTIHfv8F9rj4vVXYn7oHA/edit?usp=sharing" target="_blank"> Slides Link</a></div>
 
 <div class = "slido_button"><a href="https://app.sli.do/event/9u8HvTeKLmdpN6tfiG9heZ" target="_blank"> Discussion Link </a></div>
 
-<div class = "resource_button"><a 
+<div class = "resource_button"><a
 href="https://usegalaxy.org/login/start?redirect=None" target="_blank"> Resource Link </a></div>
 <br>
 

@@ -13,6 +13,7 @@ cellularity
 checkmark
 cheatsheet
 Chowell
+Cilas
 Cmd
 css
 csv
@@ -62,9 +63,12 @@ lightblue
 lightgreen
 LLR
 Loadings
+ly
 md
 moffitt
 Moffitt
+MoffittITN
+Morais
 Murphey
 nb
 nCount
@@ -72,8 +76,10 @@ nFeature
 nn
 Normalised
 omics
+Ospina
 OTTR
 PanCancer
+Paulo
 pembrolizumab
 Phenotyping
 phind
@@ -109,6 +115,7 @@ scalefactors
 SeuratNormalise
 slido
 Slido
+Soupir
 spatialGE
 spatialge
 spatialTIME
@@ -141,8 +148,10 @@ VectraPolarisData
 Visium
 visium
 walkthrough
+Wifi
 wikipedia
 www
+Xiaofei
 Yay
 zenodo
 Zenodo
