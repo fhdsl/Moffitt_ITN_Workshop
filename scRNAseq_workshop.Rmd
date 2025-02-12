@@ -22,14 +22,17 @@ In this workshop we will cover:
 
 <div class = "slido_button"><a href="https://app.sli.do/event/ftRxxSsRxixDYZotJt3VxD" target="_blank"> Discussion Link </a></div>
 
-<div class = "resource_button"><a 
+<div class = "resource_button"><a
 href="https://usegalaxy.org/login/start?redirect=None" target="_blank"> Resource Link </a></div>
 <br>
 
 ## Additional Resources
 
+- [Single cell analysis and interpretation (recommended by Dr. Song)](https://www.sc-best-practices.org/introduction/prior_art.html)
 - [Orchestrating single-cell analysis with bioconductor Book](https://bioconductor.org/books/release/OSCA/)
 - [Current best practices in single‐cell RNA‐seq analysis: a tutorial](https://www.embopress.org/doi/full/10.15252/msb.20188746)
 - [Single cell best practices book](https://www.sc-best-practices.org/preamble.html)
 - [Single-cell RNA-seq data analysis workshop](https://hbctraining.github.io/scRNA-seq_online/)
-
+- Resources for interpreting gene expression analyses:
+  - [A Beginner’s Guide to Analysis of RNA Sequencing Data](https://pmc.ncbi.nlm.nih.gov/articles/PMC6096346/)
+  - [RNA Sequencing and Analysis](https://cshprotocols.cshlp.org/content/early/2015/04/11/pdb.top084970.abstract)

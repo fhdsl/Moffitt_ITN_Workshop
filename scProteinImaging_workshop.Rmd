@@ -23,3 +23,9 @@ In this workshop we will cover:
 <div class = "resource_button"><a
 href="https://posit.cloud/" target="_blank"> Resource Link </a></div>
 <br>
+
+## Additional Resources
+
+- Contact email for spatialTIME package issues: [Fridley.Lab@moffitt.org](mailto:Fridley.Lab@moffitt.org)
+- Online spatialTIME Vignettes: [https://fridleylab.github.io/spatialTIME/index.html](https://fridleylab.github.io/spatialTIME/index.html)
+- Related package from Julia Wrobel: [https://juliawrobel.com/mxfda/](https://juliawrobel.com/mxfda/)

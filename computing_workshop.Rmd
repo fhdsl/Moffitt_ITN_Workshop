@@ -20,13 +20,13 @@ In this workshop we will cover:
 
 <div class = "slido_button"><a href="https://app.sli.do/event/i9DkV4CzMwqgEvzwv7B96m" target="_blank"> Discussion Link </a></div>
 
-<div class = "resource_button"><a 
+<div class = "resource_button"><a
 href="https://usegalaxy.org/login/start?redirect=None" target="_blank"> Resource Link </a></div>
 <br>
 
 ## Additional Resources
 
-Computing resources for research can be found at our [computing resource table](https://jhudatascience.org/ITN_computing_resources/). 
+Computing resources for research can be found at our [computing resource table](https://jhudatascience.org/ITN_computing_resources/).
 
 Accompanying courses can be found here:
 
@@ -36,3 +36,5 @@ Accompanying courses can be found here:
 - [Advanced reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html)
 
 See our website for additional courses (as well as how to get a certificate for completing courses) on our [course page](https://www.itcrtraining.org/resources/courses).
+
+If you'd like to learn more about manipulating data on Galaxy, see [this Galaxy Training Tutorial on the subject](https://training.galaxyproject.org/training-material/topics/introduction/tutorials/data-manipulation-olympics/tutorial.html)
