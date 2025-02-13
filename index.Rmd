@@ -87,5 +87,5 @@ To create a **Posit Cloud** account, go to the [Posit Cloud website](https://log
 |Tools for Genomics and Single-Cell RNA-seq              | [Choosing Genomics Tools](https://hutchdatascience.org/Choosing_Genomics_Tools/)|
 |Tools for Spatial Transcriptomics                       | [Choosing Genomics Tools](https://hutchdatascience.org/Choosing_Genomics_Tools/)|
 |Tools for Single-Cell Protein Imaging                   |  [Choosing Genomics Tools](https://hutchdatascience.org/Choosing_Genomics_Tools/)|
-|Transforming the Machine Learning Workbench with Galaxy | -- |
+|Transforming the Machine Learning Workbench with Galaxy | See www.itcrtraining.org for upcoming courses! |
 </div>
