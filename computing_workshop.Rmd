@@ -37,4 +37,4 @@ Accompanying courses can be found here:
 
 See our website for additional courses (as well as how to get a certificate for completing courses) on our [course page](https://www.itcrtraining.org/resources/courses).
 
-If you'd like to learn more about manipulating data on Galaxy, see [this Galaxy Training Tutorial on the subject](https://training.galaxyproject.org/training-material/topics/introduction/tutorials/data-manipulation-olympics/tutorial.html)
+Galaxy offers training tutorials on a variety of topics! Visit [https://training.galaxyproject.org/](https://training.galaxyproject.org/) to browse and search for specific tutorials of interest. For example, if you'd like to learn more about **manipulating data on Galaxy**, see [this Galaxy Training Tutorial on the subject](https://training.galaxyproject.org/training-material/topics/introduction/tutorials/data-manipulation-olympics/tutorial.html)

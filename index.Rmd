@@ -77,6 +77,8 @@ To create a **Posit Cloud** account, go to the [Posit Cloud website](https://log
 - **Posit Cloud**: The workspace will be available until Feb 22, otherwise, you could use the free version of PositCloud [https://posit.cloud/](https://posit.cloud/) to work with R in general (but does not have enough computing capacity to work with the data we used in our workshop). Alternatively, you could R/RStudio on your local machine or potentially on your institutional server.
 - **spatialGE**: You can continue using the link [https://spatialge.moffitt.org/](https://spatialge.moffitt.org/) and can also use the R package: [https://github.com/FridleyLab/spatialGE](https://github.com/FridleyLab/spatialGE)
 
+Galaxy offers training tutorials on a variety of topics! Visit [https://training.galaxyproject.org/](https://training.galaxyproject.org/) to browse and search for specific tutorials of interest.
+
 ### Relevant ITN courses for future learning
 
 <div class = "myStyle" align = "center">
