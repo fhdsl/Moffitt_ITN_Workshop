@@ -8,7 +8,7 @@ output:
 
 Welcome to the ITN Moffitt Workshop Series!
 
-Over the next two days we will cover the a variety of bioinformatics topics. Please feel free to refer to these materials in the future. 
+Over the next two days we will cover the a variety of bioinformatics topics. Please feel free to refer to these materials in the future.
 
 
 **Wifi:** Moffitt-Guest
@@ -25,7 +25,7 @@ Over the next two days we will cover the a variety of bioinformatics topics. Ple
 | Computing and Data Ethics for Cancer Informatics        | 9:30 AM - 11:00 AM  |  
 | Tools for Genomics and Single-Cell RNA-seq              | 11:00 AM - 12:30 PM |  
 | <img width="10%" src="resources/images/plate.png"> <mark>Free Lunch!    </mark>                             | 12:30 PM - 1:30 PM  |  
-| Tools for Spatial Transcriptomics                       | 1:30 PM - 3:00 PM   | 
+| Tools for Spatial Transcriptomics                       | 1:30 PM - 3:00 PM   |
 
 
 | Day 2 (SRB David Murphey Conference Room) - February 6: |  Time                   |
@@ -70,3 +70,22 @@ To create a **spatialGE** account, go to [spatialGE Website](https://spatialge.m
 </p>
 
 To create a **Posit Cloud** account, go to the [Posit Cloud website](https://login.posit.cloud/register?redirect=https%3A%2F%2Fclient.login.posit.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0) and sign up with any of the shown methods.
+
+### Accessing Computational Resources for further practice or your research
+
+- **Galaxy**: The training link will no longer work, and you should use [usegalaxy.org](https://usegalaxy.org/) to access the platform.
+- **Posit Cloud**: The workspace will be available until Feb 22, otherwise, you could use the free version of PositCloud [https://posit.cloud/](https://posit.cloud/) to work with R in general (but does not have enough computing capacity to work with the data we used in our workshop). Alternatively, you could R/RStudio on your local machine or potentially on your institutional server.
+- **spatialGE**: You can continue using the link [https://spatialge.moffitt.org/](https://spatialge.moffitt.org/) and can also use the R package: [https://github.com/FridleyLab/spatialGE](https://github.com/FridleyLab/spatialGE)
+
+### Relevant ITN courses for future learning
+
+<div class = "myStyle" align = "center">
+
+|         Workshop        | Relevant ITN Course(s) |
+|-------------------------|:----------------------:|
+|Computing and Data Ethics for Cancer Informatics        | [Computing for Cancer Informatics](https://jhudatascience.org/Computing_for_Cancer_Informatics/)<br/>[Introduction to Reproducibility](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)<br/>[Advanced Reproducibility](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/)<br/>[Ethical Data Handling](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/introduction.html)
+|Tools for Genomics and Single-Cell RNA-seq              | [Choosing Genomics Tools](https://hutchdatascience.org/Choosing_Genomics_Tools/)|
+|Tools for Spatial Transcriptomics                       | [Choosing Genomics Tools](https://hutchdatascience.org/Choosing_Genomics_Tools/)|
+|Tools for Single-Cell Protein Imaging                   |  [Choosing Genomics Tools](https://hutchdatascience.org/Choosing_Genomics_Tools/)|
+|Transforming the Machine Learning Workbench with Galaxy | See www.itcrtraining.org for upcoming courses! |
+</div>
