@@ -1,11 +1,13 @@
 adriamycin
 al
+Asc
 auth
 autofilled
 automations
 bc
 bioconductor
 bioinformatics
+bioinformatician
 Bootstap
 ccRCC
 CellMarker
@@ -17,6 +19,7 @@ Cilas
 Cmd
 css
 csv
+CROST
 Ctrl
 custimization
 cwrigh
@@ -38,6 +41,8 @@ FindNeighbours
 Flogin
 FN
 Foauth
+fridleylab
+FridleyLab
 Fshow
 favicon
 Ferman
@@ -55,9 +60,11 @@ IGKC
 Il
 immunohistochemistry
 IMM
+io
 ITN
 ITCR
 Il2ra
+juliawrobel
 json
 lightblue
 lightgreen
@@ -85,6 +92,7 @@ Phenotyping
 phind
 Phind
 pos
+PositCloud
 positivity
 png
 Pre
@@ -112,6 +120,8 @@ RStudio
 samplename
 SCTransform
 scalefactors
+Scanpy
+scRNA
 SeuratNormalise
 slido
 Slido
@@ -120,6 +130,7 @@ spatialGE
 spatialge
 spatialTIME
 spw
+Squidpy
 SRB
 STdeconvolve
 STCLUST
@@ -129,6 +140,7 @@ STGRADIENT
 STlist
 subdir
 taxotere
+TCGA
 textbox
 th
 tibble
